@@ -1,10 +1,22 @@
-// Load .env from project root, then override with Render secret file if it exists
+// Load environment: .env file, then Render secret file as override
 require('dotenv').config();
-const secretEnv = '/etc/secrets/.env';
-if (require('fs').existsSync(secretEnv)) {
-  require('dotenv').config({ path: secretEnv, override: true });
-  console.log('✓ Loaded secrets from /etc/secrets/.env');
-}
+try {
+  const secretPaths = ['/etc/secrets/.env', '/etc/secrets/env'];
+  for (const sp of secretPaths) {
+    if (require('fs').existsSync(sp)) {
+      require('dotenv').config({ path: sp, override: true });
+      console.log('✓ Loaded secrets from', sp);
+      break;
+    }
+  }
+} catch (e) { console.log('Secret file load skipped:', e.message); }
+// Log env status (no values)
+console.log('ENV:', {
+  NODE_ENV: process.env.NODE_ENV || 'unset',
+  JWT_SECRET: process.env.JWT_SECRET ? 'SET' : 'MISSING',
+  GUESTY_CLIENT_ID: process.env.GUESTY_CLIENT_ID ? 'SET' : 'MISSING',
+  GUESTY_CLIENT_SECRET: process.env.GUESTY_CLIENT_SECRET ? 'SET' : 'MISSING'
+});
 const express = require('express');
 const cors = require('cors');
 const path = require('path');

@@ -5,10 +5,12 @@ const { db } = require('../db/init');
 const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
+const JWT_KEY = process.env.JWT_SECRET || 'residence_studio_fallback_jwt_key_2024';
+
 function signToken(user) {
   return jwt.sign(
     { id: user.id, email: user.email, name: user.name, role: user.role, company_name: user.company_name },
-    process.env.JWT_SECRET, { expiresIn: '7d' }
+    JWT_KEY, { expiresIn: '7d' }
   );
 }
 
