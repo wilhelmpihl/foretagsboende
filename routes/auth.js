@@ -22,12 +22,13 @@ router.post('/register', (req, res) => {
   const user = db.createUser({ email, password_hash: bcrypt.hashSync(password, 10), name, role: 'company', company_name, phone: phone || null });
   res.status(201).json({ token: signToken(user), user: { id: user.id, email: user.email, name: user.name, company_name: user.company_name, role: user.role } });
 
-  // Fire lead email in background — never blocks response
-  const { sendLeadEmail } = require('../utils/mailer');
-  sendLeadEmail({
-    type: 'registration',
-    data: { company: company_name, email, name, phone: phone || null }
-  }).catch(err => console.error('Lead email error:', err.message));
+  // Fire emails in background — never blocks response
+  const { sendEmails } = require('../utils/mailer');
+  sendEmails('registration', {
+    companyName: company_name, email, name,
+    firstName: name ? name.split(' ')[0] : '',
+    phone: phone || null
+  }).catch(err => console.error('Email error:', err.message));
 });
 
 router.post('/login', (req, res) => {

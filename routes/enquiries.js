@@ -42,12 +42,13 @@ router.post('/', async (req, res) => {
     console.log(`✓ New enquiry ${enquiry.id} from ${companyName}`);
     res.status(201).json({ success: true, enquiryId: enquiry.id });
 
-    // Fire lead email in background — never blocks response
-    const { sendLeadEmail } = require('../utils/mailer');
-    sendLeadEmail({
-      type: 'enquiry',
-      data: { listingId, listingTitle, companyName, contactName, email, phone, checkIn, checkOut, nights, guests: parseInt(guests) || 1, message, pricePerNight }
-    }).catch(err => console.error('Lead email error:', err.message));
+    // Fire emails in background — never blocks response
+    const { sendEmails } = require('../utils/mailer');
+    sendEmails('enquiry', {
+      listingId, listingTitle, companyName, contactName, email, phone,
+      checkIn, checkOut, nights, guests: parseInt(guests) || 1,
+      message, pricePerNight
+    }).catch(err => console.error('Email error:', err.message));
   } catch (err) {
     console.error('Enquiry error:', err.message);
     res.status(500).json({ error: 'Kunde inte spara förfrågan. Försök igen.' });
