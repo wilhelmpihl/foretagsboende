@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: foretagsboende
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: residence_studio_super_secret_jwt_key_2024
+      - key: GUESTY_CLIENT_ID
+        value: 0oatnyobvq6fqjH7y5d7
+      - key: GUESTY_CLIENT_SECRET
+        value: -pt2Motf-BxAoqCz2fxp54P5MkorEMRkCr7EVpfAkRK8Oz2sk8-Gzn3GeoraPzLr
+      - key: CONTACT_EMAIL
+        value: kontakt@bostadsuthyrning.se
+      - key: SMTP_HOST
+        value: smtp.office365.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: kontakt@bostadsuthyrning.se
+      - key: SMTP_PASS
+        value: Justwin94!!!!
+      - key: LEAD_EMAIL
+        value: kontakt@bostadsuthyrning.se
