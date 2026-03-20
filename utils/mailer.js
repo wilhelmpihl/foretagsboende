@@ -1,32 +1,12 @@
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
-// ─── SMTP TRANSPORTER ─────────────────────────────
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.office365.com',
-  port: parseInt(process.env.SMTP_PORT) || 587,
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS
-  },
-  tls: {
-    ciphers: 'SSLv3',
-    rejectUnauthorized: false
-  },
-  requireTLS: true
-});
+// ─── RESEND CLIENT ────────────────────────────────
+const resend = new Resend(process.env.RESEND_API_KEY || '');
 
-// Test on startup
-if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-  transporter.verify((error) => {
-    if (error) {
-      console.error('✗ SMTP failed:', error.message, '(' + (error.code || '') + ')');
-    } else {
-      console.log('✓ SMTP ready — emails send to kontakt@bostadsuthyrning.se');
-    }
-  });
+if (process.env.RESEND_API_KEY) {
+  console.log('✓ Resend email ready — leads → kontakt@bostadsuthyrning.se');
 } else {
-  console.log('⚠ SMTP not configured — emails disabled');
+  console.log('⚠ RESEND_API_KEY not set — emails via webhook only');
 }
 
 // ─── MAKE.COM WEBHOOK FALLBACK ────────────────────
@@ -54,10 +34,10 @@ async function sendLeadNotification(type, data) {
     contact: 'Nytt meddelande — ' + (data.name || data.email)
   };
 
-  await transporter.sendMail({
-    from: '"Företagsboende" <' + process.env.SMTP_USER + '>',
-    to: process.env.LEAD_EMAIL || 'kontakt@bostadsuthyrning.se',
-    replyTo: data.email || process.env.SMTP_USER,
+  await resend.emails.send({
+    from: 'Företagsboende <onboarding@resend.dev>',
+    to: ['kontakt@bostadsuthyrning.se'],
+    replyTo: data.email || undefined,
     subject: subjects[type] || 'Ny lead — Företagsboende',
     html: buildLeadHTML(type, data)
   });
@@ -75,9 +55,9 @@ async function sendConfirmation(type, data) {
     contact: 'Tack för ert meddelande — vi återkommer snart'
   };
 
-  await transporter.sendMail({
-    from: '"Företagsboende" <' + process.env.SMTP_USER + '>',
-    to: data.email,
+  await resend.emails.send({
+    from: 'Företagsboende <onboarding@resend.dev>',
+    to: [data.email],
     subject: subjects[type] || 'Tack — vi återkommer inom 24 timmar',
     html: buildConfirmationHTML(type, data)
   });
@@ -89,11 +69,11 @@ async function sendConfirmation(type, data) {
 async function sendEmails(type, data) {
   const results = { lead: false, confirmation: false, webhook: false };
 
-  // Always send webhook (reliable fallback)
+  // Always send webhook
   try { await sendWebhook(type, data); results.webhook = true; } catch (e) {}
 
-  // Send SMTP emails if configured
-  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+  // Send Resend emails if configured
+  if (process.env.RESEND_API_KEY) {
     try { await sendLeadNotification(type, data); results.lead = true; } catch (err) {
       console.error('✗ Lead email failed:', err.message);
     }
