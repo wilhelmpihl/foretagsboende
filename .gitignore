@@ -1,0 +1,5 @@
+.env
+node_modules/
+data/enquiries.json
+*.log
+.DS_Store

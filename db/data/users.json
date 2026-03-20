@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "email": "admin@residence.se",
+    "password_hash": "$2a$10$ZYYI1icVYOEjUt.5Oc48.eG3ENS4V4CWgagHGDqVHVkaW1D48q9Vu",
+    "name": "Admin",
+    "role": "admin",
+    "company_name": "Residence Studio",
+    "phone": "+46 70 000 00 00",
+    "created_at": "2026-03-17T17:57:00.023Z"
+  },
+  {
+    "id": 2,
+    "email": "hr@volvocars.com",
+    "password_hash": "$2a$10$xQAAid0kUlqMKCH1ZYYDNuPcKKkLYZC9nUCVY50Qy9ctDUhSS6asC",
+    "name": "Anna Björk",
+    "role": "company",
+    "company_name": "Volvo Cars",
+    "phone": "+46 72 123 45 67",
+    "created_at": "2026-03-17T17:57:00.074Z"
+  },
+  {
+    "id": 3,
+    "email": "demo@company.se",
+    "password_hash": "$2a$10$A.8S7ixIPh22uO.w17CX4eZKGJp06HT3VMSQq./q7PSPC8AlDcHOa",
+    "name": "Erik Svensson",
+    "role": "company",
+    "company_name": "Ericsson AB",
+    "phone": "+46 73 456 78 90",
+    "created_at": "2026-03-17T17:57:00.122Z"
+  },
+  {
+    "id": 4,
+    "email": "wilhelm@bostadsuthyrning.se",
+    "password_hash": "$2a$10$CYKNVh/lhwkJVAQON70KOOqm09.v6o3fF/1xmffGALy8qyLA2iOK2",
+    "name": "wilhelm pihl",
+    "role": "company",
+    "company_name": "awp superhost aktiebolag",
+    "phone": "+46735376707",
+    "created_at": "2026-03-17T17:57:57.346Z"
+  },
+  {
+    "id": 5,
+    "email": "kontakt@bostadsuthyrning.se",
+    "password_hash": "$2a$10$gqCMAxJS3GtbE3ZpnaUMNef5IxCop03s8sUPEBsSzkrG3EzGERMCq",
+    "name": "wilhelm pihl",
+    "role": "company",
+    "company_name": "awp superhost aktiebolag",
+    "phone": "wilhelm pihl",
+    "created_at": "2026-03-17T18:13:36.972Z"
+  }
+]

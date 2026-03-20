@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1"/>
+<title>Skapa konto — Företagsboende.se</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0f1923;--navy-mid:#1a2535;--navy-card:#1e2e3d;
+  --gold:#c9a96e;--gold-light:#e8d5a3;--gold-dark:#8a6520;--gold-muted:#b8a882;
+  --cream:#f5f2eb;--cream-dark:#eee9de;--white:#ffffff;
+  --text-dark:#1a1510;--text-muted:#888888;--text-faint:#aaaaaa;
+  --green:#1a9e68;--error:#e24b4a;--border:#e8e2d5;
+}
+body{font-family:'Jost',sans-serif;margin:0;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* ═══ LAYOUT ═══ */
+.rp-page{display:grid;grid-template-columns:52% 48%;min-height:100vh}
+
+/* ═══ LEFT PANEL ═══ */
+.rp-left{background:var(--navy);padding:52px;display:flex;flex-direction:column;position:relative;overflow:hidden;min-height:100vh}
+.rp-left::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.rp-left *{position:relative;z-index:1}
+.rp-logo{display:block;text-decoration:none;margin-bottom:52px}
+.rp-logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1)}
+.rp-logo-fallback{font-family:'Jost',sans-serif;font-size:15px;font-weight:400;color:#fff;letter-spacing:.02em}
+.rp-logo-fallback::after{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-left:4px;vertical-align:middle}
+
+.rp-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.rp-eyebrow-line{width:20px;height:1px;background:var(--gold);flex-shrink:0}
+.rp-eyebrow-text{font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:3px;color:var(--gold)}
+
+.rp-headline{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;line-height:1.05;letter-spacing:-.02em;color:#fff}
+.rp-headline em{font-style:italic;color:var(--gold);display:block}
+
+.rp-body{margin-top:18px;font-size:15px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.5);max-width:340px}
+
+/* Checklist */
+.rp-checklist{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+.rp-check-item{display:flex;align-items:center;gap:12px}
+.rp-check-icon{width:18px;height:18px;min-width:18px;border-radius:50%;background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rp-check-icon svg{width:10px;height:10px;stroke:var(--gold);stroke-width:2.5;fill:none}
+.rp-check-text{font-size:14px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.4}
+
+/* Testimonial */
+.rp-testi{margin-top:auto;padding-top:40px;border-top:1px solid rgba(255,255,255,.07)}
+.rp-quote-mark{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(201,169,110,.25);line-height:0;display:block;margin-bottom:12px}
+.rp-quote{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:rgba(255,255,255,.8);line-height:1.6;max-width:380px}
+.rp-author{display:flex;align-items:center;gap:12px;margin-top:20px}
+.rp-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-card);border:1.5px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;color:var(--gold);flex-shrink:0}
+.rp-author-name{font-size:14px;font-weight:500;color:#fff}
+.rp-author-title{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);margin-top:2px}
+.rp-stars{margin-left:auto;display:flex;gap:2px}
+.rp-stars svg{width:12px;height:12px;fill:var(--gold);stroke:none}
+
+/* BG photo */
+.rp-bg-photo{position:absolute;bottom:0;right:0;width:200px;height:240px;object-fit:cover;border-radius:16px 0 0 0;opacity:.25;z-index:0!important}
+.rp-bg-overlay{position:absolute;bottom:0;right:0;width:300px;height:300px;background:linear-gradient(to right,var(--navy) 0%,transparent 60%);z-index:0!important;pointer-events:none}
+
+/* ═══ RIGHT PANEL ═══ */
+.rp-right{background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px 80px;position:relative;overflow-y:auto;min-height:100vh}
+.rp-form{width:100%;max-width:420px}
+
+/* Back link */
+.rp-back{position:absolute;top:24px;left:24px;display:flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;font-weight:300;color:var(--text-faint);transition:color .15s}
+.rp-back:hover{color:var(--text-dark)}
+.rp-back svg{width:14px;height:14px}
+
+/* Tabs */
+.rp-tabs{width:100%;background:var(--white);border-radius:14px;padding:5px;display:grid;grid-template-columns:1fr 1fr;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:28px}
+.rp-tab{padding:13px;border-radius:10px;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:14px;font-weight:400;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text-muted);background:transparent}
+.rp-tab:hover{color:var(--text-dark)}
+.rp-tab-active{background:var(--navy);color:#fff;font-weight:500;box-shadow:0 2px 8px rgba(15,25,35,.2);pointer-events:none}
+
+/* Welcome banner */
+.rp-banner{background:#fffbf2;border:.5px solid #f0d89a;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}
+.rp-banner-left{display:flex;align-items:center;gap:10px}
+.rp-banner-icon{flex-shrink:0;color:var(--gold)}
+.rp-banner-icon svg{width:18px;height:18px}
+.rp-banner-title{font-size:12px;font-weight:500;color:#5a3e1b}
+.rp-banner-sub{font-size:11px;font-weight:300;color:var(--gold-dark);margin-top:2px}
+.rp-banner-badge{flex-shrink:0;background:#f0d89a;color:#5a3e1b;border-radius:20px;padding:5px 12px;font-size:10px;font-weight:600;white-space:nowrap}
+
+/* Form heading */
+.rp-heading{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--text-dark);margin-bottom:6px}
+.rp-subheading{font-size:13px;font-weight:300;color:var(--text-faint);line-height:1.6;margin-bottom:24px}
+
+/* Fields */
+.rp-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.rp-field{margin-bottom:12px}
+.rp-label{display:block;font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:2px;color:var(--text-faint);margin-bottom:6px}
+.rp-input-wrap{position:relative}
+.rp-input{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:12px;font-family:'Jost',sans-serif;font-size:14px;color:var(--text-dark);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s}
+.rp-input::placeholder{color:#bbb}
+.rp-input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,169,110,.12)}
+.rp-input.rp-valid{border-color:rgba(26,158,104,.4)}
+.rp-input.rp-error{border-color:var(--error);box-shadow:0 0 0 4px rgba(226,75,74,.1);animation:rp-shake .3s ease}
+.rp-valid-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .2s;color:var(--green)}
+.rp-valid-icon.show{opacity:1}
+.rp-valid-icon svg{width:16px;height:16px}
+.rp-field-err{font-size:12px;color:var(--error);margin-top:5px;display:none}
+.rp-field-err.show{display:block}
+
+@keyframes rp-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+
+/* Password toggle */
+.rp-pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text-faint);padding:4px;transition:color .15s}
+.rp-pw-toggle:hover{color:var(--text-dark)}
+.rp-pw-toggle svg{width:16px;height:16px}
+
+/* Password strength */
+.rp-pw-bar{display:flex;gap:3px;margin-top:6px;align-items:center}
+.rp-pw-seg{height:3px;flex:1;border-radius:2px;background:#e8e2d5;transition:background .2s}
+.rp-pw-seg.weak{background:#e24b4a}
+.rp-pw-seg.ok{background:#e8a84c}
+.rp-pw-seg.good{background:#c9c14a}
+.rp-pw-seg.strong{background:#1a9e68}
+.rp-pw-label{margin-left:8px;font-size:10px;font-weight:400;transition:color .2s}
+
+/* Terms checkbox */
+.rp-terms{margin:16px 0;display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.rp-checkbox{width:18px;height:18px;min-width:18px;border-radius:5px;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .15s;flex-shrink:0;cursor:pointer}
+.rp-checkbox.checked{background:var(--navy);border-color:var(--navy)}
+.rp-checkbox.checked svg{display:block}
+.rp-checkbox svg{width:11px;height:11px;stroke:#fff;stroke-width:2.5;fill:none;display:none}
+.rp-checkbox.rp-error{border-color:var(--error);box-shadow:0 0 0 3px rgba(226,75,74,.1)}
+.rp-terms-text{font-size:12px;font-weight:300;color:var(--text-muted);line-height:1.5}
+.rp-terms-text a{color:var(--gold);text-decoration:none;transition:color .15s}
+.rp-terms-text a:hover{text-decoration:underline}
+
+/* CTA button */
+.rp-cta{width:100%;padding:18px;background:var(--gold-light);color:#5a3e1b;border:none;border-radius:12px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:.5px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px}
+.rp-cta:hover{background:#dfc98a;transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,169,110,.3)}
+.rp-cta:active{transform:scale(.99)}
+.rp-cta:disabled{opacity:.7;cursor:not-allowed;transform:none;box-shadow:none}
+.rp-cta svg{width:16px;height:16px}
+.rp-spinner{width:16px;height:16px;border:2px solid rgba(90,62,27,.3);border-top-color:#5a3e1b;border-radius:50%;animation:rp-spin .7s linear infinite;flex-shrink:0}
+@keyframes rp-spin{to{transform:rotate(360deg)}}
+
+/* Below CTA */
+.rp-below{margin-top:14px;text-align:center;font-size:11px;font-weight:300;color:var(--text-faint)}
+.rp-login-link{text-align:center;margin-top:16px;font-size:13px;font-weight:300;color:var(--text-faint)}
+.rp-login-link a{color:var(--gold);font-weight:400;text-decoration:none;transition:color .15s}
+.rp-login-link a:hover{color:var(--gold-dark);text-decoration:underline}
+
+/* Error banner */
+.rp-error-banner{background:rgba(226,75,74,.06);border:.5px solid rgba(226,75,74,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--error);display:none;align-items:center;gap:8px;margin-bottom:12px}
+.rp-error-banner.show{display:flex}
+.rp-error-banner svg{width:16px;height:16px;flex-shrink:0}
+
+/* Success state */
+.rp-success{display:none;text-align:center;padding:10px 0 20px}
+.rp-success.show{display:block}
+.rp-success-badge{width:56px;height:56px;border-radius:50%;background:rgba(26,158,104,.1);border:1px solid rgba(26,158,104,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transform:scale(.3);opacity:0;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .3s}
+.rp-success.show .rp-success-badge{transform:scale(1);opacity:1}
+.rp-success-badge svg{width:24px;height:24px;stroke:var(--green);stroke-width:2;fill:none}
+.rp-success-heading{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--text-dark)}
+.rp-success-sub{font-size:13px;font-weight:300;color:var(--text-muted);margin-top:6px}
+.rp-progress{position:fixed;bottom:0;left:0;height:2px;background:var(--gold);width:0;transition:width 2s linear;z-index:999;display:none}
+
+/* Trust signals */
+.rp-trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:24px}
+.rp-trust-item{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:300;color:var(--text-faint)}
+.rp-trust-item svg{width:12px;height:12px;stroke:var(--text-faint);stroke-width:1.5;fill:none}
+
+/* ═══ ANIMATIONS ═══ */
+.rp-anim{opacity:0;transform:translateY(16px);transition:opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezier(.4,0,.2,1)}
+.rp-anim.vis{opacity:1;transform:translateY(0)}
+.rp-check-item{opacity:0;transform:translateX(-12px);transition:opacity .35s cubic-bezier(.4,0,.2,1),transform .35s cubic-bezier(.4,0,.2,1)}
+.rp-check-item.vis{opacity:1;transform:translateX(0)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  .rp-page{grid-template-columns:1fr}
+  .rp-left{min-height:auto;padding:32px 24px 28px}
+  .rp-logo{margin-bottom:24px}
+  .rp-headline{font-size:36px}
+  .rp-checklist,.rp-testi,.rp-bg-photo,.rp-bg-overlay{display:none}
+  .rp-right{min-height:auto;padding:32px 20px 80px;justify-content:flex-start}
+  .rp-back{position:static;margin-bottom:20px}
+  .rp-trust{position:static}
+}
+@media(max-width:480px){
+  .rp-left{padding:24px 20px 24px}
+  .rp-headline{font-size:30px}
+  .rp-body{font-size:14px}
+  .rp-right{padding:24px 16px 60px}
+  .rp-heading{font-size:26px}
+  .rp-subheading{font-size:12px}
+  .rp-row{grid-template-columns:1fr}
+  .rp-tabs{border-radius:10px}
+  .rp-tab{padding:11px;font-size:13px}
+  .rp-input{font-size:16px;padding:12px 14px;border-radius:10px}
+  .rp-cta{padding:16px;font-size:13px;border-radius:10px}
+  .rp-banner{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 14px}
+  .rp-banner-badge{align-self:flex-start}
+  .rp-eyebrow-text{font-size:9px}
+}
+@media(max-width:360px){
+  .rp-headline{font-size:26px}
+  .rp-left{padding:20px 16px}
+  .rp-right{padding:20px 14px 48px}
+  .rp-heading{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div class="rp-page">
+
+<!-- ═══ LEFT PANEL ═══ -->
+<div class="rp-left">
+  <a href="/" class="rp-logo"><img src="/images/logo@2x.png" alt="Företagsboende.se" height="36" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/><span class="rp-logo-fallback" style="display:none">Företagsboende.se</span></a>
+
+  <div>
+    <div class="rp-eyebrow rp-anim"><div class="rp-eyebrow-line"></div><span class="rp-eyebrow-text">&mdash; NYTT FÖRETAGSKONTO</span></div>
+    <h1 class="rp-headline rp-anim">Sluta krångla<em>med boenden.</em></h1>
+    <p class="rp-body rp-anim">Gå med 200+ svenska företag som hanterar personalboende utan ett enda krångel.</p>
+  </div>
+
+  <div class="rp-checklist">
+    <div class="rp-check-item"><div class="rp-check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><span class="rp-check-text">173 fullt möblerade bostäder</span></div>
+    <div class="rp-check-item"><div class="rp-check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><span class="rp-check-text">En faktura. Allt inkluderat.</span></div>
+    <div class="rp-check-item"><div class="rp-check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><span class="rp-check-text">Svar inom 24 timmar — garanterat</span></div>
+    <div class="rp-check-item"><div class="rp-check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><span class="rp-check-text">Ingen deposition. Ingen bindningstid.</span></div>
+    <div class="rp-check-item"><div class="rp-check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><span class="rp-check-text">Er egen dedikerade kontaktperson</span></div>
+  </div>
+
+  <div class="rp-testi">
+    <span class="rp-quote-mark">&ldquo;</span>
+    <p class="rp-quote">Vi behövde boende för 106 arbetare på 3 dagar till Volvo Cars. Företagsboende löste det direkt.</p>
+    <div class="rp-author">
+      <div class="rp-avatar">D</div>
+      <div><div class="rp-author-name">Daniel</div><div class="rp-author-title">Projektledare</div></div>
+      <div class="rp-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <img class="rp-bg-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80&auto=format" alt="" loading="lazy"/>
+  <div class="rp-bg-overlay"></div>
+</div>
+
+<!-- ═══ RIGHT PANEL ═══ -->
+<div class="rp-right">
+  <a href="/" class="rp-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Tillbaka till startsidan
+  </a>
+
+  <div class="rp-form">
+    <!-- Tabs -->
+    <div class="rp-tabs">
+      <a href="/login.html" class="rp-tab">Logga in</a>
+      <span class="rp-tab rp-tab-active">Skapa konto</span>
+    </div>
+
+    <!-- Welcome banner -->
+    <div class="rp-banner">
+      <div class="rp-banner-left">
+        <div class="rp-banner-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 010-5A4.8 8 0 0112 8a4.8 8 0 014.5-5 2.5 2.5 0 010 5"/></svg></div>
+        <div>
+          <div class="rp-banner-title">Välkomsterbjudande för nya företag</div>
+          <div class="rp-banner-sub">10% rabatt på er första faktura — aktiveras automatiskt</div>
+        </div>
+      </div>
+      <div class="rp-banner-badge">Värde ~3 000 kr</div>
+    </div>
+
+    <!-- Form content -->
+    <div id="rpFormContent">
+      <div class="rp-heading">Skapa konto kostnadsfritt</div>
+      <div class="rp-subheading">Kom igång på under 2 minuter. Ingen bindningstid. Avsluta när ni vill.</div>
+
+      <div class="rp-error-banner" id="rpGlobalErr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="rpGlobalErrText"></span>
+      </div>
+
+      <!-- Row 1: Name -->
+      <div class="rp-row">
+        <div class="rp-field" style="margin-bottom:0">
+          <label class="rp-label">FÖRNAMN</label>
+          <div class="rp-input-wrap">
+            <input class="rp-input" type="text" id="rpFirstName" autocomplete="given-name" placeholder="Förnamn"/>
+            <div class="rp-valid-icon" id="rpFirstNameOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+          </div>
+          <div class="rp-field-err" id="rpFirstNameErr"></div>
+        </div>
+        <div class="rp-field" style="margin-bottom:0">
+          <label class="rp-label">EFTERNAMN</label>
+          <div class="rp-input-wrap">
+            <input class="rp-input" type="text" id="rpLastName" autocomplete="family-name" placeholder="Efternamn"/>
+            <div class="rp-valid-icon" id="rpLastNameOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+          </div>
+          <div class="rp-field-err" id="rpLastNameErr"></div>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="rp-field">
+        <label class="rp-label">FÖRETAGETS NAMN</label>
+        <div class="rp-input-wrap">
+          <input class="rp-input" type="text" id="rpCompany" autocomplete="organization" placeholder="Ert företags namn"/>
+          <div class="rp-valid-icon" id="rpCompanyOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+        </div>
+        <div class="rp-field-err" id="rpCompanyErr"></div>
+      </div>
+
+      <!-- Email -->
+      <div class="rp-field">
+        <label class="rp-label">JOBBMEJL</label>
+        <div class="rp-input-wrap">
+          <input class="rp-input" type="email" id="rpEmail" autocomplete="email" placeholder="er@foretag.se"/>
+          <div class="rp-valid-icon" id="rpEmailOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+        </div>
+        <div class="rp-field-err" id="rpEmailErr"></div>
+      </div>
+
+      <!-- Password -->
+      <div class="rp-field">
+        <label class="rp-label">LÖSENORD</label>
+        <div class="rp-input-wrap">
+          <input class="rp-input" type="password" id="rpPassword" autocomplete="new-password" placeholder="Minst 8 tecken" style="padding-right:40px"/>
+          <button type="button" class="rp-pw-toggle" id="rpPwToggle">
+            <svg id="rpPwEye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <div class="rp-pw-bar" id="rpPwBar">
+          <div class="rp-pw-seg" id="rpSeg1"></div>
+          <div class="rp-pw-seg" id="rpSeg2"></div>
+          <div class="rp-pw-seg" id="rpSeg3"></div>
+          <div class="rp-pw-seg" id="rpSeg4"></div>
+          <span class="rp-pw-label" id="rpPwLabel"></span>
+        </div>
+        <div class="rp-field-err" id="rpPasswordErr"></div>
+      </div>
+
+      <!-- Terms -->
+      <div class="rp-terms" id="rpTermsRow">
+        <div class="rp-checkbox" id="rpCheckbox"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <span class="rp-terms-text">Jag godkänner <a href="#">villkoren</a> och <a href="#">integritetspolicyn</a></span>
+      </div>
+
+      <!-- CTA -->
+      <button class="rp-cta" id="rpCta" type="button">
+        <span id="rpCtaText">Skapa konto &amp; aktivera 10% rabatt</span>
+        <svg id="rpCtaArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Success state -->
+    <div class="rp-success" id="rpSuccess">
+      <div class="rp-success-badge"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <div class="rp-success-heading">&#10003; Konto skapat — välkommen!</div>
+      <div class="rp-success-sub">Er rabatt är aktiverad.</div>
+    </div>
+
+    <!-- Below CTA -->
+    <div class="rp-below">Kostnadsfritt &middot; Ingen bindningstid &middot; Avsluta när som helst</div>
+    <div class="rp-login-link">Har ni redan konto? <a href="/login.html">Logga in &rarr;</a></div>
+
+    <!-- Trust -->
+    <div class="rp-trust">
+      <span class="rp-trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SSL-skyddad</span>
+      <span class="rp-trust-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>GDPR-anpassad</span>
+      <span class="rp-trust-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>200+ företag</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="rp-progress" id="rpProgress"></div>
+
+<script>
+(function(){
+  // ═══ Animations ═══
+  var anims = document.querySelectorAll('.rp-anim');
+  var checks = document.querySelectorAll('.rp-check-item');
+  requestAnimationFrame(function(){
+    anims.forEach(function(el,i){
+      setTimeout(function(){el.classList.add('vis')}, 100 + i * 100);
+    });
+    checks.forEach(function(el,i){
+      setTimeout(function(){el.classList.add('vis')}, 500 + i * 80);
+    });
+  });
+
+  // ═══ State ═══
+  var touched = {};
+  var termsChecked = false;
+
+  var fields = {
+    firstName: {el:g('rpFirstName'), err:g('rpFirstNameErr'), ok:g('rpFirstNameOk'), validate:function(v){return v.length>=2?'':'Minst 2 tecken'}},
+    lastName:  {el:g('rpLastName'),  err:g('rpLastNameErr'),  ok:g('rpLastNameOk'),  validate:function(v){return v.length>=2?'':'Minst 2 tecken'}},
+    company:   {el:g('rpCompany'),   err:g('rpCompanyErr'),   ok:g('rpCompanyOk'),   validate:function(v){return v.length>=2?'':'Ange företagsnamn'}},
+    email:     {el:g('rpEmail'),     err:g('rpEmailErr'),     ok:g('rpEmailOk'),     validate:function(v){if(!v)return'Ange e-postadress';return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?'':'Ogiltig e-postadress'}},
+    password:  {el:g('rpPassword'),  err:g('rpPasswordErr'),  ok:null,               validate:function(v){return v.length>=8?'':'Minst 8 tecken'}}
+  };
+
+  function g(id){return document.getElementById(id)}
+
+  // ═══ Blur validation ═══
+  Object.keys(fields).forEach(function(key){
+    var f = fields[key];
+    f.el.addEventListener('blur',function(){
+      touched[key] = true;
+      validateField(key);
+    });
+    f.el.addEventListener('input',function(){
+      if(touched[key]) validateField(key);
+      f.el.classList.remove('rp-error');
+    });
+  });
+
+  function validateField(key){
+    var f = fields[key];
+    var v = f.el.value.trim();
+    var err = f.validate(v);
+    f.err.textContent = err;
+    f.err.classList.toggle('show', !!err);
+    f.el.classList.toggle('rp-error', !!err && touched[key]);
+    f.el.classList.toggle('rp-valid', !err && v.length > 0);
+    if(f.ok) f.ok.classList.toggle('show', !err && v.length > 0);
+    return !err;
+  }
+
+  // ═══ Password strength ═══
+  g('rpPassword').addEventListener('input',function(){
+    var v = this.value;
+    var len = v.length;
+    var segs = [g('rpSeg1'),g('rpSeg2'),g('rpSeg3'),g('rpSeg4')];
+    var label = g('rpPwLabel');
+    var level = len===0?0:len<6?1:len<8?2:len<12?3:4;
+    var cls = ['','weak','ok','good','strong'];
+    var txt = ['','Svagt','OK','Bra','Starkt'];
+    var col = ['','#e24b4a','#e8a84c','#c9c14a','#1a9e68'];
+    segs.forEach(function(s,i){s.className='rp-pw-seg'+(i<level?' '+cls[level]:'')});
+    label.textContent = txt[level];
+    label.style.color = col[level];
+  });
+
+  // ═══ Password toggle ═══
+  g('rpPwToggle').addEventListener('click',function(){
+    var inp = g('rpPassword');
+    inp.type = inp.type==='password'?'text':'password';
+  });
+
+  // ═══ Terms checkbox ═══
+  g('rpTermsRow').addEventListener('click',function(e){
+    if(e.target.tagName==='A')return;
+    termsChecked = !termsChecked;
+    g('rpCheckbox').classList.toggle('checked',termsChecked);
+    g('rpCheckbox').classList.remove('rp-error');
+  });
+
+  // ═══ Submit ═══
+  g('rpCta').addEventListener('click', handleSubmit);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Enter' && !g('rpSuccess').classList.contains('show')) handleSubmit();
+  });
+
+  async function handleSubmit(){
+    var btn = g('rpCta');
+    if(btn.disabled) return;
+
+    Object.keys(fields).forEach(function(k){touched[k]=true});
+
+    var allValid = true;
+    var firstInvalid = null;
+    Object.keys(fields).forEach(function(k){
+      if(!validateField(k)){
+        allValid = false;
+        if(!firstInvalid) firstInvalid = fields[k].el;
+        fields[k].el.classList.add('rp-error');
+      }
+    });
+
+    if(!termsChecked){
+      allValid = false;
+      g('rpCheckbox').classList.add('rp-error');
+      if(!firstInvalid) firstInvalid = g('rpCheckbox');
+    }
+
+    if(!allValid){
+      if(firstInvalid && firstInvalid.focus) firstInvalid.focus();
+      return;
+    }
+
+    // Loading
+    btn.disabled = true;
+    g('rpCtaText').textContent = 'Skapar ert konto...';
+    g('rpCtaArrow').style.display = 'none';
+    var spinner = document.createElement('div');
+    spinner.className = 'rp-spinner';
+    spinner.id = 'rpSpinner';
+    btn.appendChild(spinner);
+
+    Object.keys(fields).forEach(function(k){fields[k].el.disabled=true});
+
+    var firstName = fields.firstName.el.value.trim();
+    var lastName = fields.lastName.el.value.trim();
+
+    try{
+      var res = await fetch('/api/auth/register',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          email: fields.email.el.value.trim(),
+          password: fields.password.el.value,
+          name: firstName + ' ' + lastName,
+          company_name: fields.company.el.value.trim(),
+          phone: ''
+        })
+      });
+      var data = await res.json();
+
+      if(data.token){
+        localStorage.setItem('rs_token', data.token);
+        localStorage.setItem('rs_user', JSON.stringify(data.user));
+        showSuccess();
+      } else {
+        resetBtn();
+        Object.keys(fields).forEach(function(k){fields[k].el.disabled=false});
+
+        if(res.status === 409){
+          fields.email.err.innerHTML = 'Den här mejlen är redan registrerad. <a href="/login.html" style="color:#c9a96e">Logga in istället &rarr;</a>';
+          fields.email.err.classList.add('show');
+          fields.email.el.classList.add('rp-error');
+          fields.email.el.focus();
+        } else {
+          showGlobalError(data.error || 'Något gick fel. Försök igen eller kontakta kontakt@bostadsuthyrning.se');
+        }
+      }
+    } catch(e){
+      resetBtn();
+      Object.keys(fields).forEach(function(k){fields[k].el.disabled=false});
+      showGlobalError('Kunde inte ansluta till servern. Försök igen.');
+    }
+  }
+
+  function resetBtn(){
+    var btn = g('rpCta');
+    btn.disabled = false;
+    g('rpCtaText').textContent = 'Skapa konto & aktivera 10% rabatt';
+    g('rpCtaArrow').style.display = '';
+    var sp = g('rpSpinner');
+    if(sp) sp.remove();
+  }
+
+  function showGlobalError(msg){
+    g('rpGlobalErrText').textContent = msg;
+    g('rpGlobalErr').classList.add('show');
+    setTimeout(function(){g('rpGlobalErr').classList.remove('show')},6000);
+  }
+
+  function showSuccess(){
+    var fc = g('rpFormContent');
+    fc.style.opacity = '0';
+    fc.style.transform = 'translateY(-8px)';
+    fc.style.transition = 'opacity .2s,transform .2s';
+    setTimeout(function(){
+      fc.style.display = 'none';
+      g('rpSuccess').classList.add('show');
+      var prog = g('rpProgress');
+      prog.style.display = 'block';
+      requestAnimationFrame(function(){prog.style.width = '100%'});
+      setTimeout(function(){window.location.href = '/portal.html'}, 2000);
+    }, 250);
+  }
+})();
+</script>
+</body>
+</html>

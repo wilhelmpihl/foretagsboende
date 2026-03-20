@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1"/>
+<title>Logga in — Företagsboende.se</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0f1923;--navy-mid:#1a2535;--navy-card:#1e2e3d;
+  --gold:#c9a96e;--gold-light:#e8d5a3;--gold-dark:#8a6520;--gold-muted:#b8a882;
+  --cream:#f5f2eb;--cream-dark:#eee9de;--white:#ffffff;
+  --text-dark:#1a1510;--text-muted:#888888;--text-faint:#aaaaaa;
+  --green:#1a9e68;--error:#e24b4a;--border:#e8e2d5;
+}
+body{font-family:'Jost',sans-serif;margin:0;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* ═══ LAYOUT ═══ */
+.lp-page{display:grid;grid-template-columns:52% 48%;min-height:100vh}
+
+/* ═══ LEFT PANEL ═══ */
+.lp-left{background:var(--navy);padding:52px;display:flex;flex-direction:column;position:relative;overflow:hidden;min-height:100vh}
+.lp-left::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.lp-left *{position:relative;z-index:1}
+.lp-logo{display:block;text-decoration:none;margin-bottom:52px}
+.lp-logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1)}
+.lp-logo-fallback{font-size:15px;font-weight:400;color:#fff;letter-spacing:.02em}
+.lp-logo-fallback::after{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-left:4px;vertical-align:middle}
+
+.lp-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.lp-eyebrow-line{width:20px;height:1px;background:var(--gold);flex-shrink:0}
+.lp-eyebrow-text{font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:3px;color:var(--gold)}
+
+.lp-headline{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;line-height:1.05;letter-spacing:-.02em;color:#fff}
+.lp-headline em{font-style:italic;color:var(--gold);display:block}
+
+.lp-body{margin-top:18px;font-size:15px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.5);max-width:340px}
+
+/* Stats row */
+.lp-stats{margin-top:40px;display:flex;align-items:center;gap:0}
+.lp-stat{padding:0 28px}
+.lp-stat:first-child{padding-left:0}
+.lp-stat:last-child{padding-right:0}
+.lp-stat-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;line-height:1}
+.lp-stat-label{font-size:11px;font-weight:300;color:rgba(255,255,255,.35);margin-top:4px;white-space:nowrap}
+.lp-stat-divider{width:1px;height:40px;background:rgba(201,169,110,.2);flex-shrink:0}
+
+/* Testimonial */
+.lp-testi{margin-top:auto;padding-top:40px;border-top:1px solid rgba(255,255,255,.07)}
+.lp-quote-mark{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(201,169,110,.25);line-height:0;display:block;margin-bottom:12px}
+.lp-quote{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:rgba(255,255,255,.8);line-height:1.6;max-width:380px}
+.lp-author{display:flex;align-items:center;gap:12px;margin-top:20px}
+.lp-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-card);border:1.5px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--gold);flex-shrink:0}
+.lp-author-name{font-size:14px;font-weight:500;color:#fff}
+.lp-author-title{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);margin-top:2px}
+.lp-stars{margin-left:auto;display:flex;gap:2px}
+.lp-stars svg{width:12px;height:12px;fill:var(--gold);stroke:none}
+
+/* BG photo */
+.lp-bg-photo{position:absolute;bottom:0;right:0;width:200px;height:240px;object-fit:cover;border-radius:16px 0 0 0;opacity:.25;z-index:0!important}
+.lp-bg-overlay{position:absolute;bottom:0;right:0;width:300px;height:300px;background:linear-gradient(to right,var(--navy) 0%,transparent 60%);z-index:0!important;pointer-events:none}
+
+/* ═══ RIGHT PANEL ═══ */
+.lp-right{background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px 80px;position:relative;overflow-y:auto;min-height:100vh}
+.lp-form{width:100%;max-width:420px}
+
+/* Back link */
+.lp-back{position:absolute;top:24px;left:24px;display:flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;font-weight:300;color:var(--text-faint);transition:color .15s}
+.lp-back:hover{color:var(--text-dark)}
+.lp-back svg{width:14px;height:14px}
+
+/* Tabs */
+.lp-tabs{width:100%;background:var(--white);border-radius:14px;padding:5px;display:grid;grid-template-columns:1fr 1fr;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:28px}
+.lp-tab{padding:13px;border-radius:10px;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:14px;font-weight:400;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text-muted);background:transparent}
+.lp-tab:hover{color:var(--text-dark)}
+.lp-tab-active{background:var(--navy);color:#fff;font-weight:500;box-shadow:0 2px 8px rgba(15,25,35,.2);pointer-events:none}
+
+/* Form heading */
+.lp-heading{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--text-dark);margin-bottom:6px}
+.lp-subheading{font-size:13px;font-weight:300;color:var(--text-faint);margin-bottom:28px}
+
+/* Fields */
+.lp-field{margin-bottom:16px}
+.lp-label{display:block;font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:2px;color:var(--text-faint);margin-bottom:6px}
+.lp-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.lp-forgot{font-size:12px;font-weight:300;color:var(--gold);text-decoration:none;transition:color .15s}
+.lp-forgot:hover{color:var(--gold-dark)}
+.lp-input-wrap{position:relative}
+.lp-input-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-faint)}
+.lp-input-icon svg{width:16px;height:16px}
+.lp-input{width:100%;padding:14px 14px 14px 42px;border:1px solid var(--border);border-radius:12px;font-family:'Jost',sans-serif;font-size:14px;color:var(--text-dark);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s}
+.lp-input::placeholder{color:#bbb}
+.lp-input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,169,110,.12)}
+.lp-input.lp-valid{border-color:rgba(26,158,104,.4)}
+.lp-input.lp-error{border-color:var(--error);box-shadow:0 0 0 4px rgba(226,75,74,.1);animation:lp-shake .3s ease}
+.lp-valid-check{position:absolute;right:14px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .2s;color:var(--green)}
+.lp-valid-check.show{opacity:1}
+.lp-valid-check svg{width:16px;height:16px}
+.lp-field-err{font-size:12px;color:var(--error);margin-top:5px;display:none}
+.lp-field-err.show{display:block}
+.lp-pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text-faint);padding:4px;transition:color .15s}
+.lp-pw-toggle:hover{color:var(--text-dark)}
+.lp-pw-toggle svg{width:16px;height:16px}
+
+@keyframes lp-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+
+/* Remember me */
+.lp-remember{display:flex;align-items:center;gap:10px;margin:16px 0 24px;cursor:pointer}
+.lp-checkbox{width:18px;height:18px;min-width:18px;border-radius:5px;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;cursor:pointer}
+.lp-checkbox.checked{background:var(--navy);border-color:var(--navy)}
+.lp-checkbox.checked svg{display:block}
+.lp-checkbox svg{width:11px;height:11px;stroke:#fff;stroke-width:2.5;fill:none;display:none}
+.lp-remember-text{font-size:13px;font-weight:300;color:#666}
+
+/* CTA — NAVY */
+.lp-cta{width:100%;padding:18px;background:var(--navy);color:#fff;border:none;border-radius:12px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:.5px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.lp-cta::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent)}
+.lp-cta:hover{background:var(--navy-mid);transform:translateY(-1px);box-shadow:0 8px 24px rgba(15,25,35,.3)}
+.lp-cta:active{transform:scale(.99)}
+.lp-cta:disabled{opacity:.85;cursor:not-allowed;transform:none;box-shadow:none}
+.lp-cta svg{width:16px;height:16px}
+.lp-cta-success{background:var(--green)!important}
+.lp-spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:lp-spin .7s linear infinite;flex-shrink:0}
+@keyframes lp-spin{to{transform:rotate(360deg)}}
+
+/* Error banner */
+.lp-error-banner{background:rgba(226,75,74,.06);border:.5px solid rgba(226,75,74,.25);border-radius:10px;padding:12px 14px;font-size:13px;font-weight:300;color:var(--error);display:none;align-items:center;gap:8px;margin-bottom:16px}
+.lp-error-banner.show{display:flex}
+.lp-error-banner svg{width:16px;height:16px;flex-shrink:0}
+
+/* Demo section */
+.lp-divider{display:flex;align-items:center;gap:12px;margin:24px 0 12px}
+.lp-divider-line{flex:1;height:1px;background:var(--border)}
+.lp-divider-text{font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:2px;color:var(--text-faint)}
+.lp-demos{display:flex;gap:8px}
+.lp-demo{flex:1;padding:12px 8px;background:var(--white);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:center;font-family:'Jost',sans-serif}
+.lp-demo:hover{border-color:var(--gold);box-shadow:0 2px 8px rgba(201,169,110,.15);transform:translateY(-1px)}
+.lp-demo:active{transform:scale(.98)}
+.lp-demo.selected{border-color:var(--gold);background:rgba(201,169,110,.04)}
+.lp-demo-badge{width:24px;height:24px;border-radius:6px;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff}
+.lp-demo-name{font-size:12px;font-weight:500;color:var(--text-dark)}
+.lp-demo-role{font-size:10px;font-weight:300;color:var(--text-faint);margin-top:2px}
+
+/* Register link */
+.lp-register{text-align:center;margin-top:20px;font-size:13px;font-weight:300;color:var(--text-faint)}
+.lp-register a{color:var(--gold);font-weight:400;text-decoration:none;transition:color .15s}
+.lp-register a:hover{color:var(--gold-dark);text-decoration:underline}
+
+/* Trust signals */
+.lp-trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:24px}
+.lp-trust-item{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:300;color:var(--text-faint)}
+.lp-trust-item svg{width:12px;height:12px;stroke:var(--text-faint);stroke-width:1.5;fill:none}
+
+/* Progress bar */
+.lp-progress{position:fixed;bottom:0;left:0;height:2px;background:var(--gold);width:0;transition:width 1.5s linear;z-index:999;display:none}
+
+/* ═══ ANIMATIONS ═══ */
+.lp-anim{opacity:0;transform:translateY(16px);transition:opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezier(.4,0,.2,1)}
+.lp-anim.vis{opacity:1;transform:translateY(0)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  .lp-page{grid-template-columns:1fr}
+  .lp-left{min-height:auto;padding:32px 24px 28px}
+  .lp-logo{margin-bottom:24px}
+  .lp-headline{font-size:36px}
+  .lp-testi,.lp-bg-photo,.lp-bg-overlay{display:none}
+  .lp-stat-num{font-size:26px}
+  .lp-stat{padding:0 16px}
+  .lp-stat-divider{height:28px}
+  .lp-stats{margin-top:28px}
+  .lp-right{min-height:auto;padding:32px 20px 80px;justify-content:flex-start}
+  .lp-back{position:static;margin-bottom:20px}
+  .lp-trust{position:static}
+}
+@media(max-width:480px){
+  .lp-left{padding:24px 20px 24px}
+  .lp-headline{font-size:30px}
+  .lp-body{font-size:14px}
+  .lp-stat-num{font-size:22px}
+  .lp-stat{padding:0 12px}
+  .lp-stat-label{font-size:10px}
+  .lp-right{padding:24px 16px 60px}
+  .lp-heading{font-size:26px}
+  .lp-tabs{border-radius:10px}
+  .lp-tab{padding:11px;font-size:13px}
+  .lp-input{font-size:16px;padding:12px 12px 12px 38px;border-radius:10px}
+  .lp-cta{padding:16px;font-size:13px;border-radius:10px}
+  .lp-demo{padding:10px 6px}
+  .lp-demo-name{font-size:11px}
+  .lp-demo-role{font-size:9px}
+  .lp-eyebrow-text{font-size:9px}
+}
+@media(max-width:360px){
+  .lp-headline{font-size:26px}
+  .lp-left{padding:20px 16px}
+  .lp-right{padding:20px 14px 48px}
+  .lp-heading{font-size:24px}
+  .lp-demos{flex-direction:column}
+  .lp-stat-num{font-size:20px}
+  .lp-stat{padding:0 10px}
+}
+</style>
+</head>
+<body>
+<div class="lp-page">
+
+<!-- ═══ LEFT PANEL ═══ -->
+<div class="lp-left">
+  <a href="/" class="lp-logo"><img src="/images/logo@2x.png" alt="Företagsboende.se" height="36" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/><span class="lp-logo-fallback" style="display:none">Företagsboende.se</span></a>
+
+  <div>
+    <div class="lp-eyebrow lp-anim"><div class="lp-eyebrow-line"></div><span class="lp-eyebrow-text">&mdash; VÄLKOMMEN TILLBAKA</span></div>
+    <h1 class="lp-headline lp-anim">Välkommen<em>tillbaka.</em></h1>
+    <p class="lp-body lp-anim">Era bokningar, era medarbetare och er kontaktperson väntar på er.</p>
+  </div>
+
+  <div class="lp-stats lp-anim">
+    <div class="lp-stat"><div class="lp-stat-num"><span id="lpStat1">0</span></div><div class="lp-stat-label">bostäder redo</div></div>
+    <div class="lp-stat-divider"></div>
+    <div class="lp-stat"><div class="lp-stat-num"><span id="lpStat2">0</span>h</div><div class="lp-stat-label">garanterad svarstid</div></div>
+    <div class="lp-stat-divider"></div>
+    <div class="lp-stat"><div class="lp-stat-num"><span id="lpStat3">0</span> kr</div><div class="lp-stat-label">deposition alltid</div></div>
+  </div>
+
+  <div class="lp-testi">
+    <span class="lp-quote-mark">&ldquo;</span>
+    <p class="lp-quote">Portalen sparar oss timmar varje vecka. Allt på ett ställe, alltid uppdaterat.</p>
+    <div class="lp-author">
+      <div class="lp-avatar">A</div>
+      <div><div class="lp-author-name">Anna Björk</div><div class="lp-author-title">Head of Operations &middot; Volvo Cars</div></div>
+      <div class="lp-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <img class="lp-bg-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80&auto=format" alt="" loading="lazy"/>
+  <div class="lp-bg-overlay"></div>
+</div>
+
+<!-- ═══ RIGHT PANEL ═══ -->
+<div class="lp-right">
+  <a href="/" class="lp-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Tillbaka till startsidan
+  </a>
+
+  <div class="lp-form">
+    <!-- Tabs -->
+    <div class="lp-tabs">
+      <span class="lp-tab lp-tab-active">Logga in</span>
+      <a href="/register.html" class="lp-tab">Skapa konto</a>
+    </div>
+
+    <!-- Heading -->
+    <div class="lp-heading">Logga in på ert konto</div>
+    <div class="lp-subheading">Era bokningar väntar.</div>
+
+    <!-- Error banner -->
+    <div class="lp-error-banner" id="lpErrBanner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span id="lpErrText"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="lp-field">
+      <label class="lp-label">E-POSTADRESS</label>
+      <div class="lp-input-wrap">
+        <span class="lp-input-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
+        <input class="lp-input" type="email" id="loginEmail" placeholder="er@foretag.se" autocomplete="email"/>
+        <div class="lp-valid-check" id="lpEmailOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
+      </div>
+      <div class="lp-field-err" id="lpEmailErr"></div>
+    </div>
+
+    <!-- Password -->
+    <div class="lp-field">
+      <div class="lp-label-row">
+        <label class="lp-label" style="margin-bottom:0">LÖSENORD</label>
+        <a href="#" class="lp-forgot">Glömt lösenord?</a>
+      </div>
+      <div class="lp-input-wrap">
+        <span class="lp-input-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+        <input class="lp-input" type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" style="padding-right:42px"/>
+        <button type="button" class="lp-pw-toggle" id="lpPwToggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+      <div class="lp-field-err" id="lpPasswordErr"></div>
+    </div>
+
+    <!-- Remember me -->
+    <div class="lp-remember" id="lpRememberRow">
+      <div class="lp-checkbox" id="lpCheckbox"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <span class="lp-remember-text">Kom ihåg mig i 30 dagar</span>
+    </div>
+
+    <!-- CTA -->
+    <button class="lp-cta" id="lpCta" type="button">
+      <span id="lpCtaText">Logga in</span>
+      <svg id="lpCtaArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+    </button>
+
+    <!-- Demo accounts -->
+    <div class="lp-divider">
+      <div class="lp-divider-line"></div>
+      <span class="lp-divider-text">TESTA MED DEMOKONTO</span>
+      <div class="lp-divider-line"></div>
+    </div>
+    <div class="lp-demos">
+      <button class="lp-demo" data-email="hr@volvocars.com" data-pw="volvo123">
+        <div class="lp-demo-badge" style="background:#003399">V</div>
+        <div class="lp-demo-name">Volvo Cars</div>
+        <div class="lp-demo-role">HR Manager</div>
+      </button>
+      <button class="lp-demo" data-email="demo@company.se" data-pw="demo123">
+        <div class="lp-demo-badge" style="background:#002868">E</div>
+        <div class="lp-demo-name">Ericsson</div>
+        <div class="lp-demo-role">Project Lead</div>
+      </button>
+      <button class="lp-demo" data-email="admin@residence.se" data-pw="admin123">
+        <div class="lp-demo-badge" style="background:#0f1923;color:#c9a96e">A</div>
+        <div class="lp-demo-name">Admin</div>
+        <div class="lp-demo-role">Superhost</div>
+      </button>
+    </div>
+
+    <!-- Register link -->
+    <div class="lp-register">Inget konto? <a href="/register.html">Registrera ert företag kostnadsfritt &rarr;</a></div>
+
+    <!-- Trust -->
+    <div class="lp-trust">
+      <span class="lp-trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SSL-skyddad</span>
+      <span class="lp-trust-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>GDPR-anpassad</span>
+      <span class="lp-trust-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>200+ företag</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="lp-progress" id="lpProgress"></div>
+
+<script>
+(function(){
+  // ═══ Animations ═══
+  var anims = document.querySelectorAll('.lp-anim');
+  requestAnimationFrame(function(){
+    anims.forEach(function(el,i){
+      setTimeout(function(){el.classList.add('vis')}, 100 + i * 100);
+    });
+  });
+
+  // ═══ Count-up stats ═══
+  var targets = [{el:document.getElementById('lpStat1'),val:173},{el:document.getElementById('lpStat2'),val:24},{el:document.getElementById('lpStat3'),val:0}];
+  setTimeout(function(){
+    targets.forEach(function(t,i){
+      setTimeout(function(){
+        if(t.val===0){t.el.textContent='0';return}
+        var start=0,dur=1200,startTime=null;
+        function step(ts){
+          if(!startTime)startTime=ts;
+          var p=Math.min((ts-startTime)/dur,1);
+          var ease=1-Math.pow(1-p,3);
+          t.el.textContent=Math.round(ease*t.val);
+          if(p<1)requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }, i*150);
+    });
+  }, 500);
+
+  // ═══ State ═══
+  var g=function(id){return document.getElementById(id)};
+  var rememberChecked = false;
+  var emailTouched = false;
+
+  // ═══ Auto-focus email ═══
+  setTimeout(function(){g('loginEmail').focus()},400);
+
+  // ═══ Email validation on blur ═══
+  g('loginEmail').addEventListener('blur',function(){
+    emailTouched=true;
+    var v=this.value.trim();
+    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    this.classList.toggle('lp-valid', valid && v.length>0);
+    g('lpEmailOk').classList.toggle('show', valid && v.length>0);
+  });
+  g('loginEmail').addEventListener('input',function(){
+    this.classList.remove('lp-error');
+    g('lpEmailErr').classList.remove('show');
+    if(emailTouched){
+      var v=this.value.trim();
+      var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      this.classList.toggle('lp-valid', valid && v.length>0);
+      g('lpEmailOk').classList.toggle('show', valid && v.length>0);
+    }
+  });
+
+  g('loginPassword').addEventListener('input',function(){
+    this.classList.remove('lp-error');
+    g('lpPasswordErr').classList.remove('show');
+  });
+
+  // ═══ Password toggle ═══
+  g('lpPwToggle').addEventListener('click',function(){
+    var inp=g('loginPassword');
+    inp.type = inp.type==='password'?'text':'password';
+  });
+
+  // ═══ Remember checkbox ═══
+  g('lpRememberRow').addEventListener('click',function(){
+    rememberChecked=!rememberChecked;
+    g('lpCheckbox').classList.toggle('checked',rememberChecked);
+  });
+
+  // ═══ Demo accounts ═══
+  var demos = document.querySelectorAll('.lp-demo');
+  demos.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var email=this.dataset.email;
+      var pw=this.dataset.pw;
+      var emailEl=g('loginEmail');
+      var pwEl=g('loginPassword');
+
+      // Visual select
+      demos.forEach(function(d){d.classList.remove('selected')});
+      this.classList.add('selected');
+
+      // Fill with highlight flash
+      emailEl.value=email;
+      pwEl.value=pw;
+      emailEl.style.background='#fffbf2';
+      pwEl.style.background='#fffbf2';
+      setTimeout(function(){
+        emailEl.style.background='';
+        pwEl.style.background='';
+      },400);
+
+      // Mark email valid
+      emailEl.classList.add('lp-valid');
+      g('lpEmailOk').classList.add('show');
+
+      // Focus CTA after delay
+      setTimeout(function(){g('lpCta').focus()},300);
+    });
+  });
+
+  // ═══ Submit ═══
+  g('lpCta').addEventListener('click', handleLogin);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Enter') handleLogin();
+  });
+
+  async function handleLogin(){
+    var btn=g('lpCta');
+    if(btn.disabled)return;
+
+    var email=g('loginEmail').value.trim();
+    var password=g('loginPassword').value;
+
+    // Clear previous errors
+    g('lpErrBanner').classList.remove('show');
+    g('lpEmailErr').classList.remove('show');
+    g('lpPasswordErr').classList.remove('show');
+    g('loginEmail').classList.remove('lp-error');
+    g('loginPassword').classList.remove('lp-error');
+
+    // Validate
+    var valid=true;
+    if(!email){
+      g('lpEmailErr').textContent='Ange e-postadress';
+      g('lpEmailErr').classList.add('show');
+      g('loginEmail').classList.add('lp-error');
+      g('loginEmail').focus();
+      valid=false;
+    }
+    if(!password){
+      g('lpPasswordErr').textContent='Ange lösenord';
+      g('lpPasswordErr').classList.add('show');
+      g('loginPassword').classList.add('lp-error');
+      if(valid) g('loginPassword').focus();
+      valid=false;
+    }
+    if(!valid) return;
+
+    // Loading
+    btn.disabled=true;
+    g('lpCtaText').textContent='Loggar in...';
+    g('lpCtaArrow').style.display='none';
+    var spinner=document.createElement('div');
+    spinner.className='lp-spinner';
+    spinner.id='lpSpinner';
+    btn.appendChild(spinner);
+
+    try{
+      var res = await fetch('/api/auth/login',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({email:email,password:password})
+      });
+      var data = await res.json();
+
+      if(data.token){
+        localStorage.setItem('rs_token',data.token);
+        localStorage.setItem('rs_user',JSON.stringify(data.user));
+
+        // Success state
+        var sp=g('lpSpinner'); if(sp)sp.remove();
+        btn.classList.add('lp-cta-success');
+        g('lpCtaText').textContent='Inloggad — välkommen tillbaka!';
+        g('lpCtaArrow').style.display='';
+        g('lpCtaArrow').innerHTML='<path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+
+        // Progress bar
+        var prog=g('lpProgress');
+        prog.style.display='block';
+        requestAnimationFrame(function(){prog.style.width='100%'});
+
+        setTimeout(function(){
+          window.location.href='/portal.html';
+        },1500);
+      } else {
+        resetBtn();
+        showError(data.error||'Fel uppgifter. Försök igen.');
+      }
+    } catch(e){
+      resetBtn();
+      showError('Kunde inte ansluta till servern. Försök igen.');
+    }
+  }
+
+  function resetBtn(){
+    var btn=g('lpCta');
+    btn.disabled=false;
+    btn.classList.remove('lp-cta-success');
+    g('lpCtaText').textContent='Logga in';
+    g('lpCtaArrow').style.display='';
+    g('lpCtaArrow').innerHTML='<path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+    var sp=g('lpSpinner'); if(sp)sp.remove();
+  }
+
+  function showError(msg){
+    g('lpErrText').textContent=msg;
+    g('lpErrBanner').classList.add('show');
+    setTimeout(function(){g('lpErrBanner').classList.remove('show')},5000);
+  }
+})();
+</script>
+</body>
+</html>

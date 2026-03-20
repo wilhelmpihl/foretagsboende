@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Företagsboende.se — Företagsbostäder i Göteborg</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0e0c;--paper:#f5f2ec;--warm:#e8e2d6;
+  --gold:#b89a6a;--gold-light:#d4b88a;--gold-pale:#f0e8d8;
+  --muted:#8a8278;--surface:#fffdf9;--border:#e0dbd2;
+  --navy:#0D1527;--navy2:#142040;
+  --green:#1a7a4a;--red:#c0392b;--amber:#d97706;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:200;display:flex;align-items:center;justify-content:center;gap:36px;background:rgba(245,242,236,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:100px;padding:12px 32px;white-space:nowrap;box-shadow:0 8px 40px rgba(15,14,12,0.08);max-width:calc(100% - 40px)}
+.nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:32px;width:auto;display:block}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:12.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-size:12.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--navy);padding:10px 22px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s}
+.nav-cta:hover{background:var(--gold);transform:translateY(-1px)}
+@media(max-width:768px){.nav-links{display:none}.nav{gap:16px;padding:12px 20px}}
+
+/* HERO */
+.hero{position:relative;min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.52) saturate(.7)}
+.hero-bg-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,9,7,.93) 0%,rgba(10,9,7,.7) 45%,rgba(10,9,7,.3) 100%),linear-gradient(to top,rgba(10,9,7,.55) 0%,transparent 60%)}
+.hero-left{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:140px 52px 80px 80px}
+.hero-tag{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-tag::before{content:'';display:block;width:28px;height:1px;background:var(--gold-light)}
+.hero-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.2vw,80px);font-weight:300;line-height:.95;letter-spacing:-.02em;color:#fff;margin-bottom:28px}
+.hero-heading em{font-style:italic;color:var(--gold-light)}
+.hero-body{font-size:15.5px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.58);max-width:390px;margin-bottom:40px}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.btn-primary{font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--gold-light);padding:15px 34px;border-radius:100px;text-decoration:none;transition:background .25s,transform .25s;display:inline-block}
+.btn-primary:hover{background:#fff;transform:translateY(-2px)}
+.btn-ghost{font-size:13px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.5);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
+.btn-ghost:hover{color:#fff}
+.btn-ghost::after{content:'→';transition:transform .2s}
+.btn-ghost:hover::after{transform:translateX(4px)}
+.hero-mini-stats{display:flex;gap:24px;margin-top:52px;padding-top:36px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.hero-mini-stat .num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#fff;line-height:1}
+.hero-mini-stat .num sup{font-size:13px;color:var(--gold-light)}
+.hero-mini-stat .lbl{font-size:11px;color:rgba(255,255,255,.35);margin-top:4px;letter-spacing:.04em}
+.hero-widget-col{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:120px 80px 60px 32px}
+#enterprise-booking-widget{width:100%;max-width:470px;filter:drop-shadow(0 32px 72px rgba(0,0,0,.5))}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-left{padding:110px 24px 36px}.hero-widget-col{padding:0 24px 60px;justify-content:stretch}#enterprise-booking-widget{max-width:100%}}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);padding:22px 0;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.15)}
+.trust-inner{display:flex;align-items:center;gap:0}
+.trust-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);white-space:nowrap;padding:0 48px 0 48px;flex-shrink:0}
+.trust-scroll{display:flex;gap:0;overflow:hidden;flex:1}
+.trust-track{display:flex;gap:0;animation:trustScroll 28s linear infinite;width:max-content}
+.trust-track:hover{animation-play-state:paused}
+.trust-logo{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;letter-spacing:.08em;color:rgba(255,255,255,.35);padding:0 40px;white-space:nowrap;transition:color .3s}
+.trust-logo:hover{color:rgba(201,168,76,.8)}
+@keyframes trustScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* HOW IT WORKS */
+.section{padding:120px 80px}
+.section-label{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.section-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4vw,58px);font-weight:300;line-height:1.05;letter-spacing:-.02em;color:var(--ink);max-width:600px}
+.section-heading em{font-style:italic;color:var(--gold)}
+.section-sub{font-size:15px;font-weight:300;line-height:1.7;color:var(--muted);max-width:520px;margin-top:20px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:72px;background:var(--border);border-radius:20px;overflow:hidden}
+.step{background:var(--surface);padding:52px 44px;position:relative;transition:background .3s}
+.step:hover{background:var(--paper)}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;line-height:.8;color:var(--gold-pale);letter-spacing:-.04em;margin-bottom:32px;display:block}
+.step-icon{width:48px;height:48px;background:var(--gold-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.step-icon svg{width:22px;height:22px;color:var(--gold)}
+.step h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:12px}
+.step p{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted)}
+.step-connector{position:absolute;top:52px;right:-1px;width:2px;height:48px;background:linear-gradient(to bottom,var(--gold),transparent)}
+@media(max-width:768px){.steps{grid-template-columns:1fr}.section{padding:80px 24px}}
+
+/* ═══ WHAT'S INCLUDED — TABBED SECTION ═══ */
+.wic-section{position:relative;background:#080F1A;padding:120px 0 140px;overflow:hidden}
+.wic-bg-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse 800px 500px at 50% 0%,rgba(201,160,120,0.05) 0%,transparent 70%);pointer-events:none}
+.wic-bottom-fade{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to bottom,transparent,rgba(201,160,120,0.03));pointer-events:none}
+.wic-container{position:relative;max-width:1200px;margin:0 auto;padding:0 40px}
+/* Header */
+.wic-header{text-align:center;max-width:680px;margin:0 auto}
+.wic-eyebrow{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px}
+.wic-eyebrow-line{width:24px;height:1px;background:#C9A078}
+.wic-eyebrow-text{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#C9A078}
+.wic-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4.5vw,56px);font-weight:600;color:#F0EBE3;line-height:1.1;margin:0 0 16px}
+.wic-subline{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,38px);font-weight:400;font-style:italic;color:#C9A078;margin:0 0 24px}
+.wic-body{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;color:#8A9BB5;line-height:1.7;max-width:480px;margin:0 auto}
+/* Tabs */
+.wic-tabs-wrap{margin-top:64px;display:flex;justify-content:center;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.wic-tabs-wrap::-webkit-scrollbar{display:none}
+.wic-tabs{display:inline-flex;gap:8px;padding:0 2px}
+.wic-tab{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;padding:10px 24px;border-radius:100px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#8A9BB5;cursor:pointer;transition:all 200ms ease;white-space:nowrap;outline:none;position:relative}
+.wic-tab:hover{border-color:rgba(201,160,120,0.18);color:#F0EBE3;background:rgba(240,235,227,0.04)}
+.wic-tab--active{background:#1A2D45;border-color:rgba(201,160,120,0.3);color:#F0EBE3;box-shadow:0 0 0 1px rgba(201,160,120,0.15),0 4px 24px rgba(0,0,0,0.3)}
+.wic-tab--active::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:#C9A078}
+.wic-tab:focus-visible{outline:2px solid rgba(201,160,120,0.4);outline-offset:2px}
+/* Grid */
+.wic-grid{margin-top:60px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;background:rgba(201,160,120,0.18)}
+.wic-grid-inner{display:contents}
+/* Card */
+.wic-card{background:#080F1A;padding:48px;transition:background 250ms cubic-bezier(0.4,0,0.2,1);cursor:default;position:relative}
+.wic-card:hover{background:#111E2E}
+.wic-card:nth-child(1){border-right:1px solid rgba(201,160,120,0.18);border-bottom:1px solid rgba(201,160,120,0.18)}
+.wic-card:nth-child(2){border-bottom:1px solid rgba(201,160,120,0.18)}
+.wic-card:nth-child(3){border-right:1px solid rgba(201,160,120,0.18)}
+/* Icon badge */
+.wic-badge{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#162438,#0F1C2E);border:1px solid rgba(201,160,120,0.2);display:flex;align-items:center;justify-content:center;transition:box-shadow 250ms ease,transform 250ms ease,filter 250ms ease;flex-shrink:0}
+.wic-badge svg{width:22px;height:22px;color:#C9A078;stroke:#C9A078}
+.wic-card:hover .wic-badge{box-shadow:0 0 20px rgba(201,160,120,0.2);transform:translateY(-3px);filter:drop-shadow(0 0 8px rgba(201,160,120,0.4))}
+/* Card text */
+.wic-card-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#F0EBE3;margin-top:24px;line-height:1.2;transition:transform 250ms cubic-bezier(0.4,0,0.2,1)}
+.wic-card:hover .wic-card-title{transform:translateY(-2px)}
+.wic-card-body{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:#8A9BB5;margin-top:12px;line-height:1.65}
+.wic-card-label{display:inline-block;margin-top:28px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#C9A078;opacity:0.7;text-decoration:none;position:relative;transition:opacity 250ms ease}
+.wic-card:hover .wic-card-label{opacity:1}
+.wic-card-label::after{content:'';position:absolute;bottom:-3px;left:0;width:100%;height:1px;background:#C9A078;transform:scaleX(0);transform-origin:left;transition:transform 200ms cubic-bezier(0.4,0,0.2,1)}
+.wic-card:hover .wic-card-label::after{transform:scaleX(1)}
+/* Animate states */
+.wic-animate{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.wic-animate.wic-visible{opacity:1;transform:translateY(0)}
+/* Card enter/exit animations */
+.wic-card{opacity:0;transform:translateY(12px)}
+.wic-card.wic-card-visible{opacity:1;transform:translateY(0);transition:opacity 0.25s ease,transform 0.25s ease,background 250ms cubic-bezier(0.4,0,0.2,1)}
+.wic-card.wic-card-exit{opacity:0;transform:translateY(-8px);transition:opacity 0.15s ease,transform 0.15s ease}
+/* Responsive */
+@media(max-width:1024px){.wic-container{padding:0 24px}.wic-card{padding:36px}}
+@media(max-width:768px){
+  .wic-section{padding:80px 0 100px}
+  .wic-grid{grid-template-columns:1fr;background:transparent;gap:0}
+  .wic-card{border:none!important;border-bottom:1px solid rgba(201,160,120,0.18)!important;padding:32px}
+  .wic-card:last-child{border-bottom:none!important}
+  .wic-headline{font-size:38px}
+  .wic-subline{font-size:26px}
+}
+
+/* ═══ PROPERTY SLIDER ═══ */
+.fb-slider-section{padding:72px 0 56px;background:var(--paper);overflow:hidden}
+.fb-container{max-width:1240px;margin:0 auto;padding:0 80px}
+.fb-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;gap:16px;flex-wrap:wrap}
+.fb-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fb-eyebrow-line{width:24px;height:1px;background:#c9a96e}
+.fb-eyebrow-text{font-family:'Jost',sans-serif;font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:3px;color:#b8a882}
+.fb-headline{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:#1a1510;line-height:1.1}
+.fb-headline em{font-style:italic;color:#c9a96e;font-weight:300}
+.fb-view-all{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:2.5px;color:#8a6520;border:none;background:none;border-bottom:.5px solid #c9a96e;padding-bottom:2px;cursor:pointer;transition:opacity 150ms;align-self:flex-end;padding-bottom:8px;white-space:nowrap}
+.fb-view-all:hover{opacity:.65}
+.fb-track{display:flex;overflow-x:scroll;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:16px;padding:8px 4px 8px;margin:0 -4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+.fb-track::-webkit-scrollbar{display:none}
+@keyframes fb-shimmer{0%{background-position:-600px 0}100%{background-position:600px 0}}
+.fb-skeleton{background:linear-gradient(90deg,#e8e3da 25%,#ddd8ce 50%,#e8e3da 75%);background-size:1200px 100%;animation:fb-shimmer 1.6s infinite linear;border-radius:14px}
+.fb-skel-card{width:260px;flex-shrink:0;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.fb-skel-img{height:180px}
+.fb-skel-body{padding:16px}
+.fb-skel-line{border-radius:4px;margin-bottom:10px}
+.fb-card{width:260px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.07);overflow:hidden;cursor:pointer;transition:transform 250ms cubic-bezier(.4,0,.2,1),box-shadow 250ms cubic-bezier(.4,0,.2,1),opacity 350ms cubic-bezier(.4,0,.2,1)}
+.fb-card.fb-entering{opacity:0;transform:translateY(12px)}
+.fb-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.13)}
+.fb-card-image{height:180px;position:relative;overflow:hidden;background:linear-gradient(145deg,#1e2e3d,#0f1923)}
+.fb-card-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 500ms cubic-bezier(.4,0,.2,1)}
+.fb-card:hover .fb-card-image img{transform:scale(1.05)}
+.fb-photo-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.fb-photo-fallback svg{width:32px;height:32px;color:#c9a96e;opacity:.5}
+.fb-badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:20px;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;background:rgba(0,0,0,.58);color:#fff}
+.fb-card-body{padding:16px 16px 18px}
+.fb-card-location{font-family:'Jost',sans-serif;font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:2px;color:#b8a882;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fb-card-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#1a1510;line-height:1.25;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fb-card-meta{display:flex;gap:12px;align-items:center;font-family:'Jost',sans-serif;font-size:11px;font-weight:300;color:#aaa}
+.fb-card-meta span{display:flex;align-items:center;gap:3px}
+.fb-card-meta svg{width:12px;height:12px}
+.fb-card-divider{height:1px;background:#f0ece4;margin:13px 0}
+.fb-card-footer{display:flex;justify-content:space-between;align-items:center}
+.fb-price-from{font-family:'Jost',sans-serif;font-size:11px;color:#aaa}
+.fb-price-value{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#1a1510}
+.fb-card-avail{display:flex;align-items:center;gap:5px;font-family:'Jost',sans-serif;font-size:11px;font-weight:300;color:#1a9e68}
+.fb-avail-dot{width:7px;height:7px;border-radius:50%;background:#1a9e68;flex-shrink:0}
+.fb-locked-card{width:260px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;background:linear-gradient(160deg,#1a2535,#0f1923);border:1px solid rgba(201,169,110,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;text-align:center;cursor:pointer;min-height:320px;transition:border-color 250ms cubic-bezier(.4,0,.2,1)}
+.fb-locked-card:hover{border-color:rgba(201,169,110,.4)}
+.fb-lock-icon{width:56px;height:56px;border-radius:50%;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:transform 300ms cubic-bezier(.34,1.56,.64,1)}
+.fb-locked-card:hover .fb-lock-icon{transform:scale(1.08) rotate(-5deg)}
+.fb-lock-icon svg{width:22px;height:22px;color:#c9a96e}
+.fb-locked-count{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#fff}
+.fb-locked-sub{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(255,255,255,.4);margin:8px 0 24px}
+.fb-locked-cta{background:#e8d5a3;color:#8a6520;border:none;border-radius:8px;padding:11px 22px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;cursor:pointer;transition:background 150ms}
+.fb-locked-cta:hover{background:#dfc98a}
+.fb-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.fb-dots{display:flex;gap:6px;align-items:center}
+.fb-dot{width:6px;height:6px;border-radius:3px;background:#d5cfc4;cursor:pointer;transition:width 250ms cubic-bezier(.4,0,.2,1),background 250ms cubic-bezier(.4,0,.2,1);border:none;padding:0}
+.fb-dot.fb-dot-active{width:18px;background:#c9a96e}
+.fb-arrows{display:flex;gap:8px}
+.fb-arrow{width:36px;height:36px;border-radius:50%;border:1px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color 150ms,color 150ms;color:#888}
+.fb-arrow:hover{border-color:#c9a96e;color:#c9a96e}
+.fb-arrow:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+.fb-arrow svg{width:16px;height:16px}
+.fb-gate{max-height:0;opacity:0;overflow:hidden;background:#eee9de;border-top:1px solid #e0d9ce;transition:max-height 380ms cubic-bezier(.4,0,.2,1),opacity 280ms cubic-bezier(.4,0,.2,1),padding 280ms cubic-bezier(.4,0,.2,1);padding:0 24px;position:relative}
+.fb-gate.fb-gate-open{max-height:500px;opacity:1;padding:52px 24px}
+.fb-gate-inner{max-width:460px;margin:0 auto;text-align:center}
+.fb-gate-close{position:absolute;top:16px;right:20px;background:none;border:none;cursor:pointer;color:#aaa;transition:color 150ms}
+.fb-gate-close:hover{color:#1a1510}
+.fb-gate-close svg{width:18px;height:18px}
+@media(max-width:640px){.fb-container{padding:0 24px}.fb-header{flex-direction:column;align-items:flex-start;gap:12px}.fb-headline{font-size:38px}.fb-card,.fb-skel-card,.fb-locked-card{width:240px}.fb-arrows{display:none}.fb-slider-section{padding:48px 0 36px}}
+
+/* ═══ HERO SEARCH WIDGET ═══ */
+.fb-hero{background:#0f1923;width:100%;padding:72px 24px 64px}
+.fb-hero-inner{max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center}
+.fb-reveal{opacity:0;transform:translateY(20px);transition:opacity 550ms cubic-bezier(.4,0,.2,1),transform 550ms cubic-bezier(.4,0,.2,1)}
+.fb-reveal.fb-revealed{opacity:1;transform:translateY(0)}
+.fb-proof-bar{display:flex;align-items:center;gap:10px;margin-bottom:22px;flex-wrap:wrap;justify-content:center}
+.fb-avatars{display:flex}
+.fb-avatar{width:28px;height:28px;border-radius:50%;background:#1e2e3d;border:2px solid #0f1923;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;color:#c9a96e}
+.fb-avatar+.fb-avatar{margin-left:-8px}
+.fb-proof-text{font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
+.fb-proof-text strong{font-weight:500;color:#fff}
+.fb-stars{display:flex;gap:2px;margin-left:4px}
+.fb-stars svg{width:12px;height:12px;fill:#c9a96e;stroke:none}
+.fb-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,110,.08);border:.5px solid rgba(201,169,110,.22);border-radius:20px;padding:8px 16px;margin-bottom:22px}
+@keyframes fb-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.fb-pulse-dot{width:6px;height:6px;border-radius:50%;background:#c9a96e;animation:fb-pulse 2s infinite}
+.fb-pill-text{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(201,169,110,.85)}
+.fb-hero-headline{margin-bottom:14px}
+.fb-hero-headline span{display:block;font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;line-height:1.05;color:#fff}
+.fb-hero-headline em{display:block;font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;font-style:italic;line-height:1.05;color:#c9a96e}
+.fb-hero-sub{font-family:'Jost',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:32px}
+.fb-hero-sub strong{color:#fff;font-weight:500}
+.fb-widget{width:100%;max-width:640px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.05);margin-bottom:30px}
+.fb-tabs{background:#f4f2ee;padding:6px;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.fb-tab{padding:12px 16px;border-radius:10px;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:13px;font-weight:400;display:flex;align-items:center;justify-content:center;gap:7px;transition:all 150ms cubic-bezier(.4,0,.2,1);background:transparent;color:#999}
+.fb-tab svg{width:14px;height:14px}
+.fb-tab.fb-tab-active{background:#0f1923;color:#fff;font-weight:500;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.fb-widget-body{padding:22px 20px 20px}
+.fb-tab-content{display:none}
+.fb-tab-content.fb-tab-visible{display:block}
+.fb-fields{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.fb-field{border:.5px solid #e8e8e8;border-radius:10px;padding:13px 14px;cursor:pointer;transition:border-color 150ms,box-shadow 150ms;background:#fff;position:relative}
+.fb-field:hover{border-color:rgba(15,25,35,.4)}
+.fb-field:focus-within{border-color:#0f1923;box-shadow:0 0 0 3px rgba(15,25,35,.07)}
+.fb-field-label{font-family:'Jost',sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#aaa;display:block;margin-bottom:3px}
+.fb-field-value{font-family:'Jost',sans-serif;font-size:13px;color:#ccc}
+.fb-field-value.fb-has-value{color:#1a1510}
+.fb-field select,.fb-field input[type=date]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;font-size:16px}
+.fb-cta{width:100%;background:#e8d5a3;color:#8a6520;border:none;border-radius:10px;padding:17px;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:2px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:background 150ms,transform 150ms}
+.fb-cta:hover{background:#dfc98a}
+.fb-cta:active{transform:scale(.99)}
+.fb-cta svg{width:15px;height:15px}
+.fb-trust-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:12px;font-family:'Jost',sans-serif;font-size:11px;font-weight:300}
+.fb-trust-green{color:#1a9e68}
+.fb-trust-muted{color:#aaa}
+.fb-welcome{background:#fffbf2;border:.5px solid #f0d89a;border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:12px}
+.fb-welcome-text{font-family:'Jost',sans-serif;font-size:12px;font-weight:500;color:#5a3e1b;line-height:1.4}
+.fb-welcome-sub{font-family:'Jost',sans-serif;font-size:11px;font-weight:300;color:#8a6520;margin-top:2px}
+.fb-welcome-badge{flex-shrink:0;background:#f0d89a;color:#5a3e1b;border-radius:20px;padding:5px 12px;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;white-space:nowrap}
+.fb-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fb-input{border:.5px solid #e8e8e8;border-radius:10px;padding:14px;font-family:'Jost',sans-serif;font-size:13px;color:#1a1510;width:100%;outline:none;transition:border-color 150ms,box-shadow 150ms}
+.fb-input::placeholder{color:#bbb}
+.fb-input:focus{border-color:#0f1923;box-shadow:0 0 0 3px rgba(15,25,35,.07)}
+.fb-input.fb-input-error{border-color:#e24b4a!important;box-shadow:0 0 0 3px rgba(226,75,74,.1)!important;animation:fb-shake 300ms ease}
+@keyframes fb-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.fb-success{text-align:center;padding:10px 0 20px}
+.fb-check-badge{width:56px;height:56px;border-radius:50%;background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.fb-check-badge svg{width:24px;height:24px;color:#c9a96e}
+.fb-proof-stats{width:100%;max-width:640px;display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:36px}
+.fb-stat-cell{display:flex;flex-direction:column;align-items:center;gap:7px;padding:0 12px;border-right:.5px solid rgba(255,255,255,.07)}
+.fb-stat-cell:last-child{border-right:none}
+.fb-stat-num{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#fff}
+.fb-stat-label{display:flex;align-items:center;gap:5px;font-family:'Jost',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,.28)}
+.fb-stat-label svg{width:11px;height:11px;stroke:#c9a96e;stroke-width:1.5;fill:none}
+.fb-referral{width:100%;max-width:640px;display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:.5px solid rgba(255,255,255,.07);gap:16px;flex-wrap:wrap}
+.fb-referral-text{max-width:300px;font-family:'Jost',sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,.72);line-height:1.5}
+.fb-referral-sub{font-family:'Jost',sans-serif;font-size:11px;font-weight:300;color:rgba(255,255,255,.3);margin-top:3px}
+.fb-referral-btn{background:#e8d5a3;color:#8a6520;border:none;border-radius:8px;padding:12px 18px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;display:flex;align-items:center;gap:7px;cursor:pointer;white-space:nowrap;transition:background 150ms,transform 150ms;text-decoration:none}
+.fb-referral-btn:hover{background:#dfc98a}
+.fb-referral-btn:active{transform:scale(.98)}
+.fb-referral-btn svg{width:13px;height:13px}
+.fb-spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(138,101,32,.3);border-top-color:#8a6520;border-radius:50%;animation:fb-spin 1s linear infinite}
+@keyframes fb-spin{to{transform:rotate(360deg)}}
+@keyframes fb-check-in{from{transform:scale(.3) rotate(-45deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+@media(max-width:640px){.fb-hero-headline span,.fb-hero-headline em{font-size:38px}.fb-fields{grid-template-columns:1fr}.fb-proof-stats{grid-template-columns:repeat(2,1fr)}.fb-stat-cell:nth-child(1),.fb-stat-cell:nth-child(2){border-bottom:.5px solid rgba(255,255,255,.07);padding-bottom:16px;margin-bottom:8px}.fb-stat-cell:nth-child(2){border-right:none}.fb-referral{flex-direction:column}.fb-referral-btn{width:100%;justify-content:center}.fb-input-grid{grid-template-columns:1fr}}
+
+/* TESTIMONIALS */
+.testimonials-section{padding:120px 80px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.testi-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px 36px;transition:transform .3s,box-shadow .3s}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 20px 56px rgba(15,14,12,.08)}
+.testi-stars{color:var(--gold);font-size:14px;margin-bottom:20px}
+.testi-quote{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;line-height:1.55;color:var(--ink);margin-bottom:28px;font-style:italic}
+.testi-quote::before{content:'\201C';font-size:48px;line-height:.6;display:block;color:var(--gold);margin-bottom:8px}
+.testi-author{display:flex;align-items:center;gap:14px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--gold-pale);border:2px solid var(--border);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold)}
+.testi-info .name{font-size:13.5px;font-weight:500;color:var(--ink)}
+.testi-info .role{font-size:12px;color:var(--muted);margin-top:2px}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr}.testimonials-section{padding:80px 24px}}
+
+/* STATS */
+.stats-section{background:var(--gold-pale);padding:80px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border-radius:16px;overflow:hidden}
+.stat-item{background:var(--gold-pale);padding:48px 40px;text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,4vw,64px);font-weight:300;line-height:1;color:var(--ink);letter-spacing:-.03em}
+.stat-num span{color:var(--gold)}
+.stat-label{font-size:13px;font-weight:400;color:var(--muted);margin-top:8px}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stats-section{padding:60px 24px}}
+
+/* FAQ */
+.faq-section{padding:120px 80px}
+.faq-section .section-heading{max-width:100%;margin-bottom:56px}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-question{width:100%;background:none;border:none;text-align:left;padding:28px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;color:var(--ink);transition:color .2s}
+.faq-question:hover{color:var(--gold)}
+.faq-icon{width:28px;height:28px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;color:var(--muted)}
+.faq-icon svg{width:14px;height:14px;transition:transform .3s}
+.faq-item.open .faq-icon{background:var(--gold);border-color:var(--gold);color:#fff}
+.faq-item.open .faq-icon svg{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .4s}
+.faq-answer p{font-size:14.5px;font-weight:300;line-height:1.75;color:var(--muted);padding-bottom:24px}
+.faq-item.open .faq-answer{max-height:200px}
+@media(max-width:768px){.faq-section{padding:80px 24px}}
+
+/* FINAL CTA */
+.cta-section{background:var(--navy);padding:120px 80px;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(184,154,106,.12) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:680px;position:relative;z-index:1}
+.cta-live{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:400;color:rgba(255,255,255,.55);margin-bottom:40px}
+.cta-live-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.cta-section .section-heading{color:#fff;max-width:100%;font-size:clamp(42px,4.5vw,68px)}
+.cta-section .section-heading em{color:var(--gold-light)}
+.cta-section .section-sub{color:rgba(255,255,255,.45);font-size:16px;margin-bottom:48px}
+.cta-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:48px}
+.cta-primary{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--gold-light);padding:18px 42px;border-radius:100px;text-decoration:none;transition:all .25s;display:inline-block}
+.cta-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,184,138,.3)}
+.cta-phone{font-size:13.5px;font-weight:400;color:rgba(255,255,255,.45);text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s}
+.cta-phone:hover{color:#fff}
+.cta-guarantee{margin-top:36px;font-size:12px;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:8px}
+.cta-guarantee svg{width:14px;height:14px;color:var(--gold)}
+@media(max-width:768px){.cta-section{padding:80px 24px}}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.45);padding:72px 80px 40px}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand .logo{display:block;margin-bottom:16px;text-decoration:none}
+.footer-brand .logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1)}
+.footer-brand p{font-size:13.5px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.38);max-width:280px;margin-bottom:28px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.35);font-size:13px;transition:all .2s;text-decoration:none}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold)}
+.footer-col h4{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:20px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:12px}
+.footer-col a{font-size:13.5px;font-weight:300;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{padding-top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:12px;color:rgba(255,255,255,.2);flex-wrap:wrap}
+.footer-bottom a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.footer-bottom a:hover{color:#fff}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}footer{padding:60px 24px 32px}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up:nth-child(2){transition-delay:.1s}
+.fade-up:nth-child(3){transition-delay:.2s}
+.fade-up:nth-child(4){transition-delay:.3s}
+.fade-up:nth-child(5){transition-delay:.4s}
+.fade-up:nth-child(6){transition-delay:.5s}
+.stagger-1{transition-delay:.1s}.stagger-2{transition-delay:.2s}.stagger-3{transition-delay:.3s}.stagger-4{transition-delay:.4s}
+
+/* TICKER */
+.ticker{background:var(--ink);padding:16px 0;overflow:hidden}
+.ticker-inner{display:flex;animation:ticker 25s linear infinite;width:max-content}
+.ticker-item{display:flex;align-items:center;gap:16px;padding:0 24px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap}
+.ticker-diamond{color:var(--gold);font-size:8px;flex-shrink:0;opacity:.6}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════════════
+   MOBILE OPTIMIZATION — 10/10
+   ═══════════════════════════════════════════════ */
+
+/* ── HAMBURGER MENU ── */
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink);width:44px;height:44px;align-items:center;justify-content:center;flex-shrink:0}
+.nav-hamburger svg{width:22px;height:22px}
+.nav-mobile-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(245,242,236,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:0;opacity:0;transition:opacity .3s ease}
+.nav-mobile-overlay.open{display:flex;opacity:1}
+.nav-mobile-overlay a{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--ink);text-decoration:none;padding:16px 0;letter-spacing:.02em;transition:color .2s}
+.nav-mobile-overlay a:hover{color:var(--gold)}
+.nav-mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.nav-mobile-close svg{width:24px;height:24px}
+
+/* ── 768px — TABLET ── */
+@media(max-width:768px){
+  /* Nav hamburger */
+  .nav-hamburger{display:flex}
+  nav{padding:10px 16px;gap:12px;top:12px}
+  .nav-logo img{height:28px}
+  .nav-cta{padding:8px 16px;font-size:11px}
+
+  /* Hero */
+  .hero{min-height:auto}
+  .hero-heading{font-size:clamp(34px,8vw,52px)}
+  .hero-body{font-size:14px;max-width:100%}
+  .hero-mini-stats{gap:16px;margin-top:32px;padding-top:24px}
+  .hero-mini-stat .num{font-size:22px}
+  .hero-mini-stat .lbl{font-size:10px}
+
+  /* Trust bar */
+  .trust-label{padding:0 16px;font-size:10px}
+  .trust-logo{padding:0 20px;font-size:13px}
+
+  /* Steps */
+  .step-num{font-size:48px;margin-bottom:20px}
+  .step{padding:36px 28px}
+  .step-icon{width:40px;height:40px}
+
+  /* Tabbed section */
+  .wic-section{padding:72px 0 80px}
+  .wic-card{padding:28px}
+  .wic-card-title{font-size:22px;margin-top:18px}
+  .wic-card-body{font-size:13px}
+  .wic-card-label{margin-top:20px}
+  .wic-badge{width:44px;height:44px;border-radius:12px}
+  .wic-badge svg{width:18px;height:18px}
+
+  /* Testimonials */
+  .testi-card{padding:28px 24px}
+  .testi-quote{font-size:17px}
+  .testi-avatar{width:38px;height:38px}
+
+  /* Stats */
+  .stat-item{padding:32px 24px}
+  .stat-num{font-size:clamp(36px,8vw,48px)}
+
+  /* FAQ */
+  .faq-question{padding:22px 0;font-size:15px;gap:14px}
+  .faq-answer p{font-size:13.5px}
+
+  /* CTA */
+  .cta-section .section-heading{font-size:clamp(32px,7vw,48px)}
+  .cta-primary{padding:16px 32px;font-size:12px}
+  .cta-actions{gap:16px}
+
+  /* Footer */
+  .footer-brand p{font-size:13px}
+}
+
+/* ── 640px — LARGE PHONE ── */
+@media(max-width:640px){
+  /* Nav */
+  nav{top:8px;padding:8px 14px;gap:10px}
+  .nav-cta{padding:7px 14px;font-size:10.5px}
+
+  /* Hero */
+  .hero-left{padding:100px 20px 28px}
+  .hero-widget-col{padding:0 16px 40px}
+  .hero-heading{font-size:clamp(30px,8.5vw,44px)}
+  .hero-body{font-size:13.5px;margin-bottom:28px}
+  .hero-tag{font-size:10px;margin-bottom:20px}
+  .hero-actions{gap:14px}
+  .btn-primary{padding:13px 26px;font-size:11.5px}
+  .btn-ghost{font-size:12px}
+  .hero-mini-stats{gap:12px;margin-top:24px;padding-top:20px;justify-content:space-between}
+  .hero-mini-stat .num{font-size:20px}
+
+  /* Section headings */
+  .section-heading{font-size:clamp(28px,7vw,42px)}
+  .section-sub{font-size:14px}
+  .section-label{font-size:10px}
+
+  /* Ticker */
+  .ticker{padding:12px 0}
+  .ticker-item{padding:0 16px;font-size:10px;letter-spacing:2px;gap:12px}
+
+  /* Trust bar */
+  .trust-bar{padding:16px 0}
+  .trust-label{padding:0 12px;font-size:9px;letter-spacing:.08em}
+  .trust-logo{padding:0 16px;font-size:12px}
+
+  /* Tabbed section */
+  .wic-tabs{gap:4px}
+  .wic-tab{font-size:12px;padding:8px 14px}
+  .wic-eyebrow-text{font-size:10px;letter-spacing:3px}
+  .wic-body{font-size:14px}
+  .wic-headline{font-size:clamp(28px,7vw,38px)}
+  .wic-subline{font-size:clamp(20px,5vw,28px)}
+
+  /* Steps */
+  .step-num{font-size:40px;margin-bottom:16px}
+  .step{padding:28px 20px}
+  .step h3{font-size:19px}
+  .step p{font-size:13px}
+
+  /* CTA */
+  .cta-live{font-size:11px;padding:6px 14px}
+  .cta-section .section-heading{font-size:clamp(28px,7vw,42px)}
+  .cta-section .section-sub{font-size:14px}
+  .cta-primary{padding:14px 28px;font-size:12px;width:100%;text-align:center}
+  .cta-phone{font-size:13px}
+  .cta-guarantee{font-size:11px}
+  .cta-actions{flex-direction:column;align-items:stretch}
+
+  /* Footer */
+  footer{padding:48px 20px 28px}
+  .footer-grid{gap:32px;padding-bottom:36px}
+  .footer-col h4{font-size:10px;margin-bottom:14px}
+  .footer-col a{font-size:12.5px}
+  .footer-col li{margin-bottom:10px}
+  .footer-bottom{font-size:11px;flex-direction:column;gap:12px;text-align:center}
+  .footer-social a{width:40px;height:40px}
+
+  /* General touch targets */
+  .faq-icon{width:36px;height:36px}
+}
+
+/* ── 480px — SMALL PHONE ── */
+@media(max-width:480px){
+  /* Hero */
+  .hero-left{padding:90px 16px 24px}
+  .hero-widget-col{padding:0 12px 32px}
+  .hero-heading{font-size:clamp(28px,9vw,36px)}
+  .hero-body{font-size:13px;line-height:1.65}
+  .hero-mini-stats{flex-wrap:wrap;gap:8px}
+  .hero-mini-stat{flex:1 1 45%}
+  .hero-mini-stat .num{font-size:18px}
+  .hero-mini-stat .lbl{font-size:9px}
+
+  /* Section */
+  .section{padding:56px 16px}
+  .section-heading{font-size:clamp(26px,7vw,34px)}
+
+  /* Steps */
+  .step-num{font-size:36px}
+  .step{padding:24px 16px}
+  .step h3{font-size:17px;margin-bottom:8px}
+  .step-icon{width:36px;height:36px;border-radius:10px;margin-bottom:14px}
+  .step-icon svg{width:18px;height:18px}
+
+  /* Tabbed section */
+  .wic-container{padding:0 16px}
+  .wic-card{padding:24px 18px}
+  .wic-card-title{font-size:20px}
+  .wic-card-body{font-size:12.5px}
+  .wic-card-label{font-size:10px;letter-spacing:2px;margin-top:16px}
+  .wic-badge{width:40px;height:40px;border-radius:10px}
+  .wic-badge svg{width:16px;height:16px}
+
+  /* Slider */
+  .fb-container{padding:0 16px}
+  .fb-headline{font-size:32px}
+  .fb-card,.fb-skel-card,.fb-locked-card{width:220px}
+  .fb-card-title{font-size:18px}
+  .fb-card-image{height:160px}
+  .fb-price-value{font-size:20px}
+  .fb-slider-section{padding:40px 0 32px}
+
+  /* Hero search widget */
+  .fb-hero{padding:48px 16px 40px}
+  .fb-hero-headline span,.fb-hero-headline em{font-size:32px}
+  .fb-hero-sub{font-size:13px;margin-bottom:24px}
+  .fb-widget{border-radius:14px}
+  .fb-widget-body{padding:16px 14px 16px}
+  .fb-tabs{padding:4px}
+  .fb-tab{padding:10px 12px;font-size:12px;gap:5px}
+  .fb-tab svg{width:12px;height:12px}
+  .fb-cta{padding:15px;font-size:12px;letter-spacing:1.5px}
+  .fb-trust-row{gap:8px;font-size:10px}
+  .fb-proof-text{font-size:12px}
+  .fb-pill{padding:6px 12px}
+  .fb-pill-text{font-size:11px}
+  .fb-stat-num{font-size:26px}
+  .fb-stat-label{font-size:9px}
+  .fb-referral-text{font-size:12px}
+  .fb-referral-sub{font-size:10px}
+  .fb-referral-btn{font-size:10px;padding:10px 14px}
+  .fb-welcome{padding:10px 12px;gap:8px;flex-wrap:wrap}
+  .fb-welcome-text{font-size:11px}
+  .fb-welcome-badge{font-size:9px;padding:4px 10px}
+  .fb-input{padding:12px;font-size:12px}
+
+  /* Testimonials */
+  .testimonials-section{padding:56px 16px}
+  .testi-card{padding:24px 20px;border-radius:16px}
+  .testi-quote{font-size:16px}
+  .testi-stars{font-size:12px;margin-bottom:14px}
+  .testi-author{gap:10px}
+  .testi-avatar{width:34px;height:34px;font-size:14px}
+  .testi-info .name{font-size:12.5px}
+  .testi-info .role{font-size:11px}
+
+  /* Stats */
+  .stats-section{padding:40px 16px}
+  .stat-item{padding:24px 16px}
+  .stat-num{font-size:clamp(32px,8vw,42px)}
+  .stat-label{font-size:11.5px;margin-top:4px}
+
+  /* FAQ */
+  .faq-section{padding:56px 16px}
+  .faq-question{font-size:14px;padding:18px 0}
+  .faq-answer p{font-size:13px;padding-bottom:16px}
+
+  /* CTA */
+  .cta-section{padding:56px 16px}
+  .cta-section .section-heading{font-size:clamp(26px,7vw,36px)}
+  .cta-section .section-sub{font-size:13px;margin-bottom:32px}
+  .cta-guarantee{flex-wrap:wrap;gap:4px;font-size:10.5px}
+
+  /* Footer */
+  footer{padding:40px 16px 24px}
+  .footer-brand p{font-size:12px;max-width:100%}
+}
+
+/* ── 360px — EXTRA SMALL ── */
+@media(max-width:360px){
+  nav{padding:8px 12px;gap:8px}
+  .nav-logo img{height:24px}
+  .nav-cta{padding:6px 12px;font-size:10px}
+  .hero-left{padding:84px 14px 20px}
+  .hero-heading{font-size:26px}
+  .hero-body{font-size:12.5px}
+  .hero-mini-stat .num{font-size:16px}
+  .section-heading{font-size:24px}
+  .step-num{font-size:32px}
+  .fb-hero-headline span,.fb-hero-headline em{font-size:28px}
+  .fb-card,.fb-skel-card,.fb-locked-card{width:200px}
+  .fb-headline{font-size:28px}
+  .wic-headline{font-size:26px}
+  .wic-subline{font-size:18px}
+  .wic-tab{font-size:11px;padding:7px 10px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-num{font-size:32px}
+  .testi-quote{font-size:15px}
+  .cta-section .section-heading{font-size:24px}
+}
+
+/* ── SAFE AREAS (notch phones) ── */
+@supports(padding:max(0px)){
+  .hero-left{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+  nav{left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));transform:none;width:auto}
+  footer{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+}
+@media(max-width:768px){
+  @supports(padding:max(0px)){
+    nav{left:0;right:0;top:0;border-radius:0;margin:0;border:none;border-bottom:1px solid var(--border);padding-top:max(10px,env(safe-area-inset-top));padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
+    .hero-left{padding-top:max(100px,calc(80px + env(safe-area-inset-top)))}
+  }
+}
+
+/* ── TOUCH IMPROVEMENTS ── */
+@media(hover:none) and (pointer:coarse){
+  .fb-card:hover{transform:none;box-shadow:0 1px 4px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.07)}
+  .fb-card:active{transform:scale(.98);transition:transform 100ms}
+  .testi-card:hover{transform:none;box-shadow:none}
+  .testi-card:active{transform:scale(.98)}
+  .wic-card:hover{background:#080F1A}
+  .wic-card:active{background:#111E2E}
+  .step:hover{background:var(--surface)}
+  .faq-question:active{color:var(--gold)}
+  .btn-primary:active{transform:scale(.96)}
+  .cta-primary:active{transform:scale(.96)}
+  .fb-cta:active{transform:scale(.97)}
+  .fb-arrow:active{transform:scale(.9)}
+}
+
+/* ── SMOOTH SCROLLING FIX (iOS) ── */
+@media(max-width:768px){
+  html{-webkit-overflow-scrolling:touch}
+  .fb-track{scroll-snap-type:x proximity}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="/images/logo@2x.png" alt="Företagsboende.se" height="32"/></a>
+  <ul class="nav-links">
+    <li><a href="#bostader">Bostäder</a></li>
+    <li><a href="#tjanster">Tjänster</a></li>
+    <li><a href="#process">Hur det fungerar</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  <a href="/login.html" class="nav-cta">Logga in</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Meny"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</nav>
+<div class="nav-mobile-overlay" id="navOverlay">
+  <button class="nav-mobile-close" id="navClose" aria-label="Stäng meny"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <a href="#bostader" onclick="closeNav()">Bostäder</a>
+  <a href="#tjanster" onclick="closeNav()">Tjänster</a>
+  <a href="#process" onclick="closeNav()">Hur det fungerar</a>
+  <a href="#kontakt" onclick="closeNav()">Kontakt</a>
+  <a href="/login.html" style="margin-top:20px;font-size:18px;font-family:'DM Sans',sans-serif;font-weight:500;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">Logga in →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=85&auto=format&fit=crop" alt=""/>
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-left">
+    <span class="hero-tag">Göteborg · Företagsbostäder</span>
+    <h1 class="hero-heading">Ert team.<br/><em>Hemma.</em><br/>På 48 timmar.</h1>
+    <p class="hero-body">Premium företagsbostäder för yrkesverksamma, ledningsgrupper och internationella team. Fullt möblerat, utan kompromisser.</p>
+    <div class="hero-actions">
+      <a href="#bostader" class="btn-primary">Se lediga bostäder</a>
+      <a href="#process" class="btn-ghost">Hur det fungerar</a>
+    </div>
+    <div class="hero-mini-stats">
+      <div class="hero-mini-stat"><div class="num">173</div><div class="lbl">Bostäder</div></div>
+      <div class="hero-mini-stat"><div class="num">10 000<sup>+</sup></div><div class="lbl">Välkomnade gäster</div></div>
+      <div class="hero-mini-stat"><div class="num">2 000<sup>+</sup></div><div class="lbl">Uthyrningar 2025</div></div>
+      <div class="hero-mini-stat"><div class="num">1 000<sup>+</sup></div><div class="lbl">Femstjärniga betyg</div></div>
+    </div>
+  </div>
+  <div class="hero-widget-col">
+    <div id="enterprise-booking-widget"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Fullt möblerat</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Flexibla kontrakt</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>24/7 Support</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Dedikerad kontakt</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Ingen deposition</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Faktura efter inflyttning</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Svar inom 24h</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Företagsanpassat</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Fullt möblerat</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Flexibla kontrakt</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>24/7 Support</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Dedikerad kontakt</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Ingen deposition</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Faktura efter inflyttning</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Svar inom 24h</span>
+    <span class="ticker-item"><span class="ticker-diamond">◆</span>Företagsanpassat</span>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-label">Betrodda av</span>
+    <div class="trust-scroll">
+      <div class="trust-track">
+        <span class="trust-logo">Volvo Cars</span><span class="trust-logo">Ericsson</span><span class="trust-logo">SKF</span><span class="trust-logo">AstraZeneca</span><span class="trust-logo">Stena Group</span><span class="trust-logo">Polestar</span><span class="trust-logo">CEVT</span><span class="trust-logo">Chalmers</span><span class="trust-logo">Haldex</span><span class="trust-logo">Göteborg Energi</span>
+        <span class="trust-logo">Volvo Cars</span><span class="trust-logo">Ericsson</span><span class="trust-logo">SKF</span><span class="trust-logo">AstraZeneca</span><span class="trust-logo">Stena Group</span><span class="trust-logo">Polestar</span><span class="trust-logo">CEVT</span><span class="trust-logo">Chalmers</span><span class="trust-logo">Haldex</span><span class="trust-logo">Göteborg Energi</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="process">
+  <div class="section-label">Enkel process</div>
+  <h2 class="section-heading">Från förfrågan till<br/><em>inflyttning på 24h</em></h2>
+  <p class="section-sub">Vi tar hand om allt — så att ni kan fokusera på det som faktiskt spelar roll för ert företag.</p>
+  <div class="steps">
+    <div class="step fade-up">
+      <span class="step-num">01</span>
+      <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6M9 16h6M17 3H7a2 2 0 00-2 2v16l3-2 2 2 2-2 2 2 2-2 3 2V5a2 2 0 00-2-2z"/></svg></div>
+      <h3>Skicka förfrågan</h3>
+      <p>Fyll i era krav i formuläret — antal personer, datum, önskemål om bekvämigheter och budget. Tar under 3 minuter.</p>
+    </div>
+    <div class="step fade-up">
+      <span class="step-num">02</span>
+      <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+      <h3>Vi återkommer</h3>
+      <p>Inom 24 timmar presenterar er dedikerade kontakt matchade alternativ med priser, bilder och tillgänglighet. Alltid tre val.</p>
+    </div>
+    <div class="step fade-up">
+      <span class="step-num">03</span>
+      <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h3>Flytta in</h3>
+      <p>Godkänn och skriv kontrakt digitalt. Nycklar, wifi och välkomstpaket väntar vid ankomst. Fullt möblerat från dag ett.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED — TABBED FEATURE SECTION -->
+<section class="wic-section" id="vad-ingar">
+  <div class="wic-bg-glow"></div>
+  <div class="wic-container">
+
+    <!-- Header -->
+    <div class="wic-header wic-animate" data-delay="0">
+      <div class="wic-eyebrow">
+        <span class="wic-eyebrow-line"></span>
+        <span class="wic-eyebrow-text">VAD INGÅR</span>
+        <span class="wic-eyebrow-line"></span>
+      </div>
+      <h2 class="wic-headline">En faktura. Allt ingår.</h2>
+      <p class="wic-subline"><em>Från 200 kr per person och dygn.</em></p>
+      <p class="wic-body">Ni bokar — vi sköter allt. Era medarbetare fokuserar på jobbet, inte logistiken.</p>
+    </div>
+
+    <!-- Tab Nav -->
+    <div class="wic-tabs-wrap wic-animate" data-delay="100">
+      <div class="wic-tabs" role="tablist">
+        <button class="wic-tab wic-tab--active" data-tab="0" role="tab" aria-selected="true">Bostäder</button>
+        <button class="wic-tab" data-tab="1" role="tab" aria-selected="false">Pris &amp; avtal</button>
+        <button class="wic-tab" data-tab="2" role="tab" aria-selected="false">Allt ingår</button>
+        <button class="wic-tab" data-tab="3" role="tab" aria-selected="false">Service</button>
+        <button class="wic-tab" data-tab="4" role="tab" aria-selected="false">Flexibilitet</button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="wic-grid wic-animate" data-delay="200" id="wicGrid">
+      <!-- JS populated -->
+    </div>
+
+  </div>
+  <div class="wic-bottom-fade"></div>
+</section>
+
+<!-- ═══ PROPERTY SLIDER ═══ -->
+<section class="fb-slider-section" id="bostader">
+  <div class="fb-container">
+    <div class="fb-header">
+      <div>
+        <div class="fb-eyebrow"><span class="fb-eyebrow-line"></span><span class="fb-eyebrow-text">Handplockade</span></div>
+        <h2 class="fb-headline">Utvalda bostäder<br/>i <em id="fbCityName">Sverige</em></h2>
+      </div>
+      <button class="fb-view-all" id="fbViewAll" onclick="showGateOverlay()">Visa alla →</button>
+    </div>
+    <div class="fb-track" id="fbTrack"></div>
+    <div class="fb-nav" id="fbNav" style="display:none">
+      <div class="fb-dots" id="fbDots"></div>
+      <div class="fb-arrows">
+        <button class="fb-arrow" id="fbPrev" disabled aria-label="Föregående"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="fb-arrow" id="fbNext" aria-label="Nästa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="fb-gate" id="fbGate">
+  <button class="fb-gate-close" onclick="closeGateOverlay()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="fb-gate-inner">
+    <div class="fb-lock-icon" style="margin:0 auto 20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#1a1510" id="fbGateCount">Fler bostäder väntar</h3>
+    <p style="font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:#888;margin-top:10px;line-height:1.7">Kontakta oss direkt — vi matchar er med rätt bostad inom 24 timmar. Svar garanterat.</p>
+    <button class="fb-cta" style="max-width:340px;margin:24px auto 0" onclick="closeGateOverlay();document.getElementById('fb-hero-section').scrollIntoView({behavior:'smooth'})">Kontakta oss — svar inom 24h</button>
+    <p style="font-family:'Jost',sans-serif;font-size:13px;color:#aaa;margin-top:16px">Har ni redan konto? <a href="/login.html" style="color:#8a6520;border-bottom:.5px solid #c9a96e;padding-bottom:1px;text-decoration:none">Logga in här</a></p>
+  </div>
+</div>
+
+<!-- ═══ HERO SEARCH WIDGET ═══ -->
+<section class="fb-hero" id="fb-hero-section">
+  <div class="fb-hero-inner">
+    <div class="fb-reveal fb-proof-bar">
+      <div class="fb-avatars">
+        <div class="fb-avatar" style="z-index:4">DL</div>
+        <div class="fb-avatar" style="z-index:3">AB</div>
+        <div class="fb-avatar" style="z-index:2">MK</div>
+        <div class="fb-avatar" style="z-index:1">+</div>
+      </div>
+      <span class="fb-proof-text">Över <strong>200 svenska företag</strong> hanterar personalboende här</span>
+      <span class="fb-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.3"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.3"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.3"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.3"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.3"/></svg></span>
+    </div>
+    <div class="fb-reveal fb-pill">
+      <span class="fb-pulse-dot"></span>
+      <span class="fb-pill-text">Garanterad inflyttning inom 72 timmar</span>
+    </div>
+    <div class="fb-reveal fb-hero-headline">
+      <span>Företagsboende i Göteborg</span>
+      <em>utan kompromisser.</em>
+    </div>
+    <p class="fb-reveal fb-hero-sub">Ingen deposition. Ingen bindningstid. <strong>Faktura skickas efter inflytt.</strong></p>
+    <div class="fb-reveal fb-widget">
+      <div class="fb-tabs">
+        <button class="fb-tab fb-tab-active" data-tab="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Sök bostad direkt</button>
+        <button class="fb-tab" data-tab="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>Öppna företagskonto</button>
+      </div>
+      <div class="fb-widget-body">
+        <div class="fb-tab-content fb-tab-visible" id="fbTab0">
+          <div class="fb-fields">
+            <div class="fb-field" id="fbCityField">
+              <span class="fb-field-label">Stad</span>
+              <span class="fb-field-value" id="fbCityDisplay">Välj stad</span>
+              <select id="fbCitySelect" onchange="document.getElementById('fbCityDisplay').textContent=this.value||'Välj stad';document.getElementById('fbCityDisplay').classList.toggle('fb-has-value',!!this.value)"><option value="">Välj stad</option></select>
+            </div>
+            <div class="fb-field" id="fbDateField">
+              <span class="fb-field-label">Inflyttning</span>
+              <span class="fb-field-value" id="fbDateDisplay">Välj datum</span>
+              <input type="date" id="fbDateInput" onchange="var d=new Date(this.value);document.getElementById('fbDateDisplay').textContent=d.toLocaleDateString('sv-SE',{day:'numeric',month:'short'});document.getElementById('fbDateDisplay').classList.add('fb-has-value')"/>
+            </div>
+            <div class="fb-field" onclick="toggleGuests(event)">
+              <span class="fb-field-label">Gäster</span>
+              <span class="fb-field-value fb-has-value" id="fbGuestsDisplay">2 personer</span>
+            </div>
+          </div>
+          <button class="fb-cta" onclick="searchListings()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Se lediga bostäder</button>
+          <div class="fb-trust-row">
+            <span class="fb-trust-green">● Inflyttningsklart inom 72h</span>
+            <span class="fb-trust-muted">· Ingen deposition</span>
+            <span class="fb-trust-muted">· Faktura efter inflytt</span>
+          </div>
+        </div>
+        <div class="fb-tab-content" id="fbTab1">
+          <div class="fb-welcome">
+            <div><div class="fb-welcome-text">Välkomsterbjudande för nya företag</div><div class="fb-welcome-sub">10% rabatt på er första faktura — automatiskt tillämpad</div></div>
+            <span class="fb-welcome-badge">Värde ~3 000 kr</span>
+          </div>
+          <div class="fb-input-grid">
+            <input class="fb-input" id="fb-company" placeholder="Företagets namn"/>
+            <input class="fb-input" id="fb-email" type="email" placeholder="Er e-postadress"/>
+          </div>
+          <button class="fb-cta" style="margin-top:8px" id="fbSignupBtn" onclick="submitSignup()">Aktivera konto & hämta 10% rabatt</button>
+          <div id="fbSignupMsg"></div>
+          <div class="fb-trust-row" style="margin-top:14px">
+            <span class="fb-trust-muted">Kostnadsfritt ·</span>
+            <span class="fb-trust-green">Ingen bindningstid</span>
+            <span class="fb-trust-muted">· Avsluta när som helst</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fb-reveal fb-proof-stats">
+      <div class="fb-stat-cell"><div class="fb-stat-num" data-countup="170" data-suffix="+">0+</div><div class="fb-stat-label"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>möblerade bostäder</div></div>
+      <div class="fb-stat-cell"><div class="fb-stat-num" data-countup="72" data-suffix="h">0h</div><div class="fb-stat-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>garanterad inflyttning</div></div>
+      <div class="fb-stat-cell"><div class="fb-stat-num" data-countup="0" data-suffix=" kr">0 kr</div><div class="fb-stat-label"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>deposition</div></div>
+      <div class="fb-stat-cell"><div class="fb-stat-num" data-countup="200" data-suffix="+">0+</div><div class="fb-stat-label"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>företagskunder</div></div>
+    </div>
+    <div class="fb-reveal fb-referral">
+      <div><div class="fb-referral-text">Tjäna extra genom att hänvisa kunder till oss</div><div class="fb-referral-sub">Upp till 15% löpande provision — kostnadsfritt att gå med</div></div>
+      <a class="fb-referral-btn" href="mailto:kontakt@bostadsuthyrning.se?subject=Partnerprogram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Bli partner & tjäna provision</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-label">Kundberättelser</div>
+  <h2 class="section-heading">Vad våra kunder<br/><em>faktiskt säger</em></h2>
+  <div class="testi-grid">
+    <div class="testi-card fade-up">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">Vi behövde 14 lägenheter i Göteborg på tre veckor. Residence Studio löste det på under 48 timmar. Imponerande.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div class="testi-info"><div class="name">Anna Björk</div><div class="role">Head of Operations · Volvo Cars</div></div>
+      </div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">Kvaliteten på bostäderna är konsekvent hög och processen är helt smidig. Vi använder ingenting annat för våra konsulter nu.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div class="testi-info"><div class="name">Marcus Lindgren</div><div class="role">HR Director · Ericsson AB</div></div>
+      </div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">Att ha en dedikerad kontakt som känner våra krav gör hela skillnaden. Det är en tjänst i verklig värdklass.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div class="testi-info"><div class="name">Sofia Andersson</div><div class="role">Travel Manager · AstraZeneca</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item fade-up"><div class="stat-num" data-target="173">0<span></span></div><div class="stat-label">Bostäder</div></div>
+    <div class="stat-item fade-up stagger-1"><div class="stat-num" data-target="10000" data-formatted="10 000">0<span>+</span></div><div class="stat-label">Välkomnade gäster</div></div>
+    <div class="stat-item fade-up stagger-2"><div class="stat-num" data-target="2000" data-formatted="2 000">0<span>+</span></div><div class="stat-label">Uthyrningar 2025</div></div>
+    <div class="stat-item fade-up stagger-3"><div class="stat-num" data-target="1000" data-formatted="1 000">0<span>+</span></div><div class="stat-label">Femstjärniga betyg</div></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" id="kontakt">
+  <div style="text-align:center;margin-bottom:24px"><div class="section-label" style="justify-content:center">Vanliga frågor</div></div>
+  <h2 class="section-heading" style="text-align:center;margin:0 auto 56px;max-width:500px">Allt ni behöver<br/><em>veta</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Vad ingår i hyran?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-answer"><p>Allt ni behöver från dag ett: fullt möblerat, sängkläder, handdukar, wifi, TV och fullt utrustat kök. Städning, el, vatten och värme ingår i de flesta bostäder. Eventuella tillägg specificeras tydligt i er offert.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Hur lång tid tar det från förfrågan till inflyttning?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-answer"><p>I genomsnitt 24–48 timmar. Vi presenterar matchade alternativ inom 24 timmar och vid godkännande kan ni vara inflyttade redan nästa dag. Akutbokningar för samma dag är möjliga i mån av tillgänglighet.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kan vi förlänga eller förkorta vistelsen?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-answer"><p>Ja, vi erbjuder full flexibilitet. Förlängning hanteras av er kontaktperson och är kostnadsfri att begära. Förkortning av vistelsen kräver 7 dagars varsel. Vi anpassar oss efter era faktiska behov — inte tvärtom.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Hur hanteras fakturering?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-answer"><p>Faktura skickas direkt till ert företag med 30 dagars betalningsvillkor. Vi stödjer centraliserad fakturering för företag med flera pågående bokningar. Alla fakturor finns samlade i ert portal-konto.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Arbetar ni bara i Göteborg?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-answer"><p>Vi är specialiserade på Göteborg men har även ett urval av bostäder i Stockholm, Malmö och Uppsala. Kontakta oss för förfrågningar i andra städer — vi kan ofta hjälpa via vårt partnernätverk.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-live"><span class="cta-live-dot"></span>47 företag hittade boende den här månaden</div>
+    <h2 class="section-heading" style="color:#fff;font-size:clamp(42px,4.5vw,68px)">Redo att husera<br/><em>ert team?</em></h2>
+    <p class="section-sub">Skicka en förfrågan nu — ingen bindning, inget krångel. Vi återkommer med skräddarsydda alternativ inom 24 timmar.</p>
+    <div class="cta-actions">
+      <a href="#" class="cta-primary" onclick="document.getElementById('enterprise-booking-widget').scrollIntoView({behavior:'smooth'});return false">Skicka förfrågan</a>
+      <a href="tel:+46317000000" class="cta-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 6.18 2 2 0 014.99 4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 11.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Ring oss direkt
+      </a>
+    </div>
+    <div class="cta-guarantee">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      24h svarsgaranti · Ingen bindning · Faktura till företaget
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo"><img src="/images/logo@2x.png" alt="Företagsboende.se" height="36"/></a>
+      <p>Premium företagsbostäder i Göteborg och övriga Sverige. Byggt för yrkesverksamma team som kräver mer.</p>
+      <div class="footer-social">
+        <a href="#">in</a><a href="#">tw</a><a href="#">ig</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Tjänster</h4>
+      <ul>
+        <li><a href="#">Lägenheter</a></li><li><a href="#">Hus & villor</a></li><li><a href="#">Flexkontrakt</a></li>
+        <li><a href="#">Företagspaket</a></li><li><a href="#">24/7 Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Företaget</h4>
+      <ul>
+        <li><a href="#">Om oss</a></li><li><a href="#">Karriär</a></li><li><a href="#">Press</a></li>
+        <li><a href="#">Partners</a></li><li><a href="#">Blogg</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:info@residencestudio.se">info@residencestudio.se</a></li>
+        <li><a href="tel:+46317000000">031 700 00 00</a></li>
+        <li><a href="#">Avenyn 12, Göteborg</a></li>
+        <li><a href="#">Mån–Fre 08–18</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Residence Studio AB · Org.nr 559XXX-XXXX</span>
+    <div style="display:flex;gap:20px"><a href="#">Integritetspolicy</a><a href="#">Villkor</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+(function(){
+  var btn=document.getElementById('navHamburger'),ov=document.getElementById('navOverlay'),cl=document.getElementById('navClose');
+  if(btn&&ov){
+    btn.addEventListener('click',function(){ov.classList.add('open');document.body.style.overflow='hidden'});
+    cl.addEventListener('click',function(){ov.classList.remove('open');document.body.style.overflow=''});
+    window.closeNav=function(){ov.classList.remove('open');document.body.style.overflow=''};
+  }
+})();
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Counter animation
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const formatted = el.dataset.formatted;
+  const suffix = el.querySelector('span').textContent;
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(eased * target);
+    if (formatted && progress >= 1) {
+      el.textContent = formatted;
+    } else if (formatted) {
+      el.textContent = current.toLocaleString('sv-SE');
+    } else {
+      el.textContent = current;
+    }
+    el.insertAdjacentHTML('beforeend', `<span>${suffix}</span>`);
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { animateCounter(e.target); statObserver.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObserver.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ═══ PROPERTY SLIDER ═══
+(function(){
+  var track = document.getElementById('fbTrack');
+  var dotsC = document.getElementById('fbDots');
+  var nav = document.getElementById('fbNav');
+  var prevBtn = document.getElementById('fbPrev');
+  var nextBtn = document.getElementById('fbNext');
+  var viewAll = document.getElementById('fbViewAll');
+  var cityName = document.getElementById('fbCityName');
+  var gateCount = document.getElementById('fbGateCount');
+  var CARD_W = 276; // 260 + 16 gap
+  var fbListings = [];
+  var guestsCount = 2;
+
+  // Show skeletons immediately
+  var skelHtml = '';
+  for (var i = 0; i < 6; i++) {
+    skelHtml += '<div class="fb-skel-card"><div class="fb-skeleton fb-skel-img" style="height:180px;border-radius:14px 14px 0 0"></div><div class="fb-skel-body"><div class="fb-skeleton fb-skel-line" style="height:10px;width:70%"></div><div class="fb-skeleton fb-skel-line" style="height:20px;width:90%"></div><div class="fb-skeleton fb-skel-line" style="height:12px;width:55%"></div><div class="fb-skeleton fb-skel-line" style="height:18px;width:40%;margin-bottom:0"></div></div></div>';
+  }
+  track.innerHTML = skelHtml;
+
+  function esc(s) { var d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+  function renderCard(l) {
+    var photo = l.thumbnail || (l.photos && l.photos[0]) || '';
+    var price = l.pricePerNight || 0;
+    var city = l.city || '';
+    var hood = l.neighborhood || '';
+    var location = hood && city && hood !== city ? hood.toUpperCase() + ' · ' + city.toUpperCase() : (city || hood).toUpperCase();
+    var beds = l.bedrooms || 0;
+    var guests = l.maxGuests || 0;
+    var imgHtml = photo
+      ? '<img src="' + esc(photo) + '" alt="' + esc(l.title) + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=fb-photo-fallback><svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z&quot;/></svg></div>\'">'
+      : '<div class="fb-photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>';
+    return '<div class="fb-card" data-id="' + esc(l.id) + '">' +
+      '<div class="fb-card-image">' + imgHtml + '</div>' +
+      '<div class="fb-card-body">' +
+        (location ? '<div class="fb-card-location">' + esc(location) + '</div>' : '') +
+        '<div class="fb-card-title">' + esc(l.title) + '</div>' +
+        '<div class="fb-card-meta">' +
+          (beds ? '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"/><path d="M2 10h20"/><path d="M7 7V4h10v3"/></svg>' + beds + ' rum</span>' : '') +
+          (guests ? '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>' + guests + ' pers</span>' : '') +
+          '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Möblerad</span>' +
+        '</div>' +
+        '<div class="fb-card-divider"></div>' +
+        '<div class="fb-card-footer">' +
+          '<div>' +
+            '<span class="fb-price-from">från </span>' +
+            '<span class="fb-price-value">' + (price ? price.toLocaleString('sv-SE') + ' kr' : 'Kontakta oss') + '</span>' +
+          '</div>' +
+          '<div class="fb-card-avail"><span class="fb-avail-dot"></span>Ledig</div>' +
+        '</div>' +
+      '</div></div>';
+  }
+
+  function renderLocked(total) {
+    var remaining = Math.max(0, total - 10);
+    return '<div class="fb-locked-card" onclick="showGateOverlay()">' +
+      '<div class="fb-lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>' +
+      '<div class="fb-locked-count">' + remaining + '+ fler bostäder</div>' +
+      '<div class="fb-locked-sub">Kontakta oss för hela utbudet</div>' +
+      '<button class="fb-locked-cta">Kontakta oss →</button>' +
+    '</div>';
+  }
+
+  function updateArrows() {
+    if (!prevBtn || !nextBtn) return;
+    prevBtn.disabled = track.scrollLeft <= 0;
+    nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+  }
+
+  function updateDots() {
+    var idx = Math.round(track.scrollLeft / CARD_W);
+    var dots = dotsC.querySelectorAll('.fb-dot');
+    dots.forEach(function(d, i) { d.classList.toggle('fb-dot-active', i === idx); });
+  }
+
+  fetch('/api/listings').then(function(r){return r.json()}).then(function(data){
+    fbListings = data.listings || data.results || data || [];
+    var show = fbListings.slice(0, 10);
+    var total = fbListings.length;
+
+    // Update header
+    var firstCity = '';
+    for (var i = 0; i < fbListings.length; i++) {
+      var c = fbListings[i].city;
+      if (c && c !== 'N/A') { firstCity = c; break; }
+    }
+    if (firstCity) cityName.textContent = firstCity;
+    viewAll.textContent = 'Visa alla ' + total + '+ →';
+    gateCount.textContent = Math.max(0, total - 10) + '+ fler bostäder väntar';
+
+    // Populate city dropdown
+    var cities = [];
+    fbListings.forEach(function(l) {
+      var c = l.city;
+      if (c && c !== 'N/A' && cities.indexOf(c) === -1) cities.push(c);
+    });
+    cities.sort();
+    var sel = document.getElementById('fbCitySelect');
+    if (sel) cities.forEach(function(c) {
+      var o = document.createElement('option'); o.value = c; o.textContent = c; sel.appendChild(o);
+    });
+
+    // Fade out skeletons
+    var skels = track.querySelectorAll('.fb-skel-card');
+    skels.forEach(function(s) { s.style.transition = 'opacity 200ms,transform 200ms'; s.style.opacity = '0'; s.style.transform = 'translateY(-4px)'; });
+
+    setTimeout(function() {
+      // Build real cards
+      var html = show.map(function(l){ return renderCard(l); }).join('');
+      html += renderLocked(total);
+      track.innerHTML = html;
+
+      // Stagger entrance
+      var cards = track.querySelectorAll('.fb-card, .fb-locked-card');
+      cards.forEach(function(card) { card.classList.add('fb-entering'); });
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){
+        cards.forEach(function(card, idx) {
+          setTimeout(function() { card.classList.remove('fb-entering'); }, Math.min(idx * 60, 360));
+        });
+      })});
+
+      // Build dots
+      var dotHtml = '';
+      for (var i = 0; i <= show.length; i++) dotHtml += '<button class="fb-dot' + (i === 0 ? ' fb-dot-active' : '') + '"></button>';
+      dotsC.innerHTML = dotHtml;
+      nav.style.display = '';
+
+      // Dot clicks
+      dotsC.querySelectorAll('.fb-dot').forEach(function(d, i) {
+        d.addEventListener('click', function() { track.scrollTo({ left: i * CARD_W, behavior: 'smooth' }); });
+      });
+
+      // Card clicks → open portal
+      track.querySelectorAll('.fb-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+          window.location.href = '/login.html';
+        });
+      });
+    }, 220);
+
+  }).catch(function() {
+    track.innerHTML = '<div style="padding:60px 24px;text-align:center;color:#888;font-family:Jost,sans-serif;font-size:14px;width:100%">Kunde inte ladda bostäder. <button onclick="location.reload()" style="color:#c9a96e;background:none;border:none;cursor:pointer;text-decoration:underline">Försök igen</button></div>';
+  });
+
+  // Scroll events
+  track.addEventListener('scroll', function() { updateArrows(); updateDots(); });
+  if (prevBtn) prevBtn.addEventListener('click', function() { track.scrollBy({ left: -CARD_W, behavior: 'smooth' }); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { track.scrollBy({ left: CARD_W, behavior: 'smooth' }); });
+
+  // Gate overlay
+  window.showGateOverlay = function() { document.getElementById('fbGate').classList.add('fb-gate-open'); };
+  window.closeGateOverlay = function() { document.getElementById('fbGate').classList.remove('fb-gate-open'); };
+
+  // Date field min
+  var dateInput = document.getElementById('fbDateInput');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+  // Guest stepper
+  window.toggleGuests = function(e) {
+    e.stopPropagation();
+    var display = document.getElementById('fbGuestsDisplay');
+    guestsCount = Math.min(20, guestsCount + 1);
+    if (guestsCount > 20) guestsCount = 1;
+    display.textContent = guestsCount + ' personer';
+  };
+
+  // Search CTA
+  window.searchListings = function() {
+    var city = document.getElementById('fbCitySelect').value;
+    var date = document.getElementById('fbDateInput').value;
+    var params = new URLSearchParams();
+    if (city) params.set('city', city);
+    if (date) params.set('date', date);
+    if (guestsCount) params.set('guests', guestsCount);
+    window.location.href = '/portal.html';
+  };
+
+  // Tab switching
+  document.querySelectorAll('.fb-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.fb-tab').forEach(function(t) { t.classList.remove('fb-tab-active'); });
+      tab.classList.add('fb-tab-active');
+      document.querySelectorAll('.fb-tab-content').forEach(function(c) { c.classList.remove('fb-tab-visible'); });
+      document.getElementById('fbTab' + tab.dataset.tab).classList.add('fb-tab-visible');
+    });
+  });
+
+  // Signup
+  window.submitSignup = function() {
+    var company = document.getElementById('fb-company');
+    var email = document.getElementById('fb-email');
+    company.classList.remove('fb-input-error');
+    email.classList.remove('fb-input-error');
+    if (!company.value.trim()) { company.classList.add('fb-input-error'); company.focus(); return; }
+    if (!email.value.trim() || email.value.indexOf('@') === -1) { email.classList.add('fb-input-error'); email.focus(); return; }
+    var btn = document.getElementById('fbSignupBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="fb-spinner"></span> Skapar konto...';
+    fetch('/api/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ companyName: company.value.trim(), email: email.value.trim(), contactName: '', phone: '', checkIn: '', checkOut: '', guests: 1, listingTitle: 'Kontoregistrering', message: 'Ny företagsregistrering via hemsidan' })
+    }).then(function(r) { return r.json(); }).then(function() { showSignupSuccess(); }).catch(function() {
+      setTimeout(showSignupSuccess, 1500);
+    });
+  };
+
+  function showSignupSuccess() {
+    var tab = document.getElementById('fbTab1');
+    tab.style.transition = 'opacity 200ms';
+    tab.style.opacity = '0';
+    setTimeout(function() {
+      tab.innerHTML = '<div class="fb-success">' +
+        '<div class="fb-check-badge" style="animation:fb-check-in 500ms cubic-bezier(.34,1.56,.64,1) both"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:27px;color:#1a1510">Konto aktiverat — välkommen!</div>' +
+        '<div style="font-family:Jost,sans-serif;font-size:13px;font-weight:300;color:#888;margin-top:8px">Er 10% rabatt aktiveras automatiskt på första fakturan.</div>' +
+        '<a class="fb-cta" href="/portal.html" style="margin-top:20px;text-decoration:none">Gå till era bostäder →</a>' +
+        '</div>';
+      tab.style.opacity = '1';
+      setTimeout(function() { window.location.href = '/portal.html'; }, 3000);
+    }, 220);
+  }
+
+  // Scroll reveal for hero section
+  var revealObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('fb-revealed'); revealObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fb-reveal').forEach(function(el, i) {
+    el.style.transitionDelay = Math.min(i * 90, 450) + 'ms';
+    revealObs.observe(el);
+  });
+
+  // Count-up for hero stats
+  var countObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var target = parseInt(el.dataset.countup);
+      var suffix = el.dataset.suffix || '';
+      var duration = 900;
+      var start = performance.now();
+      function tick(now) {
+        var t = Math.min((now - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(ease * target).toLocaleString('sv-SE') + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-countup]').forEach(function(el) { countObs.observe(el); });
+})();
+</script>
+
+<script>
+// ═══ WHAT'S INCLUDED — TABBED SECTION ═══
+(function() {
+  var ICONS = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    'layout-grid': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+    'map-pin': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    'shield-check': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 4.5-3.1 8.7-7 10-3.9-1.3-7-5.5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>',
+    tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1.5"/></svg>',
+    receipt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l3-2 2 2 2-2 2 2 2-2 2 2 3-2V2l-3 2-2-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M8 10h8M8 14h8M8 6h4"/></svg>',
+    calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+    'file-text': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
+    zap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+    wifi: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>',
+    sofa: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11a2 2 0 012 2v3h16v-3a2 2 0 012-2 2 2 0 01-2-2H4a2 2 0 01-2 2z"/><path d="M6 19v2M18 19v2"/></svg>',
+    sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/><path d="M19 3l.75 2.25L22 6l-2.25.75L19 9l-.75-2.25L16 6l2.25-.75L19 3z"/></svg>',
+    user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+    'heart-handshake': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/><path d="M12 5L9.04 7.96a2.17 2.17 0 000 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 013.79 0l2.96 2.66"/><path d="M18 15l-2-2"/><path d="M15 18l-2-2"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>',
+    repeat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>',
+    users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+    'check-circle': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
+  };
+
+  var TABS = [
+    {
+      id: 0,
+      cards: [
+        { icon: 'home',        title: 'Klart vid ankomst',  body: 'Möblerat, städat, internet. De går in och börjar jobba.',           label: 'INFLYTTNINGSKLART' },
+        { icon: 'layout-grid', title: 'Alla storlekar',     body: 'En person eller ett helt team — vi har det som passar.',            label: 'STUDIO TILL 4 RUM' },
+        { icon: 'map-pin',     title: 'Bra läge',           body: 'Nära jobbet. Nära stan. Alltid genomtänkt.',                        label: 'CENTRALT BELÄGET' },
+        { icon: 'shield-check',title: 'Alltid godkänt',     body: 'Besiktat och godkänt innan inflyttning. Varje gång.',               label: 'KVALITETSGARANTI' }
+      ]
+    },
+    {
+      id: 1,
+      cards: [
+        { icon: 'tag',       title: 'Från 200 kr/dygn',       body: 'Fast pris per person. Ni vet exakt vad det kostar.',             label: 'TRANSPARENT PRIS' },
+        { icon: 'receipt',   title: 'Ingen deposition',        body: 'Inga pengar i förväg. Fakturan kommer efter inflyttning.',       label: 'BETALA EFTER' },
+        { icon: 'calendar',  title: 'Inga bindningstider',     body: 'Boka så länge ni behöver. Avsluta när projektet är klart.',     label: 'FULL FLEXIBILITET' },
+        { icon: 'file-text', title: 'Ett avtal. En faktura.',  body: 'Ni skriver på — vi sköter resten.',                             label: 'ZERO ADMINISTRATION' }
+      ]
+    },
+    {
+      id: 2,
+      cards: [
+        { icon: 'zap',       title: 'Hyra & el',       body: 'Allt inräknat. Inga tillägg. Inga överraskningar.',    label: 'INGA DOLDA KOSTNADER' },
+        { icon: 'wifi',      title: 'Internet',         body: 'Snabbt och stabilt från dag ett.',                     label: 'ALLTID UPPKOPPLAD' },
+        { icon: 'sofa',      title: 'Fullt möblerat',   body: 'Husgeråd, sängar, soffa. De tar med sig själva.',      label: 'KOMPLETT UTRUSTAT' },
+        { icon: 'sparkles',  title: 'Städning',         body: 'Vi håller det i ordning — hela vistelsen.',            label: 'LÖPANDE SERVICE' }
+      ]
+    },
+    {
+      id: 3,
+      cards: [
+        { icon: 'user',            title: 'En kontakt',          body: 'Samma person varje gång. Ni behöver aldrig förklara om.',      label: 'PERSONLIG SERVICE' },
+        { icon: 'heart-handshake', title: 'Vi tar hand om dem',  body: 'Välkomnande, info och trygghet — från dag ett.',              label: 'OMHÄNDERTAGNA' },
+        { icon: 'clock',           title: 'Alltid tillgängliga', body: 'Vi svarar när det behövs — inte bara kontorstid.',            label: '24/7 SUPPORT' },
+        { icon: 'star',            title: 'Ni kan lita på oss',  body: 'Det är det som skiljer oss från alla andra.',                 label: 'GARANTERAT' }
+      ]
+    },
+    {
+      id: 4,
+      cards: [
+        { icon: 'mail',         title: 'Förläng med ett mejl', body: 'Projektet drar ut? Inga problem. Vi löser det.',              label: 'ENKELT' },
+        { icon: 'repeat',       title: 'Byt bostad',           body: 'Ny stad eller större yta — vi fixar det utan merarbete.',     label: 'VI LÖSER DET' },
+        { icon: 'users',        title: 'Skala upp direkt',     body: 'Fler medarbetare med kort varsel. Vi klarar det.',           label: 'FULL KAPACITET' },
+        { icon: 'check-circle', title: 'Avsluta när ni vill',  body: 'Tydliga villkor. Inga fällor. Inga dolda avgifter.',         label: 'INGA FÄLLOR' }
+      ]
+    }
+  ];
+
+  var activeTab = 0;
+  var grid = document.getElementById('wicGrid');
+  var tabs = document.querySelectorAll('.wic-tab');
+
+  function buildCard(card, idx) {
+    var d = document.createElement('div');
+    d.className = 'wic-card';
+    d.setAttribute('role', 'tabpanel');
+    d.innerHTML =
+      '<div class="wic-badge">' + (ICONS[card.icon] || '') + '</div>' +
+      '<div class="wic-card-title">' + card.title + '</div>' +
+      '<div class="wic-card-body">' + card.body + '</div>' +
+      '<span class="wic-card-label">' + card.label + '</span>';
+    return d;
+  }
+
+  function showTab(idx, animate) {
+    activeTab = idx;
+
+    // Update tab states
+    tabs.forEach(function(t, i) {
+      t.classList.toggle('wic-tab--active', i === idx);
+      t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+
+    var cards = grid.querySelectorAll('.wic-card');
+
+    function renderCards() {
+      grid.innerHTML = '';
+      var tabData = TABS[idx];
+      tabData.cards.forEach(function(card, i) {
+        var el = buildCard(card, i);
+        grid.appendChild(el);
+        var delay = i * 60;
+        setTimeout(function() {
+          el.classList.add('wic-card-visible');
+        }, animate ? 50 + delay : 0);
+      });
+    }
+
+    if (animate && cards.length) {
+      cards.forEach(function(c) { c.classList.add('wic-card-exit'); });
+      setTimeout(renderCards, 160);
+    } else {
+      renderCards();
+      // Immediate show on first load (after section becomes visible)
+      requestAnimationFrame(function() {
+        grid.querySelectorAll('.wic-card').forEach(function(c) {
+          c.classList.add('wic-card-visible');
+        });
+      });
+    }
+  }
+
+  // Tab click
+  tabs.forEach(function(tab, i) {
+    tab.addEventListener('click', function() {
+      if (i !== activeTab) showTab(i, true);
+    });
+  });
+
+  // Intersection Observer for section fade-in
+  var animEls = document.querySelectorAll('.wic-animate');
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+        setTimeout(function() { el.classList.add('wic-visible'); }, delay);
+        sectionObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  animEls.forEach(function(el) { sectionObserver.observe(el); });
+
+  // Init first tab (render immediately, show on section enter)
+  showTab(0, false);
+
+  // Re-trigger card visibility when section enters viewport
+  var gridObserver = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
+      grid.querySelectorAll('.wic-card').forEach(function(c, i) {
+        setTimeout(function() { c.classList.add('wic-card-visible'); }, i * 60);
+      });
+      gridObserver.disconnect();
+    }
+  }, { threshold: 0.1 });
+  gridObserver.observe(grid);
+
+})();
+</script>
+
+<!-- BOOKING WIDGET -->
+<script>
+(function () {
+var WEBHOOK_URL = "https://hook.eu2.make.com/cgpgmn98xgl03pdl6uojlgq06xg7ktgh";
+function fetchWithTimeout(url, options, timeoutMs) {
+var controller = new AbortController();
+var id = setTimeout(function () { controller.abort(); }, timeoutMs);
+return fetch(url, Object.assign({}, options, { signal: controller.signal })).finally(function () { clearTimeout(id); });
+}
+window.EBW_ON_SUBMIT = function EBW_ON_SUBMIT(payload) {
+return fetchWithTimeout(WEBHOOK_URL, {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(payload)
+}, 12000).then(function (res) {
+if (!res.ok) {
+return res.text().catch(function () { return ""; }).then(function (txt) {
+return { ok: false, message: "Webhook error (" + res.status + "): " + (txt ? txt.slice(0, 200) : "No response body") };
+});
+}
+return { ok: true };
+}).catch(function (e) {
+var msg = e && e.name === "AbortError" ? "Tidsgr\u00e4nsen \u00f6verskreds." : e && e.message ? e.message : "Ok\u00e4nt n\u00e4tverksfel.";
+return { ok: false, message: msg };
+});
+};
+})();
+</script>
+<script>(function () {
+"use strict";
+var ROOT_ID = "enterprise-booking-widget";
+var KEY = "aircrew_widget_v7";
+var host = document.getElementById(ROOT_ID);
+if (!host) return;
+var shadow = host.shadowRoot || host.attachShadow({ mode: "open" });
+host.style.visibility = "hidden";
+function $(s, r) { return (r || shadow).querySelector(s); }
+function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
+function jp(s, fb) { try { return JSON.parse(s); } catch (e) { return fb; } }
+function esc(s) {
+return String(s || "").replace(/[&<>"']/g, function (m) {
+return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[m];
+});
+}
+function attr(s) { return esc(s).replace(/"/g, "&quot;"); }
+function iso() { return new Date().toISOString(); }
+function sek(n) { return Math.round(+n || 0).toLocaleString("sv-SE") + " kr"; }
+var rm = false;
+try { rm = matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+function emailOk(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v || ""); }
+function phoneClean(v) { return (v || "").replace(/[^\d+ ()-]/g, "").replace(/\s{2,}/g, " ").trim(); }
+function merge(t, s) {
+for (var k in s) {
+if (s.hasOwnProperty(k)) {
+var v = s[k];
+if (v && typeof v === "object" && !Array.isArray(v)) {
+t[k] = merge(t[k] && typeof t[k] === "object" ? t[k] : {}, v);
+} else { t[k] = v; }
+}
+}
+return t;
+}
+function clone(o) { try { return structuredClone(o); } catch (e) { return JSON.parse(JSON.stringify(o)); } }
+function debounce(fn, wait) {
+var t; return function () { var a = arguments; clearTimeout(t); t = setTimeout(function () { fn.apply(null, a); }, wait || 120); };
+}
+function makeObj(k, v) { var o = {}; o[k] = v; return o; }
+function svg(p) {
+return '<svg class="awI" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg>';
+}
+var Ico = {
+apt: svg('<rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 8h1M9 11h1M9 14h1M13 8h1M13 11h1M13 14h1"/><path d="M6 20h12"/>'),
+house: svg('<path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/>'),
+villa: svg('<path d="M4 20V9l8-5 8 5v11"/><path d="M8 20v-7h8v7"/><path d="M9 11h1M14 11h1"/>'),
+units: svg('<path d="M3 11l4-4 4 4"/><path d="M13 11l4-4 4 4"/><path d="M5 11v9h4v-9"/><path d="M15 11v9h4v-9"/>'),
+pin: svg('<path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.1"/>'),
+che: svg('<path d="M8 10l4 4 4-4"/>'),
+ok: svg('<path d="M20 6L9 17l-5-5"/>'),
+plus: svg('<path d="M12 5v14M5 12h14"/>'),
+info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><path d="M12 7h.01"/>'),
+check: svg('<circle cx="12" cy="12" r="10" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="2"/>'),
+arrowDown: svg('<path d="M12 5v14"/><path d="M5 12l7 7 7-7"/>')
+};
+var T = {
+header: "Boendef\u00f6rfr\u00e5gan",
+sub: "Fyll i formul\u00e4ret \u2014 vi \u00e5terkommer inom 24 timmar",
+step: function (a, b) { return "Steg " + a + " av " + b; },
+back: "Tillbaka",
+next: "Forts\u00e4tt",
+send: "Skicka f\u00f6rfr\u00e5gan",
+saved: "Sparat",
+s1: "Boendetyp",
+s2: "Datum",
+s3: "Storlek",
+s4: "Bekv\u00e4mligheter",
+s5: "Budget & l\u00e4ge",
+s6: "Kontaktuppgifter",
+s1q: "V\u00e4lj ett alternativ",
+pt: { apartment: "L\u00e4genhet", house: "Hus", villa: "Flerfamiljsvilla", units: "Flera enheter" },
+unitsHowMany: "Hur m\u00e5nga enheter?",
+unitsHint: "F\u00f6r st\u00f6rre arbetsteam.",
+datesQ: "N\u00e4r vill ni checka in och ut?",
+cin: "Incheckning",
+cout: "Utcheckning",
+extTitle: "M\u00f6jlig f\u00f6rl\u00e4ngning?",
+extLocked: "V\u00e4lj datum f\u00f6rst.",
+extTap: "Valfritt \u2014 tryck f\u00f6r att v\u00e4lja.",
+yes: "Ja", no: "Nej", unsure: "Os\u00e4ker",
+bed: "Sovrum", bath: "Badrum", beds: "S\u00e4ngar", ppl: "Personer", park: "Parkeringsplatser",
+needsQ: "Vad beh\u00f6ver ni i boendet?",
+more: "Visa fler alternativ",
+less: "Visa f\u00e4rre",
+am: {
+wifi: "Wifi", fastWifi: "Snabbt wifi (krav)", parking: "Parkering",
+laundry: "Tv\u00e4tt & tork", desk: "Skrivbord / arbetsyta", tv: "TV",
+blackout: "M\u00f6rkl\u00e4ggningsgardiner", kitchen: "K\u00f6k", dishwasher: "Diskmaskin",
+aircon: "AC / kylning", weeklyCleaning: "Veckost\u00e4dning", privateRooms: "Privata sovrum",
+singleBeds: "Separata s\u00e4ngar (krav)", storage: "F\u00f6rvaringsyta", quiet: "Tyst l\u00e4ge",
+nearShops: "N\u00e4ra matbutik"
+},
+workplace: "Arbetsplats",
+workplacePh: "Adress eller platsnamn",
+commute: "Max restid (min)",
+budgetH: function (n) { return "Budget (ca " + n + " n\u00e4tter)"; },
+budgetSub: "kr / person / natt",
+estStay: "Totalt (hela vistelsen)",
+estNight: "Ca kr / natt",
+estMonth: "Ca m\u00e5nad (30 n\u00e4tter)",
+estMonthPP: "Ca kr / person / m\u00e5n",
+note: "Prelimin\u00e4r uppskattning \u2014 vi matchar b\u00e4sta alternativet \u00e5t er.",
+company: "F\u00f6retagsnamn", name: "Kontaktperson", email: "E-postadress",
+phone: "Telefonnummer", notes: "\u00d6vrig information",
+notesPh: "T.ex. skiftarbete, specifika krav, faktureringsinfo\u2026",
+v: {
+pt: "V\u00e4lj boendetyp.", units: "Ange antal enheter.",
+dates: "V\u00e4lj b\u00e5de in- och utcheckning.", order: "Utcheckning kan inte vara f\u00f6re incheckning.",
+ppl: "Minst 1 person.", company: "Ange f\u00f6retagsnamn.",
+email: "Ange e-postadress.", emailBad: "Ogiltig e-postadress.", phone: "Ange telefonnummer."
+},
+toastFix: "V\u00e4nligen fyll i alla obligatoriska f\u00e4lt.",
+sending: "Skickar\u2026",
+sent: "Tack! Din f\u00f6rfr\u00e5gan har skickats.",
+sendFail: "N\u00e5got gick fel. F\u00f6rs\u00f6k igen.",
+fine: "Ingen bindning. Vi kontaktar dig med boendef\u00f6rslag anpassade efter era behov.",
+successTitle: "Tack f\u00f6r din f\u00f6rfr\u00e5gan!",
+successSub: "Vi \u00e5terkommer inom 24 timmar med boendef\u00f6rslag.",
+newRequest: "Ny f\u00f6rfr\u00e5gan"
+};
+function tr(k) { return T[k] || k; }
+var steps = ["s1", "s2", "s3", "s4", "s5", "s6"];
+var def = {
+step: 0, propertyType: "", unitsNeeded: 2,
+checkIn: "", checkOut: "", extendOpen: false, mayExtend: "unsure",
+bedrooms: 2, bathrooms: 1, beds: 4, persons: 4, parkingSpots: 1,
+showMoreAmenities: false,
+amenities: {
+wifi: true, fastWifi: false, parking: true, laundry: false, desk: false,
+tv: false, blackout: false, kitchen: true, dishwasher: false, aircon: false,
+weeklyCleaning: false, privateRooms: false, singleBeds: false, storage: false,
+quiet: false, nearShops: false
+},
+workplace: "", maxCommuteMin: 30, budgetSlider: 35,
+companyName: "", contactName: "", email: "", phone: "", notes: ""
+};
+var state = (function () {
+var saved = null;
+try { saved = jp(localStorage.getItem(KEY), null); } catch (e) {}
+var s = merge(clone(def), saved || {});
+s.step = clamp(+s.step || 0, 0, steps.length - 1);
+s.unitsNeeded = clamp(+s.unitsNeeded || 2, 2, 50);
+s.maxCommuteMin = clamp(+s.maxCommuteMin || 30, 0, 240);
+s.budgetSlider = clamp(+s.budgetSlider || 35, 1, 100);
+s.persons = clamp(+s.persons || 1, 1, 250);
+s.bedrooms = clamp(+s.bedrooms || 0, 0, 30);
+s.bathrooms = clamp(+s.bathrooms || 0, 0, 30);
+s.beds = clamp(+s.beds || 1, 1, 200);
+s.parkingSpots = clamp(+s.parkingSpots || 0, 0, 100);
+s.mayExtend = ["yes", "no", "unsure"].indexOf(s.mayExtend) >= 0 ? s.mayExtend : "unsure";
+s.extendOpen = !!s.extendOpen;
+return s;
+})();
+var showErrors = false;
+var submitted = false;
+var saveTimer = 0;
+function save() {
+clearTimeout(saveTimer);
+saveTimer = setTimeout(function () {
+try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+flashSaved();
+}, 140);
+}
+function patch(p, rerender) {
+merge(state, p);
+save();
+if (rerender) render({ dir: 0, resetScroll: false, keepScroll: true });
+else { updateCTA(); updateBudgetIfVisible(); updateSliderFill(); }
+}
+function setVhVar() {
+var vh = (window.innerHeight || document.documentElement.clientHeight || 0) * 0.01;
+host.style.setProperty("--vh", vh + "px");
+}
+function nightsBetween() {
+var a = state.checkIn ? new Date(state.checkIn) : null;
+var b = state.checkOut ? new Date(state.checkOut) : null;
+if (a && b && !isNaN(a) && !isNaN(b)) {
+var d = Math.round((b - a) / 864e5);
+if (d > 0 && d < 3650) return d;
+}
+return 7;
+}
+function sliderToPP(s01) { return 10 + Math.pow(s01, 1.55) * 1140; }
+function calcBudget() {
+var nights = nightsBetween();
+var persons = clamp(+state.persons || 1, 1, 250);
+var spots = clamp(+state.parkingSpots || 0, 0, 100);
+var commute = clamp(+state.maxCommuteMin || 30, 0, 240);
+var a = state.amenities || {};
+var s01 = (clamp(+state.budgetSlider || 35, 1, 100) - 1) / 99;
+var pp = sliderToPP(s01);
+var mult =
+(commute <= 15 ? 1.06 : commute <= 30 ? 1.03 : commute <= 45 ? 1.0 : commute <= 75 ? 0.98 : 0.96) *
+(nights >= 90 ? 0.86 : nights >= 60 ? 0.88 : nights >= 28 ? 0.91 : nights >= 8 ? 0.96 : 1) *
+(persons >= 30 ? 0.9 : persons >= 20 ? 0.92 : persons >= 12 ? 0.94 : persons >= 6 ? 0.97 : 1) *
+({ apartment: 1, house: 1.04, villa: 1.06, units: 1.03 }[state.propertyType] || 1) *
+(1 + clamp(
+(a.wifi ? 0.006 : 0) + (a.fastWifi ? 0.01 : 0) + (a.kitchen ? 0.008 : 0) +
+(a.dishwasher ? 0.004 : 0) + (a.laundry ? 0.006 : 0) + (a.weeklyCleaning ? 0.01 : 0) +
+(a.desk ? 0.006 : 0) + (a.tv ? 0.003 : 0) + (a.blackout ? 0.006 : 0) +
+(a.aircon ? 0.008 : 0) + (a.privateRooms ? 0.008 : 0) + (a.storage ? 0.005 : 0) +
+(a.quiet ? 0.004 : 0) + (a.nearShops ? 0.003 : 0) + (a.singleBeds ? 0.006 : 0), 0, 0.08)) *
+(spots >= 10 ? 1.08 : spots >= 6 ? 1.06 : spots >= 3 ? 1.035 : spots >= 1 ? 1.015 : 1) *
+(state.propertyType === "units" ? (+state.unitsNeeded >= 8 ? 1.05 : +state.unitsNeeded >= 4 ? 1.03 : 1.02) : 1);
+var perNightTotal = pp * persons * mult;
+return {
+nights: nights, persons: persons,
+perPersonPerNight: Math.round(pp),
+perNightTotal: Math.round(perNightTotal),
+stayTotal: Math.round(perNightTotal * nights),
+monthTotal: Math.round(perNightTotal * 30),
+perPersonMonth: Math.round(pp * 30 * mult)
+};
+}
+function validate(k) {
+var e = {};
+if (k === "s1") {
+if (!state.propertyType) e.propertyType = T.v.pt;
+if (state.propertyType === "units" && (+state.unitsNeeded || 0) < 2) e.unitsNeeded = T.v.units;
+}
+if (k === "s2") {
+if (!state.checkIn || !state.checkOut) e.dates = T.v.dates;
+if (state.checkIn && state.checkOut && state.checkOut < state.checkIn) e.checkOut = T.v.order;
+}
+if (k === "s3") { if ((+state.persons || 0) < 1) e.persons = T.v.ppl; }
+if (k === "s6") {
+if (!state.companyName) e.companyName = T.v.company;
+if (!state.email) e.email = T.v.email;
+else if (!emailOk(state.email)) e.email = T.v.emailBad;
+if (!state.phone) e.phone = T.v.phone;
+}
+return e;
+}
+function canProceed() { return !Object.keys(validate(steps[state.step])).length; }
+function choice(field, value, icon, label) {
+var on = state[field] === value;
+return '<button type="button" class="awChoice ' + (on ? "is-on" : "") + '" data-choice="' + field + '" data-value="' + value + '" aria-pressed="' + on + '">' +
+'<div class="awChoiceI"><div class="awIconBg ' + (on ? "is-on" : "") + '">' + icon + '</div></div>' +
+'<div class="awChoiceL">' + esc(label) + '</div></button>';
+}
+function pill(field, value, label) {
+var on = state[field] === value;
+return '<button type="button" class="awPill ' + (on ? "is-on" : "") + '" data-pill="' + field + '" data-value="' + value + '" aria-pressed="' + on + '">' + esc(label) + '</button>';
+}
+function counter(key, min, max) {
+var v = clamp(+state[key] || 0, min, max);
+return '<div class="awCtr">' +
+'<button class="awRound awMinus" type="button" data-ctr="' + key + '" data-d="-1" ' + (v <= min ? "disabled" : "") + ' aria-label="Minska">\u2212</button>' +
+'<div class="awNum">' + v + '</div>' +
+'<button class="awRound awPlus" type="button" data-ctr="' + key + '" data-d="1" ' + (v >= max ? "disabled" : "") + ' aria-label="\u00d6ka">+</button>' +
+'</div>';
+}
+function toggle(k, label) {
+var on = !!(state.amenities && state.amenities[k]);
+return '<button type="button" class="awRow ' + (on ? "is-on" : "") + '" data-am="' + k + '" aria-pressed="' + on + '">' +
+'<span class="awRowL">' + esc(label) + '</span>' +
+'<span class="awDot ' + (on ? "is-on" : "") + '">' + (on ? Ico.ok : Ico.plus) + '</span></button>';
+}
+injectStyles();
+setVhVar();
+window.addEventListener("resize", debounce(setVhVar, 120));
+window.addEventListener("orientationchange", function () { setTimeout(setVhVar, 60); });
+requestAnimationFrame(function () {
+requestAnimationFrame(function () {
+render({ keepScroll: false, resetScroll: true, dir: 0 });
+host.style.visibility = "visible";
+});
+});
+function render(opts) {
+var keepScroll = opts && opts.keepScroll;
+var resetScroll = opts && opts.resetScroll;
+var dir = (opts && opts.dir) || 0;
+var scPrev = ($("#awScroll") || {}).scrollTop || 0;
+var k = steps[state.step];
+var errs = showErrors ? validate(k) : {};
+var isLastStep = k === "s6";
+var dots = '';
+for (var si = 0; si < steps.length; si++) {
+var dotCls = si < state.step ? 'awDotDone' : si === state.step ? 'awDotActive' : 'awDotFuture';
+dots += '<div class="awStepDot ' + dotCls + '"><span>' + (si + 1) + '</span></div>';
+if (si < steps.length - 1) dots += '<div class="awStepLine ' + (si < state.step ? 'done' : '') + '"></div>';
+}
+var subtext = { s1: T.s1q, s2: T.datesQ, s3: "", s4: T.needsQ, s5: "", s6: "" }[k] || "";
+var html;
+if (submitted) {
+html = '<div class="awWrap"><div class="awCard" role="status">' +
+'<div class="awSuccess">' +
+'<div class="awSuccessIcon">' + Ico.check + '</div>' +
+'<div class="awSuccessH">' + esc(T.successTitle) + '</div>' +
+'<div class="awSuccessS">' + esc(T.successSub) + '</div>' +
+'<button type="button" class="awNewBtn" data-new>' + esc(T.newRequest) + '</button>' +
+'</div></div></div>';
+} else {
+html = '<div class="awWrap"><div class="awCard" role="form">' +
+'<header class="awHead">' +
+'<div class="awTop">' +
+'<div class="awTiny">' + esc(T.step(state.step + 1, steps.length).toUpperCase()) + '</div>' +
+'<div id="awSaved" class="awSaved"></div>' +
+'</div>' +
+'<div class="awHero">' +
+'<div class="awH">' + esc(T.header) + '</div>' +
+'<div class="awS">' + esc(T.sub) + '</div>' +
+'</div>' +
+'<div class="awStepDots">' + dots + '</div>' +
+'</header>' +
+'<div class="awSecHead">' +
+'<div class="awST">' + esc(tr(k)) + '</div>' +
+(subtext ? '<span class="awSS">' + esc(subtext) + '</span>' : '') +
+'</div>' +
+'<div class="awScroll" id="awScroll"><main class="awBody">' +
+'<div id="awAnim" class="awAnim ' + (!rm ? (dir > 0 ? "in-r" : dir < 0 ? "in-l" : "") : "") + '">' +
+renderStep(k, errs) +
+'</div><div class="awPad"></div>' +
+'</main></div>' +
+'<footer class="awFoot">' +
+'<button class="awBack" type="button" data-nav="-1" ' + (state.step === 0 ? "disabled" : "") + '>' + esc(T.back) + '</button>' +
+'<div class="awScrollHint" data-scroll-down>' + Ico.arrowDown + '</div>' +
+'<button class="awNext ' + (isLastStep ? 'awGold' : '') + '" type="button" data-nav="+1" ' + (canProceed() ? "" : "disabled") + '>' +
+esc(isLastStep ? T.send : T.next) + ' <span class="awArr">\u2192</span>' +
+'</button>' +
+'</footer>' +
+'<div class="awToast" id="awToast" aria-live="polite"></div>' +
+'</div></div>';
+}
+var old = shadow.querySelector("#awRoot");
+if (old) old.remove();
+var wrap = document.createElement("div");
+wrap.id = "awRoot";
+wrap.innerHTML = html;
+shadow.appendChild(wrap);
+if (!rm) requestAnimationFrame(function () { var el = $("#awAnim"); if (el) el.classList.add("ready"); });
+var sc = $("#awScroll");
+if (sc) sc.scrollTop = resetScroll ? 0 : keepScroll ? scPrev : 0;
+updateCTA();
+updateBudgetIfVisible();
+updateSliderFill();
+}
+function renderStep(k, errs) {
+if (k === "s1") {
+var showUnits = state.propertyType === "units";
+return '<section class="awSec">' +
+(errs.propertyType ? '<div class="awErr">' + esc(errs.propertyType) + '</div>' : '') +
+'<div class="awGrid">' +
+choice("propertyType", "apartment", Ico.apt, T.pt.apartment) +
+choice("propertyType", "house", Ico.house, T.pt.house) +
+choice("propertyType", "villa", Ico.villa, T.pt.villa) +
+choice("propertyType", "units", Ico.units, T.pt.units) +
+'</div>' +
+'<div class="awCol ' + (showUnits ? "is-on" : "") + '">' +
+'<div class="awQsm">' + esc(T.unitsHowMany) + '</div>' +
+'<div class="awHint">' + esc(T.unitsHint) + '</div>' +
+(errs.unitsNeeded ? '<div class="awErr">' + esc(errs.unitsNeeded) + '</div>' : '') +
+'<div class="awRow2"><div class="awLbl">Antal</div>' + counter("unitsNeeded", 2, 50) + '</div>' +
+'</div></section>';
+}
+if (k === "s2") {
+var ok = !!(state.checkIn && state.checkOut && state.checkOut >= state.checkIn);
+var open = !!state.extendOpen;
+return '<section class="awSec">' +
+(errs.dates ? '<div class="awErr">' + esc(errs.dates) + '</div>' : '') +
+(errs.checkOut ? '<div class="awErr">' + esc(errs.checkOut) + '</div>' : '') +
+'<div class="awGrid2">' +
+'<div class="awF"><label class="awLab">' + esc(T.cin) + '</label>' +
+'<input class="awIn" type="date" data-bind="checkIn" value="' + attr(state.checkIn) + '"></div>' +
+'<div class="awF"><label class="awLab">' + esc(T.cout) + '</label>' +
+'<input class="awIn" type="date" data-bind="checkOut" value="' + attr(state.checkOut) + '"></div>' +
+'</div>' +
+'<button type="button" class="awExt ' + (ok ? "" : "is-dis") + '" data-ext ' + (ok ? "" : "disabled") + ' aria-expanded="' + open + '">' +
+'<div><div class="awExtT">' + esc(T.extTitle) + '</div>' +
+'<div class="awHint">' + esc(ok ? (open ? "" : T.extTap) : T.extLocked) + '</div></div>' +
+'<div class="awChe ' + (open ? "is-on" : "") + '">' + Ico.che + '</div>' +
+'</button>' +
+'<div class="awCol ' + (open && ok ? "is-on" : "") + '">' +
+'<div class="awP3" role="radiogroup">' +
+pill("mayExtend", "yes", T.yes) +
+pill("mayExtend", "no", T.no) +
+pill("mayExtend", "unsure", T.unsure) +
+'</div></div></section>';
+}
+if (k === "s3") {
+return '<section class="awSec">' +
+'<div class="awRow2"><div class="awLbl">' + esc(T.bed) + '</div>' + counter("bedrooms", 0, 30) + '</div>' +
+'<div class="awRow2"><div class="awLbl">' + esc(T.bath) + '</div>' + counter("bathrooms", 0, 30) + '</div>' +
+'<div class="awRow2"><div class="awLbl">' + esc(T.beds) + '</div>' + counter("beds", 1, 200) + '</div>' +
+'<div class="awRow2"><div>' + esc(T.ppl) + (errs.persons ? '<div class="awErr">' + esc(errs.persons) + '</div>' : '') + '</div>' + counter("persons", 1, 250) + '</div>' +
+'<div class="awRow2 noBorder"><div class="awLbl">' + esc(T.park) + '</div>' + counter("parkingSpots", 0, 100) + '</div>' +
+'</section>';
+}
+if (k === "s4") {
+var more = !!state.showMoreAmenities;
+return '<section class="awSec">' +
+'<div class="awList">' +
+toggle("wifi", T.am.wifi) + toggle("fastWifi", T.am.fastWifi) +
+toggle("parking", T.am.parking) + toggle("laundry", T.am.laundry) +
+toggle("desk", T.am.desk) + toggle("tv", T.am.tv) +
+toggle("blackout", T.am.blackout) + toggle("singleBeds", T.am.singleBeds) +
+'<div class="awMore ' + (more ? "is-on" : "") + '">' +
+toggle("kitchen", T.am.kitchen) + toggle("dishwasher", T.am.dishwasher) +
+toggle("aircon", T.am.aircon) + toggle("weeklyCleaning", T.am.weeklyCleaning) +
+toggle("privateRooms", T.am.privateRooms) + toggle("storage", T.am.storage) +
+toggle("quiet", T.am.quiet) + toggle("nearShops", T.am.nearShops) +
+'</div>' +
+'</div>' +
+'<button type="button" class="awMoreB" data-more>' + esc(more ? T.less : T.more) + '</button>' +
+'</section>';
+}
+if (k === "s5") {
+var b = calcBudget();
+return '<section class="awSec">' +
+'<div class="awGrid2">' +
+'<div class="awF"><label class="awLab">' + esc(T.workplace) + '</label>' +
+'<div class="awIconIn"><span class="awIcon">' + Ico.pin + '</span>' +
+'<input class="awIn awIn2" data-bind="workplace" placeholder="' + attr(T.workplacePh) + '" value="' + attr(state.workplace) + '"></div></div>' +
+'<div class="awF"><label class="awLab">' + esc(T.commute) + '</label>' +
+'<input class="awIn" inputmode="numeric" data-bind="maxCommuteMin" value="' + attr(String(state.maxCommuteMin)) + '" placeholder="30"></div>' +
+'</div>' +
+'<div class="awBud">' +
+'<div class="awBudH">' + esc(T.budgetH(b.nights)) + '</div>' +
+'<div class="awBudTop">' +
+'<div class="awBudV"><span id="awPP">' + sek(b.perPersonPerNight) + '</span>' +
+'<div class="awBudU">' + esc(T.budgetSub) + '</div></div>' +
+'<div class="awBudM">' +
+'<div class="awML"><span>' + esc(T.estStay) + '</span><b id="awStay">' + sek(b.stayTotal) + '</b></div>' +
+'<div class="awML"><span>' + esc(T.estNight) + '</span><b id="awNight">' + sek(b.perNightTotal) + '</b></div>' +
+'<div class="awML"><span>' + esc(T.estMonth) + '</span><b id="awMonth">' + sek(b.monthTotal) + '</b></div>' +
+'<div class="awML"><span>' + esc(T.estMonthPP) + '</span><b id="awMonthPP">' + sek(b.perPersonMonth) + '</b></div>' +
+'</div>' +
+'</div>' +
+'<div class="awSl">' +
+'<input class="awR" id="awBudgetSlider" type="range" min="1" max="100" step="1" value="' + attr(String(state.budgetSlider)) + '">' +
+'<div class="awRL"><span>10 kr</span><span>1 150 kr</span></div>' +
+'</div>' +
+'<div class="awNote"><span class="awInfo">' + Ico.info + '</span>' + esc(T.note) + '</div>' +
+'</div></section>';
+}
+var e2 = showErrors ? validate("s6") : {};
+return '<section class="awSec">' +
+'<div class="awGrid2">' +
+'<div class="awF"><label class="awLab">' + esc(T.company) + ' *</label>' +
+'<input class="awIn" data-bind="companyName" value="' + attr(state.companyName) + '">' +
+(e2.companyName ? '<div class="awErr">' + esc(e2.companyName) + '</div>' : '') + '</div>' +
+'<div class="awF"><label class="awLab">' + esc(T.name) + '</label>' +
+'<input class="awIn" data-bind="contactName" value="' + attr(state.contactName) + '"></div>' +
+'</div>' +
+'<div class="awGrid2">' +
+'<div class="awF"><label class="awLab">' + esc(T.email) + ' *</label>' +
+'<input class="awIn" type="email" data-bind="email" value="' + attr(state.email) + '">' +
+(e2.email ? '<div class="awErr">' + esc(e2.email) + '</div>' : '') + '</div>' +
+'<div class="awF"><label class="awLab">' + esc(T.phone) + ' *</label>' +
+'<input class="awIn" data-bind="phone" value="' + attr(state.phone) + '" placeholder="+46\u2026">' +
+(e2.phone ? '<div class="awErr">' + esc(e2.phone) + '</div>' : '') + '</div>' +
+'</div>' +
+'<div class="awF"><label class="awLab">' + esc(T.notes) + '</label>' +
+'<textarea class="awTa" data-bind="notes" placeholder="' + attr(T.notesPh) + '">' + esc(state.notes) + '</textarea></div>' +
+'<div class="awFine">' + esc(T.fine) + '</div>' +
+'</section>';
+}
+shadow.addEventListener("click", function (ev) {
+var el = ev.target.closest("[data-nav],[data-choice],[data-pill],[data-ctr],[data-am],[data-more],[data-ext],[data-new],[data-scroll-down]");
+if (!el) return;
+if (el.hasAttribute("data-scroll-down")) {
+var sc = $("#awScroll");
+if (sc) sc.scrollBy({ top: 120, behavior: "smooth" });
+return;
+}
+if (el.hasAttribute("data-new")) {
+submitted = false; state = merge(clone(def), {}); state.step = 0; showErrors = false;
+try { localStorage.removeItem(KEY); } catch (e) {}
+render({ keepScroll: false, resetScroll: true, dir: 0 }); return;
+}
+if (el.dataset.nav) {
+var dir = +el.dataset.nav;
+if (dir < 0) { goTo(state.step - 1, -1); return; }
+showErrors = true;
+var k = steps[state.step]; var errs = validate(k);
+if (Object.keys(errs).length) { render({ keepScroll: true, resetScroll: false, dir: 0 }); toast(T.toastFix); focusFirst(errs); return; }
+if (k !== "s6") { goTo(state.step + 1, +1); return; }
+var btn = $(".awNext"); if (btn) btn.disabled = true;
+toast(T.sending);
+var payload = buildPayload();
+var submitFn = window.EBW_ON_SUBMIT;
+if (typeof submitFn === "function") {
+Promise.resolve(submitFn(payload)).then(function (res) {
+if (res && res.ok === false) throw new Error(res.message || "Failed");
+submitted = true; render({ keepScroll: false, resetScroll: true, dir: 0 });
+}).catch(function (e) { toast((e && e.message) || T.sendFail); updateCTA(); });
+} else { submitted = true; render({ keepScroll: false, resetScroll: true, dir: 0 }); }
+return;
+}
+if (el.hasAttribute("data-ext")) {
+var ok2 = !!(state.checkIn && state.checkOut && state.checkOut >= state.checkIn);
+if (!ok2) return; patch({ extendOpen: !state.extendOpen }, true); return;
+}
+if (el.dataset.choice) { patch(makeObj(el.dataset.choice, el.dataset.value), true); return; }
+if (el.dataset.pill) { patch(makeObj(el.dataset.pill, el.dataset.value), true); return; }
+if (el.dataset.ctr) {
+var ck = el.dataset.ctr; var d2 = +el.dataset.d;
+var bounds = { unitsNeeded: [2, 50], bedrooms: [0, 30], bathrooms: [0, 30], beds: [1, 200], persons: [1, 250], parkingSpots: [0, 100] }[ck] || [0, 999];
+patch(makeObj(ck, clamp((+state[ck] || 0) + d2, bounds[0], bounds[1])), true); return;
+}
+if (el.dataset.am) {
+var amk = el.dataset.am; var newAm = {};
+for (var ak in state.amenities) { if (state.amenities.hasOwnProperty(ak)) newAm[ak] = state.amenities[ak]; }
+newAm[amk] = !newAm[amk]; patch({ amenities: newAm }, true); return;
+}
+if (el.hasAttribute("data-more")) { patch({ showMoreAmenities: !state.showMoreAmenities }, true); return; }
+});
+shadow.addEventListener("input", function (ev) {
+var el = ev.target; if (!el) return;
+if (el.id === "awBudgetSlider") { patch({ budgetSlider: clamp(+el.value || 35, 1, 100) }, false); return; }
+var bind = el.getAttribute("data-bind"); if (!bind) return;
+var v = el.value;
+if (bind === "maxCommuteMin") v = clamp(parseInt(String(v).replace(/[^\d-]/g, ""), 10) || 30, 0, 240);
+if (bind === "phone") { v = phoneClean(v); el.value = v; }
+if (bind === "checkIn" || bind === "checkOut") { patch(makeObj(bind, v), true); return; }
+patch(makeObj(bind, v), false);
+});
+function goTo(n, dir) { state.step = clamp(n, 0, steps.length - 1); showErrors = false; save(); render({ keepScroll: false, resetScroll: true, dir: dir }); }
+function updateCTA() { var b = $(".awNext"); if (b) b.disabled = !canProceed(); }
+function updateBudgetIfVisible() {
+if (steps[state.step] !== "s5") return; var b = calcBudget();
+var pp = $("#awPP"); if (pp) pp.textContent = sek(b.perPersonPerNight);
+var st = $("#awStay"); if (st) st.textContent = sek(b.stayTotal);
+var ni = $("#awNight"); if (ni) ni.textContent = sek(b.perNightTotal);
+var mo = $("#awMonth"); if (mo) mo.textContent = sek(b.monthTotal);
+var mp = $("#awMonthPP"); if (mp) mp.textContent = sek(b.perPersonMonth);
+}
+function updateSliderFill() {
+var r = $("#awBudgetSlider"); if (!r) return;
+var min = +r.min || 1, max = +r.max || 100, v = +r.value || +state.budgetSlider || 35;
+r.style.setProperty("--fill", ((v - min) / (max - min)) * 100 + "%");
+}
+function focusFirst(errs) {
+var k = Object.keys(errs)[0];
+var el = $('[data-choice="' + k + '"]') || $('[data-bind="' + k + '"]') || (k === "dates" ? $('[data-bind="checkIn"]') : null);
+if (el && el.focus) el.focus();
+}
+function toast(msg) {
+var t = $("#awToast"); if (!t) return;
+t.textContent = msg; t.classList.add("is-on");
+clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove("is-on"); }, 3500);
+}
+function flashSaved() {
+var el = $("#awSaved"); if (!el) return;
+el.textContent = T.saved; el.classList.add("is-on");
+clearTimeout(flashSaved._t); flashSaved._t = setTimeout(function () { el.classList.remove("is-on"); el.textContent = ""; }, 900);
+}
+function buildPayload() {
+return { meta: { version: "aircrew_widget_v7", submittedAt: iso(), lang: "sv", currency: "SEK" }, input: clone(state), budget: calcBudget() };
+}
+function injectStyles() {
+if (shadow.getElementById && shadow.getElementById("aw_style")) return;
+var style = document.createElement("style");
+style.id = "aw_style";
+style.textContent = [
+':host {',
+'  --w:460px; --r:18px; --vh:1vh;',
+'  --navy:#0D1527; --navy-dark:#091020;',
+'  --gray:#6B7280; --light:#F8F8F6;',
+'  --border:rgba(17,32,64,0.11); --selected:#FAF5E8;',
+'  --gold:#C9A84C; --gold-hover:#B8962E; --gold-text:#0D1527;',
+'  --gold-glow:rgba(201,168,76,0.18); --gold-border:rgba(201,168,76,0.32);',
+'  --text:#0D1527; --white:#FFFFFF;',
+'  --err:#D63031;',
+'  --surface:#FAFAF8;',
+'  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;',
+'  color:var(--text); display:block;',
+'  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;',
+'}',
+'* { box-sizing:border-box; margin:0; padding:0; }',
+'button { font-family:inherit; font-size:inherit; cursor:pointer; }',
+'.awWrap { display:grid; place-items:center; padding:12px; }',
+'.awCard {',
+'  width:min(var(--w),100%);',
+'  max-height:min(calc(var(--vh)*82),720px); max-height:min(82dvh,720px);',
+'  display:flex; flex-direction:column; overflow:hidden;',
+'  border-radius:var(--r); background:var(--white);',
+'  border:1px solid var(--gold-border);',
+'  box-shadow:0 0 0 1px rgba(201,168,76,0.08),0 4px 32px rgba(10,15,30,0.12),0 1px 4px rgba(10,15,30,0.06);',
+'}',
+'.awHead {',
+'  background:#0D1527;',
+'  padding:18px 22px 14px;',
+'  border-radius:var(--r) var(--r) 0 0;',
+'  position:relative;',
+'}',
+'.awHead::after {',
+"  content:'';",
+'  position:absolute; bottom:0; left:0; right:0; height:1px;',
+'  background:linear-gradient(90deg,transparent 0%,rgba(201,168,76,0.5) 25%,rgba(226,204,150,0.9) 50%,rgba(201,168,76,0.5) 75%,transparent 100%);',
+'}',
+'.awTop { display:flex; align-items:center; justify-content:space-between; gap:10px; }',
+'.awTiny { color:#C9A84C; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }',
+'.awSaved { font-weight:600; font-size:11px; color:#34c759; opacity:0; transition:opacity .25s ease; }',
+'.awSaved.is-on { opacity:1; }',
+'.awHero { padding:10px 0 8px; text-align:left; }',
+'.awH { font-size:22px; font-weight:700; letter-spacing:-0.03em; line-height:1.1; color:#FFFFFF; }',
+'.awS { margin-top:4px; font-size:12.5px; font-weight:400; color:rgba(255,255,255,0.5); line-height:1.4; }',
+'.awStepDots { display:flex; align-items:center; justify-content:flex-start; gap:0; margin:10px 0 6px; }',
+'.awStepDot { width:26px; height:26px; border-radius:999px; display:grid; place-items:center; font-size:11px; font-weight:700; flex-shrink:0; transition:all .3s ease; }',
+'.awStepDot span { display:block; }',
+'.awDotFuture { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.3); }',
+'.awDotActive { background:#C9A84C; color:#0D1527; box-shadow:0 0 0 3px rgba(201,168,76,0.22); }',
+'.awDotDone { background:rgba(201,168,76,0.2); color:#C9A84C; border:1px solid rgba(201,168,76,0.4); }',
+'.awStepLine { width:16px; height:1px; background:rgba(255,255,255,0.1); flex-shrink:0; margin:0 3px; transition:background .3s ease; }',
+'.awStepLine.done { background:rgba(201,168,76,0.4); }',
+'.awSecHead { padding:14px 22px 10px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; gap:10px; }',
+'.awST { font-size:15px; font-weight:700; color:var(--navy); letter-spacing:-.015em; }',
+'.awSS { font-size:13px; font-weight:400; color:var(--gray); }',
+'.awScroll { flex:1 1 auto; overflow:auto; -webkit-overflow-scrolling:touch; }',
+'.awBody { padding:10px 20px 8px; background:#FAFAF8; }',
+'.awPad { height:50px; }',
+'.awSec { }',
+'.awAnim { transition:transform .3s cubic-bezier(.4,0,.2,1),opacity .22s ease; will-change:transform,opacity; }',
+'.awAnim.in-r { transform:translateX(20px); opacity:0; }',
+'.awAnim.in-l { transform:translateX(-20px); opacity:0; }',
+'.awAnim.ready { transform:none; opacity:1; }',
+'.awErr { margin:6px 0 2px; color:var(--err); font-size:12px; font-weight:500; }',
+'.awHint { margin-top:4px; color:var(--gray); font-size:12px; font-weight:400; }',
+'.awQsm { font-size:13px; font-weight:600; color:var(--navy); }',
+'.awGrid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }',
+'@media(max-width:520px){ .awGrid{grid-template-columns:1fr 1fr;} }',
+'.awChoice {',
+'  border:1px solid rgba(17,32,64,0.11); border-radius:12px; background:#FFFFFF;',
+'  padding:14px; text-align:left; min-height:72px;',
+'  transition:all 0.18s ease;',
+'}',
+'.awChoice:hover { border-color:rgba(201,168,76,0.5); background:#FAF5E8; transform:translateY(-1px); }',
+'.awChoice:active { transform:scale(.97); }',
+'.awChoice.is-on { border:1.5px solid #C9A84C; background:#FAF5E8; box-shadow:0 0 0 3px rgba(201,168,76,0.13); }',
+'.awChoiceI { display:flex; margin-bottom:8px; color:#6B7280; }',
+'.awIconBg {',
+'  width:38px; height:38px; border-radius:10px; display:grid; place-items:center;',
+'  background:var(--light); color:var(--gray);',
+'  transition:all .2s ease;',
+'}',
+'.awIconBg.is-on { background:var(--selected); color:var(--gold); }',
+'.awChoice.is-on .awChoiceI { color:#A8891E; }',
+'.awChoiceL { font-weight:600; font-size:13px; line-height:1.2; color:var(--text); margin-top:8px; }',
+'.awChoice.is-on .awChoiceL { color:#0D1527; }',
+'.awI { width:20px; height:20px; }',
+'.awCol { margin-top:10px; border-radius:10px; border:0.5px solid var(--border); background:var(--light); max-height:0; overflow:hidden; opacity:.9; padding:0 14px; transition:max-height .3s cubic-bezier(.4,0,.2,1),opacity .25s ease,padding .25s ease; }',
+'.awCol.is-on { max-height:340px; opacity:1; padding:14px; }',
+'.awGrid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }',
+'@media(max-width:520px){ .awGrid2{grid-template-columns:1fr;} }',
+'.awF { margin:6px 0; }',
+'.awLab { display:block; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#6B7280; font-weight:700; margin-bottom:5px; }',
+'.awIn,.awTa {',
+'  width:100%; border:1.5px solid rgba(17,32,64,0.11); background:#FFFFFF;',
+'  border-radius:10px; padding:10px 13px; font-size:14px; color:#0D1527;',
+'  outline:none; font-family:inherit;',
+'  transition:border-color 0.18s ease,box-shadow 0.18s ease;',
+'}',
+'.awIn::placeholder,.awTa::placeholder { color:#B4B2A9; }',
+'.awTa { border-radius:10px; min-height:76px; resize:vertical; }',
+'.awIn:focus,.awTa:focus { border-color:#C9A84C; box-shadow:0 0 0 3px rgba(201,168,76,0.15); background:#FAF5E8; }',
+'.awIconIn { display:flex; align-items:center; gap:10px; border-radius:10px; border:1.5px solid rgba(17,32,64,0.11); background:#FFFFFF; padding:0 13px; transition:border-color 0.18s ease,box-shadow 0.18s ease; }',
+'.awIconIn:focus-within { border-color:#C9A84C; box-shadow:0 0 0 3px rgba(201,168,76,0.15); }',
+'.awIcon { display:flex; color:var(--navy); }',
+'.awIcon svg { width:18px; height:18px; }',
+'.awIn2 { border:0!important; background:transparent!important; padding:10px 8px; box-shadow:none!important; }',
+'.awExt { width:100%; margin-top:12px; border:1px solid var(--border); background:var(--light); border-radius:10px; padding:12px 14px; display:flex; align-items:center; justify-content:space-between; gap:12px; transition:all .18s ease; }',
+'.awExt:hover { border-color:rgba(201,168,76,0.5); }',
+'.awExt.is-dis { opacity:.35; cursor:not-allowed; }',
+'.awExtT { font-weight:500; font-size:13px; color:var(--navy); }',
+'.awChe { width:28px; height:28px; border-radius:999px; border:1px solid var(--border); background:var(--white); display:grid; place-items:center; color:var(--navy); transition:transform .25s cubic-bezier(.4,0,.2,1); }',
+'.awChe.is-on { transform:rotate(180deg); }',
+'.awP3 { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }',
+'.awPill { flex:1 1 0; min-width:80px; border:1px solid rgba(17,32,64,0.11); background:#FFFFFF; border-radius:10px; padding:9px 14px; font-weight:500; font-size:13px; color:#6B7280; text-align:center; transition:all 0.18s ease; }',
+'.awPill:hover { border-color:rgba(201,168,76,0.5); color:#0D1527; }',
+'.awPill.is-on { border:1.5px solid #C9A84C; background:#FAF5E8; color:#0D1527; font-weight:600; box-shadow:0 0 0 3px rgba(201,168,76,0.12); }',
+'.awRow2 { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 0; border-bottom:1px solid rgba(13,21,39,.06); }',
+'.awRow2.noBorder { border-bottom:0; }',
+'.awLbl { font-weight:400; font-size:14px; color:var(--text); }',
+'.awCtr { display:flex; align-items:center; gap:10px; }',
+'.awRound { width:32px; height:32px; border-radius:999px; display:grid; place-items:center; font-weight:500; font-size:16px; transition:all .15s ease; border:0; }',
+'.awMinus { background:#F8F8F6; border:1px solid rgba(17,32,64,0.12); color:#0D1527; }',
+'.awMinus:hover { border-color:#C9A84C; color:#A8891E; }',
+'.awPlus { background:#C9A84C; color:#0D1527; border:none; font-weight:700; }',
+'.awPlus:hover { background:#B8962E; }',
+'.awRound:active { transform:scale(.90); }',
+'.awRound:disabled { opacity:.2; cursor:not-allowed; transform:none; }',
+'.awNum { width:36px; text-align:center; font-variant-numeric:tabular-nums; font-weight:700; font-size:15px; color:#0D1527; }',
+'.awList { border:1px solid var(--border); border-radius:10px; overflow:hidden; background:var(--white); }',
+'.awRow { width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 14px; border:0; background:var(--white); cursor:pointer; border-bottom:1px solid rgba(17,32,64,0.07); transition:background 0.15s ease; color:var(--text); font-family:inherit; }',
+'.awRow:last-child { border-bottom:0; }',
+'.awRow:hover { background:#FAF5E8; }',
+'.awRow.is-on { background:#FAF5E8; }',
+'.awRowL { font-weight:400; font-size:13px; color:var(--text); text-align:left; }',
+'.awRow.is-on .awRowL { color:#0D1527; font-weight:500; }',
+'.awDot { width:28px; height:28px; min-width:28px; border-radius:999px; display:grid; place-items:center; transition:all .2s ease; }',
+'.awRow:not(.is-on) .awDot { border:1px solid var(--border); background:var(--white); color:var(--gray); }',
+'.awDot.is-on { background:#C9A84C; border:0; color:#0D1527; }',
+'.awMore { max-height:0; overflow:hidden; transition:max-height .3s cubic-bezier(.4,0,.2,1); }',
+'.awMore.is-on { max-height:1000px; }',
+'.awMoreB { margin-top:8px; border:1px solid rgba(201,168,76,0.35); background:var(--white); border-radius:999px; padding:9px 16px; font-weight:500; font-size:12px; color:#A8891E; transition:all .2s ease; }',
+'.awMoreB:hover { background:#FAF5E8; border-color:#C9A84C; }',
+'.awBud { margin-top:12px; border-radius:14px; border:1px solid rgba(201,168,76,0.25); background:#0D1527; padding:0; overflow:hidden; }',
+'.awBudH { font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#C9A84C; padding:14px 16px 0; }',
+'.awBudTop { margin-top:10px; padding:0 16px 14px; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,0.07); }',
+'.awBudV { font-size:30px; font-weight:800; letter-spacing:-0.04em; line-height:1.1; color:#FFFFFF; }',
+'.awBudU { font-size:11px; font-weight:500; color:rgba(255,255,255,0.45); margin-top:3px; }',
+'.awBudM { flex:1 1 180px; min-width:180px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; }',
+'.awML { display:flex; align-items:baseline; justify-content:space-between; gap:8px; padding:4px 0; }',
+'.awML span { font-weight:400; color:rgba(255,255,255,0.45); font-size:11px; }',
+'.awML b { font-weight:600; color:#FFFFFF; font-size:12px; }',
+'.awSl { margin-top:14px; padding:0 16px 4px; }',
+'.awR { width:100%; height:28px; appearance:none; -webkit-appearance:none; background:transparent; --fill:35%; cursor:pointer; }',
+'.awR:focus { outline:none; }',
+'.awR::-webkit-slider-runnable-track { height:4px; border-radius:999px; background:linear-gradient(90deg,#C9A84C 0%,#C9A84C var(--fill),rgba(255,255,255,0.12) var(--fill),rgba(255,255,255,0.12) 100%); }',
+'.awR::-webkit-slider-thumb { -webkit-appearance:none; width:22px; height:22px; border-radius:999px; background:linear-gradient(145deg,#E8D09C,#C9A84C); border:2px solid #FFFFFF; margin-top:-9px; cursor:pointer; box-shadow:0 2px 8px rgba(201,168,76,0.5),0 1px 3px rgba(0,0,0,0.2); transition:transform 0.15s ease,box-shadow 0.15s ease; }',
+'.awR::-webkit-slider-thumb:active { transform:scale(1.15); box-shadow:0 3px 14px rgba(201,168,76,0.7); }',
+'.awR::-moz-range-track { height:4px; border-radius:999px; background:rgba(255,255,255,0.12); }',
+'.awR::-moz-range-progress { height:4px; border-radius:999px; background:#C9A84C; }',
+'.awR::-moz-range-thumb { width:22px; height:22px; border-radius:999px; background:linear-gradient(145deg,#E8D09C,#C9A84C); border:2px solid #FFFFFF; box-shadow:0 2px 8px rgba(201,168,76,0.5); cursor:pointer; }',
+'.awRL { margin-top:8px; display:flex; justify-content:space-between; color:rgba(255,255,255,0.35); font-weight:500; font-size:10px; }',
+'.awNote { margin-top:0; color:rgba(255,255,255,0.4); font-weight:400; font-size:11px; display:flex; align-items:flex-start; gap:8px; line-height:1.5; padding:10px 16px 14px; }',
+'.awInfo svg { width:14px; height:14px; }',
+'.awFoot { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 20px; border-top:1px solid rgba(17,32,64,0.08); position:sticky; bottom:0; background:#FFFFFF; }',
+'.awBack { background:transparent; border:none; color:#6B7280; font-weight:500; padding:10px 4px; font-size:13px; transition:all .15s ease; }',
+'.awBack:hover { color:#0D1527; }',
+'.awBack:disabled { opacity:.25; cursor:not-allowed; }',
+'.awScrollHint { width:36px; height:36px; border-radius:999px; border:1px solid var(--border); display:grid; place-items:center; color:var(--gray); cursor:pointer; transition:all .2s ease; }',
+'.awScrollHint:hover { background:var(--light); color:var(--navy); }',
+'.awScrollHint svg { width:18px; height:18px; }',
+'.awNext { border:0; background:#0D1527; color:#FFFFFF; font-weight:700; padding:12px 26px; border-radius:12px; min-width:150px; font-size:13px; transition:all .2s ease; display:flex; align-items:center; justify-content:center; gap:6px; position:relative; overflow:hidden; letter-spacing:-0.01em; }',
+".awNext::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#C9A84C 30%,#E2CC96 50%,#C9A84C 70%,transparent); }",
+'.awNext:hover { background:#1A3060; transform:translateY(-1px); box-shadow:0 4px 16px rgba(13,21,39,0.25); }',
+'.awNext:active { transform:scale(.97); }',
+'.awNext:disabled { opacity:.30; cursor:not-allowed; transform:none; }',
+'.awArr { font-size:15px; transition:transform .2s ease; }',
+'.awNext:hover .awArr { transform:translateX(2px); }',
+'.awNext.awGold { background:#C9A84C; color:#0D1527; border:0; }',
+'.awNext.awGold::after { opacity:0; }',
+'.awNext.awGold:hover { background:#B8962E; }',
+'.awNext.awGold:disabled { background:#C9A84C; opacity:.35; }',
+'.awToast { display:none; margin:8px 20px 12px; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--light); color:var(--text); font-weight:500; font-size:12px; }',
+'.awToast.is-on { display:block; }',
+'.awFine { margin-top:12px; font-size:11px; font-weight:400; color:var(--gray); line-height:1.5; }',
+'.awSuccess { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:50px 24px; }',
+'.awSuccessIcon { color:#C9A84C; margin-bottom:18px; }',
+'.awSuccessIcon svg { width:52px; height:52px; }',
+'.awSuccessH { font-size:22px; font-weight:800; color:#0D1527; letter-spacing:-.02em; }',
+'.awSuccessS { margin-top:6px; font-size:14px; color:var(--gray); font-weight:400; line-height:1.5; }',
+'.awNewBtn { margin-top:20px; border:1px solid rgba(201,168,76,0.35); background:var(--white); color:#0D1527; font-weight:600; padding:10px 24px; border-radius:10px; font-size:13px; transition:all .2s ease; }',
+'.awNewBtn:hover { background:#FAF5E8; border-color:#C9A84C; }',
+'@media(max-width:640px) {',
+'  :host { --w:100%; }',
+'  .awCard { border-radius:16px; max-height:min(92dvh,780px); }',
+'  .awHead { padding:16px 18px 12px; }',
+'  .awH { font-size:20px; }',
+'  .awS { font-size:12px; }',
+'  .awStepDot { width:24px; height:24px; font-size:10px; }',
+'  .awStepLine { width:12px; }',
+'  .awSecHead { padding:12px 16px 8px; }',
+'  .awBody { padding:10px 16px 8px; }',
+'  .awFoot { padding:10px 16px; }',
+'  .awNext { min-width:130px; padding:11px 20px; font-size:13px; }',
+'  .awBack { font-size:13px; }',
+'  .awGrid { grid-template-columns:1fr 1fr; gap:7px; }',
+'  .awChoice { padding:12px; min-height:66px; }',
+'  .awChoiceL { font-size:12px; margin-top:6px; }',
+'  .awGrid2 { grid-template-columns:1fr; gap:8px; }',
+'  .awBudV { font-size:26px; }',
+'  .awBudTop { flex-direction:column; gap:10px; }',
+'  .awBudM { min-width:unset; width:100%; }',
+'  .awRow2 { padding:10px 0; }',
+'  .awRound { width:30px; height:30px; }',
+'  .awNum { font-size:14px; }',
+'  .awIn,.awTa { font-size:16px; }',
+'}',
+'@media(max-width:380px) {',
+'  .awHead { padding:14px 14px 10px; }',
+'  .awH { font-size:18px; }',
+'  .awBody { padding:8px 14px; }',
+'  .awFoot { padding:10px 14px; }',
+'  .awStepDot { width:22px; height:22px; font-size:9px; }',
+'  .awStepLine { width:8px; }',
+'  .awChoice { padding:10px; min-height:60px; }',
+'}',
+'@media(prefers-reduced-motion:reduce) {',
+'  .awAnim,.awChoice,.awPill,.awRow,.awDot,.awRound,.awMoreB,.awNext,.awBack,.awChe,.awSaved,.awArr { transition:none!important; }',
+'}'
+].join('\n');
+shadow.appendChild(style);
+}
+})();</script>
+
+<!-- ═══ WhatsApp Chat Widget ═══
+     Paste this block before </body> in Webflow:
+     Pages → Page Settings → Custom Code → Before </body> tag
+     ═══════════════════════════════════════════════════════ -->
+<div id="wacw-root"></div>
+<style>
+.wacw-wrap{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.wacw-btn{width:56px;height:56px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.18);position:relative;transition:transform .2s ease,box-shadow .2s ease;-webkit-tap-highlight-color:transparent}
+.wacw-btn:hover{transform:scale(1.06);box-shadow:0 6px 24px rgba(0,0,0,.22)}
+.wacw-btn:active{transform:scale(.95)}
+.wacw-btn svg{width:28px;height:28px;fill:#fff}
+.wacw-pulse{position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;opacity:0;animation:wacw-ping 3s cubic-bezier(0,0,.2,1) infinite}
+@keyframes wacw-ping{0%{transform:scale(.85);opacity:.7}70%{transform:scale(1.35);opacity:0}100%{opacity:0}}
+.wacw-card{position:absolute;bottom:68px;right:0;width:320px;background:#fff;border-radius:16px;box-shadow:0 12px 48px rgba(0,0,0,.18),0 2px 8px rgba(0,0,0,.08);overflow:hidden;transform:translateY(12px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(.175,.885,.32,1.275),opacity .28s ease}
+.wacw-card.wacw-open{transform:translateY(0);opacity:1;pointer-events:auto}
+.wacw-card.wacw-closing{transform:translateY(12px);opacity:0;transition-duration:.2s;transition-timing-function:ease-in;pointer-events:none}
+.wacw-head{background:#075E54;padding:18px 20px;display:flex;align-items:center;gap:12px;position:relative}
+.wacw-avatar{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wacw-avatar svg{width:22px;height:22px;fill:#fff}
+.wacw-info{flex:1;min-width:0}
+.wacw-name{display:flex;align-items:center;gap:6px}
+.wacw-dot{width:7px;height:7px;border-radius:50%;background:#25D366;flex-shrink:0}
+.wacw-name span{font-size:14px;font-weight:600;color:#fff;line-height:1.2}
+.wacw-sub{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:2px;line-height:1.3}
+.wacw-close{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:background .15s,color .15s}
+.wacw-close:hover{background:rgba(255,255,255,.22);color:#fff}
+.wacw-close svg{width:14px;height:14px}
+.wacw-body{padding:20px;background:#ECE5DD;min-height:80px;display:flex;align-items:flex-start}
+.wacw-bubble{background:#fff;border-radius:0 12px 12px 12px;padding:12px 16px;box-shadow:0 1px 2px rgba(0,0,0,.06);max-width:85%;position:relative}
+.wacw-bubble::before{content:'';position:absolute;top:0;left:-7px;width:0;height:0;border-top:0 solid transparent;border-right:8px solid #fff;border-bottom:8px solid transparent}
+.wacw-bubble p{font-size:13.5px;line-height:1.55;color:#111;margin:0}
+.wacw-bubble .wacw-time{font-size:10.5px;color:#667781;text-align:right;margin-top:4px}
+.wacw-footer{padding:16px 20px;background:#fff}
+.wacw-cta{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;border:none;border-radius:12px;padding:13px 20px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s,transform .15s}
+.wacw-cta:hover{background:#20BD5A;transform:scale(1.02)}
+.wacw-cta:active{transform:scale(.98)}
+.wacw-cta svg{width:18px;height:18px;fill:#fff}
+@media(max-width:480px){.wacw-wrap{bottom:16px;right:16px}.wacw-card{width:calc(100vw - 32px);right:-8px}}
+</style>
+<script>
+(function(){
+  var root=document.getElementById('wacw-root');
+  if(!root)return;
+  var isOpen=false,hasAutoOpened=false,closeTimer=null;
+  var WA_URL='https://wa.me/46735376707?text=Hej%20AWP%20Superhost%2C%20jag%20%C3%A4r%20intresserad%20av%20f%C3%B6retagsboende.';
+  var WA_ICON='<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+  var now=new Date();var h=now.getHours();var m=String(now.getMinutes()).padStart(2,'0');
+  root.innerHTML='<div class="wacw-wrap">'+
+    '<div class="wacw-card" id="wacw-card">'+
+      '<div class="wacw-head">'+
+        '<div class="wacw-avatar">'+WA_ICON+'</div>'+
+        '<div class="wacw-info"><div class="wacw-name"><span class="wacw-dot"></span><span>AWP Superhost</span></div><div class="wacw-sub">Svarar vanligtvis inom 1 timme</div></div>'+
+        '<button class="wacw-close" id="wacw-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>'+
+      '</div>'+
+      '<div class="wacw-body"><div class="wacw-bubble"><p>Hej! \uD83D\uDC4B Hur kan vi hjälpa dig med företagsboende idag?</p><div class="wacw-time">'+h+':'+m+'</div></div></div>'+
+      '<div class="wacw-footer"><a class="wacw-cta" href="'+WA_URL+'" target="_blank" rel="noopener">'+WA_ICON+' Starta chatt på WhatsApp</a></div>'+
+    '</div>'+
+    '<button class="wacw-btn" id="wacw-btn" aria-label="WhatsApp">'+
+      '<span class="wacw-pulse"></span>'+
+      WA_ICON+
+    '</button>'+
+  '</div>';
+  var card=document.getElementById('wacw-card');
+  var btn=document.getElementById('wacw-btn');
+  var closeBtn=document.getElementById('wacw-close');
+  function open(){isOpen=true;card.classList.remove('wacw-closing');card.classList.add('wacw-open');}
+  function close(){
+    if(!isOpen)return;isOpen=false;
+    card.classList.add('wacw-closing');card.classList.remove('wacw-open');
+    setTimeout(function(){card.classList.remove('wacw-closing');},220);
+  }
+  btn.addEventListener('click',function(){isOpen?close():open();});
+  closeBtn.addEventListener('click',function(e){e.stopPropagation();close();});
+  // Auto-open after 4s
+  setTimeout(function(){if(!hasAutoOpened){hasAutoOpened=true;open();}},4000);
+})();
+</script>
+
+</body>
+</html>
