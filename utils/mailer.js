@@ -36,7 +36,7 @@ async function sendLeadNotification(type, data) {
 
   await resend.emails.send({
     from: 'Företagsboende <onboarding@resend.dev>',
-    to: ['kontakt@bostadsuthyrning.se'],
+    to: ['wilhelm@bostadsuthyrning.se'],
     replyTo: data.email || undefined,
     subject: subjects[type] || 'Ny lead — Företagsboende',
     html: buildLeadHTML(type, data)
@@ -57,8 +57,8 @@ async function sendConfirmation(type, data) {
 
   await resend.emails.send({
     from: 'Företagsboende <onboarding@resend.dev>',
-    to: [data.email],
-    subject: subjects[type] || 'Tack — vi återkommer inom 24 timmar',
+    to: ['wilhelm@bostadsuthyrning.se'],
+    subject: '[Kund-kopia] ' + (subjects[type] || 'Tack — vi återkommer inom 24 timmar') + ' (till: ' + data.email + ')',
     html: buildConfirmationHTML(type, data)
   });
 
