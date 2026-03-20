@@ -1564,6 +1564,25 @@ var id = setTimeout(function () { controller.abort(); }, timeoutMs);
 return fetch(url, Object.assign({}, options, { signal: controller.signal })).finally(function () { clearTimeout(id); });
 }
 window.EBW_ON_SUBMIT = function EBW_ON_SUBMIT(payload) {
+// Also send to our API for Resend email notification
+try {
+  var d = payload.input || payload;
+  fetch('/api/enquiry', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      companyName: d.companyName || 'Widget-förfrågan',
+      contactName: d.contactName || '',
+      email: d.email || 'ej angiven',
+      phone: d.phone || '',
+      checkIn: d.checkIn || '',
+      checkOut: d.checkOut || '',
+      guests: d.persons || 1,
+      message: d.notes || '',
+      listingTitle: 'Boendeförfrågan via widget (' + (d.propertyType || 'ej valt') + ')'
+    })
+  }).catch(function(){});
+} catch(e){}
 return fetchWithTimeout(WEBHOOK_URL, {
 method: "POST",
 headers: { "Content-Type": "application/json" },
