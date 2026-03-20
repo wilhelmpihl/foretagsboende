@@ -1,4 +1,10 @@
+// Load .env from project root, then override with Render secret file if it exists
 require('dotenv').config();
+const secretEnv = '/etc/secrets/.env';
+if (require('fs').existsSync(secretEnv)) {
+  require('dotenv').config({ path: secretEnv, override: true });
+  console.log('✓ Loaded secrets from /etc/secrets/.env');
+}
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
