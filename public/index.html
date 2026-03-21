@@ -1566,35 +1566,37 @@ return fetch(url, Object.assign({}, options, { signal: controller.signal })).fin
 window.EBW_ON_SUBMIT = function EBW_ON_SUBMIT(payload) {
 // Also send to our API for Resend email notification
 try {
-  var d = (payload && payload.input) ? payload.input : payload;
+  var d = (payload && payload.input) ? payload.input : (payload || {});
   var b = (payload && payload.budget) ? payload.budget : {};
-  if (d && d.email) {
-    fetch('/api/enquiry', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        companyName: d.companyName || 'Ej angivet',
-        contactName: d.contactName || '',
-        email: d.email,
-        phone: d.phone || 'Ej angivet',
-        checkIn: d.checkIn || 'Flexibelt',
-        checkOut: d.checkOut || 'Flexibelt',
-        guests: d.persons || 1,
-        message: [
-          d.propertyType ? 'Typ: ' + d.propertyType : '',
-          d.bedrooms ? d.bedrooms + ' sovrum' : '',
-          d.beds ? d.beds + ' sängar' : '',
-          d.persons ? d.persons + ' personer' : '',
-          b.perPersonPerNight ? 'Budget: ' + b.perPersonPerNight + ' kr/person/natt' : '',
-          b.stayTotal ? 'Total: ' + b.stayTotal + ' kr' : '',
-          d.workplace ? 'Arbetsplats: ' + d.workplace : '',
-          d.notes || ''
-        ].filter(Boolean).join(' | '),
-        listingTitle: 'Widget: ' + (d.propertyType || 'boende') + ' — ' + (d.persons || '?') + ' pers'
-      })
-    }).catch(function(){});
-  }
-} catch(e){}
+  fetch('/api/enquiry', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      companyName: d.companyName || 'Widget-förfrågan',
+      contactName: d.contactName || '',
+      email: d.email || 'widget@foretagsboende.se',
+      phone: d.phone || 'Ej angivet',
+      checkIn: d.checkIn || 'Flexibelt',
+      checkOut: d.checkOut || 'Flexibelt',
+      guests: d.persons || 1,
+      message: [
+        d.propertyType ? 'Typ: ' + d.propertyType : '',
+        d.bedrooms ? d.bedrooms + ' sovrum' : '',
+        d.beds ? d.beds + ' sängar' : '',
+        d.persons ? d.persons + ' personer' : '',
+        d.parkingSpots ? d.parkingSpots + ' parkering' : '',
+        d.mayExtend && d.mayExtend !== 'unsure' ? 'Förlängning: ' + d.mayExtend : '',
+        b.perPersonPerNight ? 'Budget: ca ' + b.perPersonPerNight + ' kr/pers/natt' : '',
+        b.stayTotal ? 'Total: ca ' + b.stayTotal + ' kr' : '',
+        b.nights ? b.nights + ' nätter' : '',
+        d.workplace ? 'Arbetsplats: ' + d.workplace : '',
+        d.maxCommuteMin ? 'Max pendling: ' + d.maxCommuteMin + ' min' : '',
+        d.notes || ''
+      ].filter(Boolean).join(' | '),
+      listingTitle: 'Boendeförfrågan: ' + (d.propertyType || 'boende') + ' — ' + (d.persons || '?') + ' pers — ' + (d.companyName || 'ej angivet')
+    })
+  }).catch(function(e){ console.log('API enquiry error:', e); });
+} catch(e){ console.log('Widget email error:', e); }
 return fetchWithTimeout(WEBHOOK_URL, {
 method: "POST",
 headers: { "Content-Type": "application/json" },
