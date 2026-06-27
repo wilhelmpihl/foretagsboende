@@ -1,0 +1,24 @@
+TECH SIGNALS — corporate-apartments.se homepage rawHtml scrape 2026-06-27
+=========================================================================
+Framework: Astro (data-astro-cid-* attributes; /_astro/BaseLayout.D1mCMbj5.css)
+CSS: Bootstrap 5.3.3 (cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js)
+Icons: Font Awesome (fa fa-* classes)
+Analytics/Tags:
+  - Google Tag Manager: GTM-MWHQLQ9
+  - Google Analytics GA4: G-K8YPM9FKJF
+  - Plausible Analytics: data-domain="corporate-apartments.se" (plausible.io/js/script.js)
+  - Meta Pixel (fbq): 403789254006725 (init + PageView; noscript img present)
+  - Albacross B2B visitor de-anonymization: window._nQc="89620593" (serve.albacross.com/track.js)
+  - Termly Consent Manager: resource-blocker id 79ac8856-7b44-459c-9b26-341f5115853b (autoBlock=off)
+No Google Ads (AW-) conversion ID found in homepage head.
+Schema.org JSON-LD: LodgingBusiness; email sara@corporate-apartments.se; telephone +46738616200;
+  currenciesAccepted USD,SEK,EUR,PLN,NOK; areaServed Sweden; availableLanguage English,Swedish;
+  slogan "Comfortable and Affordable Staff Accommodations"
+Languages: en (default), pl (Polish), sv (Swedish) — flags us.png/pl.png/se.png
+Lead form (homepage hero) POST -> /contactus-thank-you  name="homepage-lead"
+  fields: guests, location, bedroom_sharing(select: Only shared/Only separate/Both options work, required),
+          full_name(req), company(req), email(req), phone(req), start_date(date), end_date(date), comment(req)
+Phone: +46 738 616 200 ; Email: sara@corporate-apartments.se
+Social: facebook.com/corporateapartments/, linkedin.com/company/corporate-apartments-sweden/, instagram.com/corporateapartments/
+Footer claim: "over 200 houses and apartments, and a large property network on demand"
+ICP copy: "Our customers are mainly in the construction and contracting industries"

@@ -1,0 +1,14 @@
+[grep of homepage rawHtml, firecrawl 2026-06-27]
+Framework: Vite/React SPA — /assets/index-[hash].js + /assets/index-[hash].css, no /_next/, no wp-content, no webflow/framer/shopify. data-crm-theme="stripe" (UI theme name, not payments). 8x application/ld+json schema blocks (FAQ, AggregateRating, Org).
+Analytics/Ads (LIVE):
+  - Meta Pixel: fbq('init','32808262188787589'); fbq('track','PageView'); connect.facebook.net/fbevents.js
+  - Google Ads conversion tag 1: AW-18075940627 (loaded directly "for verification")
+  - Google Ads conversion tag 2: AW-17159979002 (allow_enhanced_conversions:true)
+  - googletagmanager.com/gtag/js
+  - fonts.googleapis.com / gstatic (Google Fonts, NOT self-hosted)
+PLACEHOLDERS (not configured): GA4 id 'G-XXXXXXXXXX'; Microsoft Clarity src clarity.ms/tag/CLARITY_PROJECT_ID (literal placeholder).
+Consent: gtag consent default = ALL granted (ad_storage/analytics_storage granted) — aggressive, questionable GDPR despite "GDPR compliant" badge.
+Inventory tech: listings sourced from Hospitable (assets.hospitable.com) + Airbnb (a0.muscache.com); booking engine on subdomain booking.workersstay.com (property pages, multi-lang /de /fr /es).
+Social: LinkedIn /company/workers-stay, FB profile id 61574257059539, Airbnb /users/show/workersstay.
+NOT FOUND: HubSpot, Intercom, Crisp, Tawk, Drift, Hotjar, Segment(real), TikTok, recaptcha. No live chat widget.
+EGRESS NOTE: direct curl/WebFetch blocked (403 org policy); all data via Firecrawl MCP. Response headers (server/CDN) EJ VERIFIERAT.

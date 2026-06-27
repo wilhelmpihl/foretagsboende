@@ -1,0 +1,10 @@
+Blueground — käll-scrapes (2026-06-27, via Firecrawl MCP)
+- home-rawhtml-head.txt : rawHtml (script/link/meta) av https://www.theblueground.com/ (tech-signaler)
+- linkoping-corporate.txt : JSON-scrape https://www.theblueground.com/m/corporate-apartments/linkoping-swe
+- berlin-listing.txt : JSON-scrape https://www.theblueground.com/furnished-apartments-berlin-de (listningssida/instant-book)
+Övriga scrapes (i konversation, ej fil):
+- https://www.theblueground.com/ (markdown startsida)
+- https://www.theblueground.com/furnished-corporate-apartments (markdown B4B-sida + FAQ)
+- https://www.trustpilot.com/review/www.theblueground.com (recensioner, 4.1/2196)
+- firecrawl_map https://www.theblueground.com/ (programmatisk SEO-bekräftelse: stad/kvarter/sovrum × 6 språk)
+- firecrawl_search: funding/valuation; Sverige-närvaro (endast Linköping, partner-network)

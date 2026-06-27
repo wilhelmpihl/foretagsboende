@@ -1,0 +1,8 @@
+RENTABORG — tech-signaler (källa: firecrawl rawHtml av https://rentaborg.com/, 2026-06-27)
+- Framework: Next.js (bevis: /_next/static/chunks/, /_next/static/media/*.woff2)
+- Fonts: self-hosted via next/font (woff2 under /_next/static/media/) — inga externa Google Fonts-anrop
+- Analytics/Ads: gtag + googletagmanager; Google Ads conversion-ID AW-17443560069 (=> kör Google Ads)
+- Ingen Meta-pixel (fbq) hittad; ingen live-chattwidget hittad
+- CSS: utility-first (Tailwind-liknande klassnamn)
+- meta: next-size-adjust (Next.js next/font-signal)
+- EJ VERIFIERAT: server/x-powered-by/CDN headers (egress-policy blockerar direkt curl; firecrawl exponerar ej response headers). Hosting trolig Vercel pga Next.js — ej bekräftat.

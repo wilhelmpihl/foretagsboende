@@ -1,0 +1,43 @@
+# Sweden Casa Solutions — tech-signaler (grep ur startsidans rawHtml, 2026-06-27)
+
+CANONICAL / ORIGIN:
+- <link rel="canonical" href="https://casa-embrace-europe.lovable.app/">  → Lovable-genererad app, ompekad till egen domän
+- og:url = https://casa-embrace-europe.lovable.app/  (samtliga sidor)
+- Bygg-script: /__l5e/events.js med data-commit-sha + data-context-token (Lovable "l5e"-runtime)
+- /~flock.js data-proxy-url="/~api/analytics"  → Lovable inbyggd analytics-proxy ("flock")
+
+FRAMEWORK:
+- React (modulepreload index-*.js, InquiryForm-*.js) + Vite-asset-namn (assets/index-CLX_TAWu.js, hashade)
+- Server-renderad HTML med React-hydration-markörer (<!--$--> / <!--/$-->)  → SSR/streaming
+- Utility-CSS (Tailwind-klasser: text-foreground/80, bg-gold, tracking-[0.18em])
+- Lucide-ikoner (class="lucide lucide-*")
+
+TYPSNITT:
+- Google Fonts (EXTERNT anrop): Cormorant Garamond + Inter
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond...&family=Inter...">
+  preconnect fonts.googleapis.com + fonts.gstatic.com
+
+ANALYTICS / PIXLAR / TAGGAR:
+- Google: gtag / GTM  → EJ HITTAD (ingen googletagmanager, ingen gtag i markup)
+- Google Ads (AW-)    → EJ HITTAD
+- UA-/G- (GA4)        → EJ HITTAD i markup (kan injiceras via cookie-consent efter accept)
+- Meta Pixel (fbq)    → EJ HITTAD
+- LinkedIn / TikTok   → EJ HITTAD
+- Hotjar/Clarity/HubSpot/Intercom/Crisp/Tawk/Drift → EJ HITTAD
+- google-site-verification: arfn81IQ8rw0TC6fXthkiZQYmJ6dBanC9-IDhmg41l8  (Search Console verifierad)
+- Egen analytics: /~flock.js (Lovable flock) — proxyad via /~api/analytics
+- Cookie-consent-banner finns (Accept all/Reject all/Customize) → marketing/analytics-cookies laddas FÖRST efter samtycke (förklarar avsaknad av pixlar i råmarkup)
+
+HOSTING:
+- Lovable publish (lovable.app origin). Lovable hostar på egen infra (bakom Cloudflare typiskt). EJ VERIFIERAT via headers (egress 403).
+
+KONTAKT / JURIDISK (ur ld+json + footer):
+- SwedenCasaSolutions S.L., Calle Arce 9, 21110 Aljaraque, Huelva, Spanien
+- CIF ESB06951248 (spanskt org.nr)
+- info@swedencasasolutions.com / +46 (0)79 336 01 42 (svenskt mobilnr)
+- WhatsApp: wa.me/46793360142
+- Schema.org: Organization + WebSite + LocalBusiness, priceRange "€€€", addressLocality Huelva ES
+- areaServed: Spain, Portugal, Sweden, Denmark, Finland, Germany, Austria, Switzerland, Italy
+
+CHATT:
+- Ingen live-chat-widget. WhatsApp floating-knapp (wa.me/46793360142) = enda "chatt".

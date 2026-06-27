@@ -1,0 +1,2903 @@
+{
+  "links": [
+    {
+      "url": "https://www.foretagsbostader.se/en"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt",
+      "title": "Aktuellt - Företagsbostäder",
+      "description": "Läs om nyheter och vad som händer hos Företagsbostäder! Vi delar artiklar och projekt här."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/apartment-hotels"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetshotell"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/my-apartment-info",
+      "title": "My Apartment Info - Företagsbostäder",
+      "description": "For urgent issues after office hours, we kindly request that you first consult the information provided on this site. If the issue remains unresolved, please ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/privacy-policy",
+      "title": "Privacy Policy | Företagsbostäder",
+      "description": "BACKGROUND. [Företagsbostäder Sverige AB], reg. no. [556213-6241], (the ”Company”), is a company providing accommodation solutions, mainly for companies."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/customer-service"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/additional-services",
+      "title": "Additional Services - Företagsbostäder",
+      "description": "If you want a more flexible stay with us you can add an extra service to your booking. This service allows you to cancel your reservation on a shorter notice ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/legal-terms"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/studenthousing-lund",
+      "title": "but missing your dream home? We're here for you in the meantime.",
+      "description": "Finding housing in Lund can feel like a whole course in itself. · Everything included. For real. For 6300 kr per month you get your own furnished apartment."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/larger-projects"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/about-us"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/environment"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/faq",
+      "title": "FAQ – Corporate Housing & Apartments | Företagsbostäder",
+      "description": "Answers to the most common questions from HR managers and procurement teams about corporate apartments — booking, contracts, pricing, and service across ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/house-rules"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/categories",
+      "title": "Our categories - Företagsbostäder",
+      "description": "Those who need apartments for a fixed-term project mainly choose this category. Construction companies, IT-tech teams and production companies within film and ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/personuppgiftspolicy"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/felanmalan",
+      "title": "Felanmälan - Företagsbostäder",
+      "description": "Saknas något i din lägenhet? Eller har något gått sönder? Kontakta oss i formuläret nedan så hjälper vi dig så fort vi kan. Dygnet-runt- ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/tillvalstjanster"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/studentbostader-lund",
+      "title": "men saknar drömbostaden? Vi finns här så länge. - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/storre-projekt"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/om-oss"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/miljo",
+      "title": "Hållbart Företagsboende | Miljödiplomerade Sedan 1993",
+      "description": "Företagsbostäder är miljödiplomerade enligt Svensk Miljöbas. Vi arbetar aktivt med energi, transporter och återvinning — ett tryggt val för företag med ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/vanliga-fragor",
+      "title": "Vanliga Frågor – Företagsboende | Företagsbostäder",
+      "description": "Svar på de vanligaste frågorna från HR-avdelningar och inköpsansvariga om företagslägenheter — bokning, avtal, priser och service i hela Sverige sedan 1993."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetstyper"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/what-is-corporate-housing-how-foeretagsbostaeder-works-step-by-step"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/5-common-long-stay-booking-mistakes-and-how-to-avoid-them-or-foeretagsbostaeder"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/who-are-the-best-corporate-housing-providers-for-relocating-employees"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/explore-four-options-for-apartment-hotels-in-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/skarpskyttevaegen-a-great-short-term-accommodation-for-students-or-visiting-researchers"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/get-the-most-out-of-your-long-stay-in-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/apartment-with-hotel-benefits"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/what-to-pack-for-your-long-stay-accommodation"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/5-tips-on-how-to-get-an-affordable-furnished-apartment"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/exploring-foeretagsbostaeder-s-premium-apartments-in-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/project-accommodation-solutions-in-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/new-it-projects-in-the-pipe"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/up-for-a-new-city-and-need-accommodation"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/let-us-solve-the-accommodation-at-your-next-recruitment"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/new-job-away-from-home-let-the-adventure-begin"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/in-need-of-temporary-housing-solutions"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/welcome-to-foeretagsbostaeder-3-0"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/get-a-good-start-on-your-assignment"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/apartment-hotel-in-stockholm-became-home-to-entrepreneurs-from-all-over-the-world"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/things-to-do-in-stockholm-10-smart-tips-for-business-travelers"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/news/corporate-apartments-vs-hotels"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/vad-ar-ett-foretagsboende-sa-fungerar-foretagsbostader-steg-for-steg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/5-vanliga-misstag-vid-foretagsboende-sa-undviker-du-dem-or-foretagsbostader"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/vilka-ar-de-basta-leverantorerna-av-foretagsboende-for-relokering-av-medarbetare"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/utforska-fyra-alternativ-for-lagenhetshotell-i-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/skarpskyttevagen-ett-bra-korttidsboende-for-dig-som-ar-student-eller-gastforskare"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/fa-ut-det-mesta-av-din-langa-vistelse-i-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/lagenhet-med-hotellformaner"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/vad-ska-du-packa-for-ditt-langtidsboende"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/5-tips-pa-hur-du-far-en-prisvard-moblerad-lagenhet"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/utforska-foretagsbostaders-premiumlagenheter-i-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/projektboende-losningar-i-stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/nytt-it-projekt-pa-gang"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/sugen-pa-en-ny-stad-och-behover-boende"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/lat-oss-losa-boendet-vid-din-nasta-rekrytering"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/nytt-jobb-ny-plats-lat-aventyret-borja"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/behover-du-tillfalliga-boendelosningar"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/valkommen-till-foretagsbostader-3-0"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/fa-en-bra-start-pa-ditt-uppdrag"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/lagenhetshotell-i-stockholm-blev-hem-for-entreprenorer-fran-hela-varlden"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/att-gora-i-stockholm-10-tips-for-dig-som-reser-i-jobbet"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/aktuellt/foretagslagenheter-istallet-for-hotell"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/apartment-hotels/stockholm",
+      "title": "Our Apartment Hotel in Stockholm - Företagsbostäder",
+      "description": "Find a modern and environmentally friendly long-term accommodation in the Nordic region's first zero-energy hotel. Företagsbostäder's aparthotel in Stockholm ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/apartment-hotels/goteborg",
+      "title": "Apartment hotel in Göteborg - Företagsbostäder",
+      "description": "Experience the perfect combination of comfort and convenience at apartment hotels in Gothenburg. Enjoy a fully equipped apartment. Book now!"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/apartment-hotels/malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/apartment-hotels/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetshotell/stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetshotell/goteborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetshotell/malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/lagenhetshotell/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ynglingag"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gustaf-dahlensg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/per-albin-hanssonsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg",
+      "title": "Teaterg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/topeliusg",
+      "title": "Topeliusg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-21"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/karlag",
+      "title": "Karlag - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/koldingg",
+      "title": "Koldingg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjardingsg",
+      "title": "Fjärdingsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smorslatten"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg",
+      "title": "Smyckeg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/volrat-thamsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-p"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-6"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bangardsgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-10"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-20"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjallbog",
+      "title": "Fjällbog - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/aschebergsg",
+      "title": "Aschebergsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/egnahemsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/storg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/thorildsg",
+      "title": "Thorildsg | Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bernhards-grand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-2"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodrav-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-8"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-6"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ornehufvudsg-5"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ornehufvudsg-9---11"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjarde-langg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/erik-dahlbergsg-5"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lorensbergsgaraget"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-3"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-6"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-18"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-13"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-3"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-11"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/bjareg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/bernstorpsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/langangen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/rundbacksg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/polhemsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/diktarv-17-19"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/brantingsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ladbygrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvid-tydens-alle"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/stora-fiskareg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/dammsnacksg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/hostvadersg",
+      "title": "Höstvädersg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/viktoriag-4"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/burggreve"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gyllenkrooksgatan-10"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/riddarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/krukmakarg",
+      "title": "Krukmakarg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/svarvarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg",
+      "title": "Inedalsg - Företagsbostäder",
+      "description": "Image imported from Elina. Stockholm, Kungsholmen. Inedalsg, Stockholm. Available Apartments. Image for ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bondeg-48"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gotlandsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/urvadersgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/stampg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg",
+      "title": "Åsö/Götg | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/lundbergsg",
+      "title": "Lundbergsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/stormg",
+      "title": "Stormg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-40"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/kullav",
+      "title": "Kullav - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/drejarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eriksbergsglodg",
+      "title": "Eriksbergsg/Lodg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/ovre-eneborgsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/kurirg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/erik-sandbergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/uppfartsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/kastellg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/fyrspannsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/fregattg",
+      "title": "Fregattg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/rasundav"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/viktor-rydbergsg-44"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bergsundsstrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/saltholmsgrand",
+      "title": "Saltholmsgränd - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/knut-wicksellsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bornholmsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/limfjordsgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev",
+      "title": "Skarpskyttev - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sedelv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bagerig"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/langholmsg",
+      "title": "Långholmsg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/karlsg",
+      "title": "Karlsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sibylleg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/studentg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvingev"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/tuleg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/aby-alle"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/storkockumsg",
+      "title": "Stor/Kockumsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-28-38"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/erik-dahlbhelmfeltsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/andra-langg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-4"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gyllenkrooksg-17-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kopmansnorra-hamng"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lundg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/packhusplatsen",
+      "title": "Packhusplatsen - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/temperaturg",
+      "title": "Temperaturg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ovre-olskroksg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodra-varvindsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-12"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/kronborgsgrand",
+      "title": "Kronborgsgränd - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ynglingag",
+      "title": "Ynglingag - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gustaf-dahlensg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/per-albin-hanssonsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg",
+      "title": "Teaterg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/topeliusg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2",
+      "title": "Epistelv 2 - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-21"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/karlag"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/koldingg",
+      "title": "Koldingg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjardingsg",
+      "title": "Fjärdingsg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smorslatten"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/volrat-thamsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47",
+      "title": "Nordhemsg 47 - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-p"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-6",
+      "title": "Götabergsg 6 - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bangardsgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-10"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-20"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjallbog"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/aschebergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/egnahemsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/storg",
+      "title": "Storg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/thorildsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bernhards-grand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-2"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg",
+      "title": "Tegnersg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodrav-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-8"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-6"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ornehufvudsg-5",
+      "title": "Örnehufvudsg 5 - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ornehufvudsg-9---11"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjarde-langg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/erik-dahlbergsg-5"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lorensbergsgaraget"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand",
+      "title": "Norr Mälarstrand | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48",
+      "title": "Eveneman 48 - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-3",
+      "title": "Epistelv 3 - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-6",
+      "title": "Trubadurv 6 | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-18"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-13"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-3"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-11"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/bjareg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/bernstorpsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/langangen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/rundbacksg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/polhemsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/diktarv-17-19"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/brantingsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ladbygrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvid-tydens-alle"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/stora-fiskareg",
+      "title": "Stora Fiskareg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/dammsnacksg",
+      "title": "Dammsnäcksg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/hostvadersg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/viktoriag-4",
+      "title": "Viktoriag 4 - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/burggreve"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gyllenkrooksgatan-10"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/riddarg",
+      "title": "Riddarg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/krukmakarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/svarvarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg",
+      "title": "Inedalsg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bondeg-48",
+      "title": "Bondeg 48 - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gotlandsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/urvadersgrand",
+      "title": "Urvädersgränd - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/stampg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg",
+      "title": "Åsö/Götg | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/lundbergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/stormg",
+      "title": "Stormg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-40"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/kullav",
+      "title": "Kullav - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/drejarg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eriksbergsglodg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/ovre-eneborgsv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/kurirg",
+      "title": "Kurirg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/erik-sandbergsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/uppfartsv",
+      "title": "Uppfartsv - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/kastellg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/fyrspannsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/fregattg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/rasundav",
+      "title": "Råsundav - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/viktor-rydbergsg-44"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bergsundsstrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/saltholmsgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/knut-wicksellsv",
+      "title": "Knut Wicksellsv - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bornholmsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/limfjordsgrand"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sedelv"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bagerig"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/langholmsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/karlsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sibylleg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/studentg",
+      "title": "Studentg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvingev",
+      "title": "Ärvingev - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/tuleg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/aby-alle",
+      "title": "Åby Allé - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/storkockumsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-28-38"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/erik-dahlbhelmfeltsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/andra-langg",
+      "title": "Andra Långg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-4"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gyllenkrooksg-17-23"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kopmansnorra-hamng",
+      "title": "Köpmans/Norra Hamng | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lundg",
+      "title": "Lundg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/packhusplatsen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/temperaturg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ovre-olskroksg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodra-varvindsg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-12"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/kronborgsgrand",
+      "title": "Kronborgsgränd - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/rasundav/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bergsundsstrand/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bergsundsstrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/krukmakarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/krukmakarg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/brantingsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/svarvarg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/svarvarg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/svarvarg/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sedelv/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sedelv/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sedelv/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/inedalsg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bondeg-48/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bondeg-48/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gotlandsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/langholmsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/langholmsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/langholmsg/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/langholmsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/urvadersgrand/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/urvadersgrand/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/urvadersgrand/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/two-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/drejarg/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ynglingag/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ynglingag/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sibylleg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sibylleg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eriksbergsglodg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/bornholmsg/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/kronborgsgrand/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/kronborgsgrand/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ladbygrand/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/limfjordsgrand/five-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/saltholmsgrand/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvingev/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvid-tydens-alle/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvid-tydens-alle/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/arvid-tydens-alle/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/knut-wicksellsv/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/stora-fiskareg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/one-bedroom-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/dammsnacksg/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/dammsnacksg/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/dammsnacksg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/dammsnacksg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/fregattg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/fregattg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/fregattg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/fregattg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/storkockumsg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/storkockumsg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/lundbergsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/stormg/two-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/stormg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-28-38/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-40/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-40/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/halsov-40/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/kullav/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/kullav/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/erik-dahlbhelmfeltsg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/erik-dahlbhelmfeltsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/ovre-eneborgsv/one-bedroom-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/ovre-eneborgsv/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/andra-langg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/andra-langg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-23/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-23/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-21/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-4/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-4/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/friggag-4/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/volrat-thamsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/volrat-thamsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gyllenkrooksg-17-23/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gyllenkrooksg-17-23/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gyllenkrooksg-17-23/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-6/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-6/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-6/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-6/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/hostvadersg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kopmansnorra-hamng/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kopmansnorra-hamng/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kopmansnorra-hamng/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/aschebergsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/egnahemsv/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/storg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/viktoriag-4/one-bedroom-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/viktoriag-4/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lundg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/packhusplatsen/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/packhusplatsen/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/packhusplatsen/one-bedroom-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/packhusplatsen/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg/one-bedroom-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smyckeg/one-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/one-bedroom-x-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/one-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/teaterg/two-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/four-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodrav-7/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodrav-7/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-5-7/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-8/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-15/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasag-6/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ornehufvudsg-5/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ornehufvudsg-5/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ornehufvudsg-9---11/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ovre-olskroksg/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ovre-olskroksg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/ovre-olskroksg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjarde-langg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodra-varvindsg/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bagerig/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/bagerig/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-12/two-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/two-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/svarvarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gotlandsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/erik-dahlbergsg-5/four-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/erik-dahlbergsg-5/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/erik-dahlbergsg-5/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/grepg/parking"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog/two-bedroom-x-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gotlandsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/koldingg/five-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kopmansnorra-hamng/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/one-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/two-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/two-bedroom-normal-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/four-bedroom-normal-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/studio-queen-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/lilla-kyrkog/three-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-10/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-2/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-3/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-3/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/brantingsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/asogotg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-3/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/epistelv-3/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-6/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-10/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-6/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-6/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-10/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-20/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-18/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/trubadurv-20/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gotlandsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-23/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/per-albin-hanssonsv/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/per-albin-hanssonsv/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/ovre-eneborgsv/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/vasaplatsen-8/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/storg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/urvadersgrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/gjutarg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg/karlsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjarde-langg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/storkockumsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/storkockumsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/norr-malarstrand/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/eveneman-48/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/gotabergsg-12/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/nordhemsg-47/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/sodrav-7/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/topeliusg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/smorslatten/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/fjallbog/four-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/kungslasarettsg/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/brantingsg/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/nybrog/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/erik-dahlbergsg-5/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/sibylleg/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/tegnersg/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/viktor-rydbergsg-44/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/skarpskyttev/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund/studentg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo/stormg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm/ynglingag/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/temperaturg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/temperaturg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/temperaturg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/temperaturg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/rasundav/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bergsundsstrand/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bergsundsstrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/krukmakarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/krukmakarg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/brantingsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/svarvarg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/svarvarg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/svarvarg/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sedelv/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sedelv/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sedelv/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/inedalsg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bondeg-48/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bondeg-48/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gotlandsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/langholmsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/langholmsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/langholmsg/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/langholmsg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/urvadersgrand/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/urvadersgrand/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/urvadersgrand/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/two-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/drejarg/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ynglingag/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ynglingag/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sibylleg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sibylleg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eriksbergsglodg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/bornholmsg/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/kronborgsgrand/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/kronborgsgrand/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ladbygrand/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/limfjordsgrand/five-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/saltholmsgrand/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvingev/four-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvid-tydens-alle/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvid-tydens-alle/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/arvid-tydens-alle/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/knut-wicksellsv/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/stora-fiskareg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/one-bedroom-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/dammsnacksg/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/dammsnacksg/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/dammsnacksg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/dammsnacksg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/fregattg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/fregattg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/fregattg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/fregattg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/storkockumsg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/storkockumsg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/lundbergsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/stormg/two-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/stormg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-28-38/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-40/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-40/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/halsov-40/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/kullav/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/kullav/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/erik-dahlbhelmfeltsg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/erik-dahlbhelmfeltsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/ovre-eneborgsv/one-bedroom-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/ovre-eneborgsv/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/andra-langg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/andra-langg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-23/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-23/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-21/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-4/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-4/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/friggag-4/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/volrat-thamsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/volrat-thamsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gyllenkrooksg-17-23/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gyllenkrooksg-17-23/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gyllenkrooksg-17-23/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-6/one-bedroom-x-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-6/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-6/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-6/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/hostvadersg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kopmansnorra-hamng/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kopmansnorra-hamng/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kopmansnorra-hamng/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/aschebergsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/egnahemsv/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/storg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/viktoriag-4/one-bedroom-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/viktoriag-4/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lundg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/packhusplatsen/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/packhusplatsen/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/packhusplatsen/one-bedroom-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/packhusplatsen/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg/one-bedroom-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smyckeg/one-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/one-bedroom-x-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/one-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/teaterg/two-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/four-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodrav-7/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodrav-7/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-5-7/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-8/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-15/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasag-6/three-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ornehufvudsg-5/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ornehufvudsg-5/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ornehufvudsg-9---11/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ovre-olskroksg/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ovre-olskroksg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/ovre-olskroksg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjarde-langg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodra-varvindsg/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bagerig/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/bagerig/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-12/two-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/studio-queen-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/two-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/svarvarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gotlandsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/erik-dahlbergsg-5/four-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/erik-dahlbergsg-5/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/erik-dahlbergsg-5/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/grepg/parking",
+      "title": "Parking - Företagsbostäder",
+      "description": "Grepgatan, Helsingborg ... Den här lägenheten tillhör vår kategori Basic. En möblerad lägenhet med fullt utrustat kök. Inget liv i flärd, men valet lämnar mer ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog/two-bedroom-x-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gotlandsg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/koldingg/five-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kopmansnorra-hamng/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/one-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/two-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/two-bedroom-normal-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/four-bedroom-normal-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/studio-queen-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/lilla-kyrkog/three-bedroom-large-premium"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-10/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-2/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-3/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-3/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/brantingsg/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/asogotg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/three-bedroom-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-3/one-bedroom-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/epistelv-3/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-6/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-10/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-6/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-6/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-10/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-20/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-18/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/trubadurv-20/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gotlandsg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-23/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/per-albin-hanssonsv/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/per-albin-hanssonsv/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/ovre-eneborgsv/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/vasaplatsen-8/one-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/storg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/urvadersgrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/gjutarg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg/karlsg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjarde-langg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/storkockumsg/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/storkockumsg/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/studio-single-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/one-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/norr-malarstrand/studio-single-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48/two-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48/studio-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/eveneman-48/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/gotabergsg-12/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/nordhemsg-47/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/sodrav-7/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/topeliusg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/smorslatten/studio-single-normal-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/three-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/fjallbog/four-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/kungslasarettsg/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/brantingsg/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/nybrog/one-bedroom-queen-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/erik-dahlbergsg-5/one-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/sibylleg/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/tegnersg/three-bedroom-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/viktor-rydbergsg-44/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/skarpskyttev/studio-queen-normal-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund/studentg/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo/stormg/two-bedroom-x-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm/ynglingag/two-bedroom-large-standard"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/temperaturg/studio-queen-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/temperaturg/two-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/temperaturg/one-bedroom-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/temperaturg/studio-single-large-basic"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/goteborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/lund",
+      "title": "Explore Lund – Your Guide to Corporate Housing & Attractions",
+      "description": "Rent serviced apartments in Lund within walking distance or with fast connections to key areas such as the innovation hub Ideon Science Park and Lund University ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/helsingborg",
+      "title": "Explore Helsingborg – Your Guide to Corporate Housing & Attractions",
+      "description": "Företagsbostäder rents out serviced apartments to corporate customers who need long-term housing for hired consultants or staff. Företagsbostäder always have ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm",
+      "title": "Möblerade lägenheter i Stockholm - Företagsbostäder",
+      "description": "Hitta en företagslägenhet i Stockholm, och känn dig som hemma i huvudstaden. Vi har ett brett utbud av företagslägenheter över hela stan."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/goteborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/helsingborg",
+      "title": "Stadsguide Helsingborg - Företagsbostäder",
+      "description": "Helsingborg är full av historiska platser som Jacob Hansens hus, Kärnan och Sofiero. Det är också ett viktigt fäste för svensk industri med företag som Ramlösa, ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/goteborg/hisingen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/goteborg/west-gothenburg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/malmo/vastra-hamnen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/ostermalm",
+      "title": "Östermalm - Företagsbostäder",
+      "description": "Östermalm is the most distinguished and traditional area in Stockholm. Here you will find some of the city's classic restaurants and cultural institutions as ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/kungsholmen",
+      "title": "Kungsholmen - Företagsbostäder",
+      "description": "Every Stockholm resident has at least once fantasized about living in one of the sought after apartments in Kungsholmen. The many long streets in this area ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/sodermalm",
+      "title": "Södermalm - Företagsbostäder",
+      "description": "Södermalm is Stockholm's southern inner city island and hipster epicentre. Here you'll have no shortage of great restaurants, cultural institutions, bars, ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/vastra-skogen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/arenastaden",
+      "title": "Arenastaden - Företagsbostäder",
+      "description": "The very popular main attractions in this part of town are the largest stadium in Stockholm – Friends Arena – and the second biggest mall in the nordic ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/helsingborg/helsingborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/lund/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/malmo/downtown-malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/goteborg/centrala-goteborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/goteborg/east-gothenburg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/rasunda"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/vasastan"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/city-guides/stockholm/kista"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/goteborg/hisingen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/goteborg/west-gothenburg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/malmo/vastra-hamnen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/ostermalm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/kungsholmen"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/sodermalm",
+      "title": "Södermalm | Företagsbostäder",
+      "description": "Runt hörnet lär du hitta roliga nischade butiker, showrooms och konstgallerier. Stämningen på “Söder” är bohemisk, om än uppstyrd och välordnad. Om du vill bo i ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/vastra-skogen",
+      "title": "Västra Skogen - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/arenastaden"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/helsingborg/helsingborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/lund/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/malmo/downtown-malmo"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/goteborg/centrala-goteborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/goteborg/east-gothenburg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/rasunda",
+      "title": "Råsunda | Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/vasastan",
+      "title": "Möblerade lägenheter i Stockholm | Företagsbostäder",
+      "description": "Hitta ditt perfekta långtidsboende i Stockholm med vårt utbud av möblerade lägenheter."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/stadsguider/stockholm/kista",
+      "title": "Kista - Företagsbostäder",
+      "description": "Kista kallas ofta Sveriges Silicon Valley och huserar det största IKT-klustret i Europa. Kommunikationsjätten Ericsson har haft sitt huvudkontor här sedan 80- ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/stockholm",
+      "title": "Serviced Apartments in Stockholm - Företagsbostäder",
+      "description": "Explore Företagsbostäder's fully furnished serviced apartments across Stockholm's prime areas, including Vasastan, Södermalm, Östermalm, and Kungsholmen."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg",
+      "title": "Serviced apartments in Göteborg - Företagsbostäder",
+      "description": "Gothenburg's position as Sweden's industrial heart makes our centrally located serviced apartments ideal for corporate travelers. Our properties are ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/malmo",
+      "title": "Malmö - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/helsingborg",
+      "title": "Helsingborg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/stockholm"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg",
+      "title": "Göteborg - Företagsbostäder",
+      "description": "Som Sveriges industriella centrum lockar Göteborg många affärsresenärer, och våra företagslägenheter erbjuder det perfekta boendet nära Lindholmen Science Park, ..."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/malmo",
+      "title": "Malmö - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/lund"
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/helsingborg"
+    },
+    {
+      "url": "https://www.foretagsbostader.se",
+      "title": "Företagsbostäder",
+      "description": "Företagsbostäder är Sveriges största bostadsförmedling möblerade lägenheter. Vi ser till att företag kan växa och rekrytera inom Norden."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/larger-projects",
+      "title": "Corporate Housing for Large Teams & Projects - Företagsbostäder",
+      "description": "Planning a large scale project? Call 010 - 707 55 00 and we'll help you find apartments for your whole team."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/sv/foretagslagenheter/goteborg/koldingg",
+      "title": "Koldingg - Företagsbostäder",
+      "description": "Företagsbostäder erbjuder möblerade lägenheter för företag och privatpersoner. Vi har lägenheter i Stockholm, Göteborg, Malmö och flera andra städer."
+    },
+    {
+      "url": "https://www.foretagsbostader.se/en/serviced-apartments/goteborg/koldingg",
+      "title": "Koldingg - Företagsbostäder",
+      "description": "UP YOUR STAY. Cleaning; Flexible cancelation; Damage protection; Early / late check-out; Extra linen & towels; Extra bed or baby crib ..."
+    }
+  ]
+}
