@@ -1,0 +1,8 @@
+Google Ads Transparency Center — domain corporate-apartments.se, region SE (scrape 2026-06-27)
+RESULT: "2 ads" — advertiser "Corporate Apartments Swedrent AB" (Verified).
+  Two image/display creatives pointing to corporate-apartments.se.
+  Advertiser IDs: AR12582950465727102977 (creatives CR10445977066556882945, CR01779506294781116417)
+=> Google Ads: ACTIVE / CONFIRMED (verified advertiser, live creatives).
+NOTE: No AW- conversion ID in homepage <head> (only GTM-MWHQLQ9 + GA4 G-K8YPM9FKJF);
+  conversion tracking likely fired via GTM container, not inline gtag AW.
+LEGAL ENTITY revealed: "Corporate Apartments Swedrent AB" (the Google-verified advertiser name).
