@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+<title>Städmästarklass — Filmen | Residence Studio</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Jost:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#d4b88a;--gold2:#b89a6a;--navy:#0D1527;--ink:#0f0e0c}
+html,body{height:100%}
+body{font-family:'DM Sans',sans-serif;background:#07090f;color:#fff;overflow:hidden;-webkit-font-smoothing:antialiased}
+#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.frame{position:relative;width:100%;height:100%;max-width:520px;max-height:100dvh;margin:0 auto;overflow:hidden;background:#000}
+
+/* SCENES */
+.scene{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.scene.active{opacity:1}
+.scene .bg{position:absolute;inset:0;z-index:0;transform:scale(1.05)}
+.scene.active .bg{animation:ken 7s ease-out forwards}
+@keyframes ken{from{transform:scale(1.05)}to{transform:scale(1.18) translateY(-2%)}}
+.scene .vignette{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.25) 42%,rgba(0,0,0,.15) 100%)}
+.scene .motif{position:absolute;top:0;left:0;right:0;height:58%;z-index:1;display:flex;align-items:center;justify-content:center;font-size:clamp(90px,32vw,190px);filter:drop-shadow(0 12px 40px rgba(0,0,0,.5));opacity:.96}
+.scene.active .motif{animation:pop 1s cubic-bezier(.2,.9,.3,1.3) both}
+@keyframes pop{from{transform:scale(.6) translateY(20px);opacity:0}to{transform:scale(1) translateY(0);opacity:.96}}
+
+/* lower third */
+.lower{position:relative;z-index:2;padding:26px 26px calc(104px + env(safe-area-inset-bottom))}
+.kicker{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;opacity:0}
+.scene.active .kicker{animation:rise .6s .15s ease both}
+.headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,8.5vw,3rem);font-weight:600;line-height:1.02;letter-spacing:-.01em;margin-bottom:12px;opacity:0}
+.scene.active .headline{animation:rise .7s .3s ease both}
+.caption{font-size:clamp(1rem,4.4vw,1.18rem);line-height:1.4;color:rgba(255,255,255,.9);max-width:26ch;opacity:0}
+.scene.active .caption{animation:rise .7s .5s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* progress */
+.progress{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;gap:5px;padding:14px 16px calc(14px)}
+.pseg{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+.pseg i{display:block;height:100%;width:0;background:var(--gold);border-radius:3px}
+.pseg.done i{width:100%}
+.pseg.run i{animation:fill var(--dur,6s) linear forwards}
+@keyframes fill{from{width:0}to{width:100%}}
+
+/* brand chip */
+.brand{position:absolute;top:26px;left:16px;z-index:5;display:flex;align-items:center;gap:8px;opacity:.9}
+.brand img{height:20px;filter:brightness(0) invert(1)}
+.brand span{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+
+/* controls */
+.bar{position:absolute;bottom:0;left:0;right:0;z-index:6;display:flex;align-items:center;gap:14px;padding:14px 20px calc(14px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
+.bar button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:100px;width:42px;height:42px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;flex-shrink:0}
+.bar button:hover{background:rgba(255,255,255,.22)}
+.bar .cc{width:auto;padding:0 16px;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.bar .cc.off{opacity:.45}
+.scount{margin-left:auto;font-size:12px;color:rgba(255,255,255,.6);font-variant-numeric:tabular-nums}
+
+/* start overlay */
+#start{position:absolute;inset:0;z-index:20;background:radial-gradient(120% 90% at 50% 30%,#16233f 0%,#07090f 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 28px;transition:opacity .5s}
+#start.hide{opacity:0;pointer-events:none}
+#start .eye{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+#start h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,7.5vw,3.2rem);font-weight:600;line-height:1.04;margin-bottom:14px;hyphens:auto;overflow-wrap:break-word;max-width:12ch}
+#start h1 em{font-style:italic;color:var(--gold)}
+#start p{color:rgba(255,255,255,.7);max-width:30ch;margin-bottom:30px;font-size:1rem}
+#play{background:var(--gold);color:var(--navy);border:none;border-radius:100px;padding:16px 38px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.02em;cursor:pointer;display:inline-flex;align-items:center;gap:10px;box-shadow:0 14px 44px rgba(212,184,138,.35);transition:transform .15s}
+#play:hover{transform:translateY(-2px)}
+#start .hint{margin-top:22px;font-size:12px;color:rgba(255,255,255,.4);max-width:32ch}
+#end{position:absolute;inset:0;z-index:19;background:radial-gradient(120% 90% at 50% 40%,#16233f 0%,#07090f 70%);display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 28px}
+#end.show{display:flex}
+#end .big{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,9vw,3rem);font-weight:600;margin-bottom:8px}
+#end .big em{font-style:italic;color:var(--gold)}
+#end p{color:rgba(255,255,255,.7);margin-bottom:26px}
+#end a,#end button{display:inline-flex;align-items:center;gap:8px;margin:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:100px;padding:13px 26px;font-family:inherit;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;transition:.15s}
+#end a:hover,#end button:hover{background:rgba(255,255,255,.2)}
+#end .replay{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+</style>
+</head>
+<body>
+<div id="stage"><div class="frame" id="frame">
+
+  <div class="brand"><img src="/images/logo.png" alt=""/><span>Städmästarklass</span></div>
+  <div class="progress" id="progress"></div>
+  <div id="scenes"></div>
+
+  <div class="bar" id="bar" style="display:none">
+    <button id="btnPause" title="Paus/Spela">⏸</button>
+    <button id="btnPrev" title="Föregående">⏮</button>
+    <button id="btnNext" title="Nästa">⏭</button>
+    <button class="cc" id="btnCC" title="Undertexter">CC</button>
+    <span class="scount" id="scount">1 / 6</span>
+  </div>
+
+  <div id="start">
+    <div class="eye">Residence Studio · Personalutbildning</div>
+    <h1>Städ­mästar­klassen<br><em>på 60 sekunder</em></h1>
+    <p>Från nybörjare till hotellstandard. Slå på ljudet och tryck spela.</p>
+    <button id="play">▶ &nbsp;Spela mästarklassen</button>
+    <div class="hint">Berättarrösten använder din webbläsares svenska röst. Fungerar bäst i Chrome, Edge eller Safari med ljudet på.</div>
+  </div>
+
+  <div id="end">
+    <div class="big">Nu är du <em>expert.</em></div>
+    <p>Fota · rapportera · lås · gå.</p>
+    <button class="replay" id="replay">↺ Spela igen</button>
+    <a href="/stadning-masterclass.html">📋 Öppna checklistan</a>
+  </div>
+
+</div></div>
+
+<script>
+const SCENES = [
+  { k:"Introduktion", h:"Välkommen", c:"På en minut lär du dig städa våra boenden till hotellstandard.",
+    vo:"Välkommen. På en minut lär du dig städa våra boenden till hotellstandard.",
+    motif:"🏠", bg:"linear-gradient(160deg,#1b3a2e,#0d1f2d)" },
+  { k:"Grunden", h:"Uppifrån och ner", c:"Städa alltid uppifrån och ner. Torka torrt efter vått. Färgkoda trasorna.",
+    vo:"Städa alltid uppifrån och ner. Torka torrt efter vått. Och färgkoda trasorna.",
+    motif:"🧴", bg:"linear-gradient(160deg,#2a2350,#111a33)" },
+  { k:"Köket", h:"Granskas hårdast", c:"Töm kylen, avfetta spisen, och polera kranen tills den blänker.",
+    vo:"Köket granskas hårdast. Töm kylen, avfetta spisen, och polera kranen tills den blänker.",
+    motif:"🍳", bg:"linear-gradient(160deg,#3a2c1a,#1a1710)" },
+  { k:"Badrummet", h:"Avgör omdömet", c:"Bort med kalk och varenda hårstrå. Torka duschglaset kristallblankt.",
+    vo:"Badrummet avgör omdömet. Bort med kalk och varenda hårstrå. Torka glaset blankt.",
+    motif:"🛁", bg:"linear-gradient(160deg,#123a44,#0a1f28)" },
+  { k:"Sovrummet", h:"Hotellbädd", c:"Alltid rena lakan. Dra dem släta, vik hörnen, plymfa kuddarna.",
+    vo:"Alltid rena lakan. Dra dem släta, vik hörnen som på hotell, och plymfa kuddarna.",
+    motif:"🛏️", bg:"linear-gradient(160deg,#2c2f3a,#14161d)" },
+  { k:"Slutkoll", h:"Gästens ögon", c:"Titta med gästens ögon. Fota, rapportera, lås och gå.",
+    vo:"Titta med gästens ögon. Fota, rapportera, lås och gå. Nu är du expert.",
+    motif:"✨", bg:"linear-gradient(160deg,#3a3212,#1a1708)" },
+];
+const FALLBACK_MS = [4200,5200,5600,5400,5400,5200]; // if TTS unavailable
+
+// build DOM
+const scenesEl = document.getElementById('scenes');
+const progEl = document.getElementById('progress');
+SCENES.forEach((s,i)=>{
+  const d=document.createElement('div');d.className='scene';d.dataset.i=i;
+  d.innerHTML=`<div class="bg" style="background:${s.bg}"></div><div class="vignette"></div>
+    <div class="motif">${s.motif}</div>
+    <div class="lower"><div class="kicker">${s.k}</div><div class="headline">${s.h}</div><div class="caption">${s.c}</div></div>`;
+  scenesEl.appendChild(d);
+  const p=document.createElement('div');p.className='pseg';p.innerHTML='<i></i>';progEl.appendChild(p);
+});
+const sceneEls=[...document.querySelectorAll('.scene')];
+const segEls=[...document.querySelectorAll('.pseg')];
+
+let idx=0, playing=false, paused=false, ccOn=true, timer=null, voice=null;
+
+// pick a Swedish voice when available
+function pickVoice(){
+  const vs=speechSynthesis.getVoices();
+  voice = vs.find(v=>/sv[-_]?SE/i.test(v.lang)) || vs.find(v=>/^sv/i.test(v.lang)) || null;
+}
+if('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged=pickVoice; }
+
+const bar=document.getElementById('bar');
+const scount=document.getElementById('scount');
+
+function showScene(i){
+  sceneEls.forEach(e=>e.classList.remove('active'));
+  segEls.forEach((e,j)=>{e.classList.remove('run','done');e.querySelector('i').style.animation='none';
+    if(j<i)e.classList.add('done');});
+  const el=sceneEls[i]; el.classList.add('active');
+  // restart ken burns
+  const bg=el.querySelector('.bg'); bg.style.animation='none'; void bg.offsetWidth; bg.style.animation='';
+  scount.textContent=(i+1)+' / '+SCENES.length;
+}
+
+function runSegment(i,ms){
+  const seg=segEls[i], bar=seg.querySelector('i');
+  seg.classList.add('run'); bar.style.setProperty('--dur',(ms/1000)+'s');
+  bar.style.animation='none'; void bar.offsetWidth;
+  seg.style.setProperty('--dur',(ms/1000)+'s');
+  bar.style.animation=`fill ${ms}ms linear forwards`;
+}
+
+function speak(i,onEnd){
+  if(!('speechSynthesis' in window)){ return timed(i,onEnd); }
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(SCENES[i].vo);
+    if(voice) u.voice=voice;
+    u.lang='sv-SE'; u.rate=1.0; u.pitch=1.0;
+    let done=false; const finish=()=>{if(done)return;done=true;onEnd();};
+    u.onend=finish; u.onerror=finish;
+    // safety fallback in case onend never fires
+    const guard=setTimeout(finish, FALLBACK_MS[i]+3500);
+    u.onend=()=>{clearTimeout(guard);finish();};
+    runSegment(i, Math.max(FALLBACK_MS[i], SCENES[i].vo.length*70));
+    speechSynthesis.speak(u);
+  }catch(e){ timed(i,onEnd); }
+}
+function timed(i,onEnd){ runSegment(i,FALLBACK_MS[i]); timer=setTimeout(onEnd,FALLBACK_MS[i]); }
+
+function play(i){
+  if(i>=SCENES.length){ return finishFilm(); }
+  idx=i; showScene(i);
+  speak(i, ()=>{ if(paused)return; play(i+1); });
+}
+function finishFilm(){
+  playing=false; try{speechSynthesis.cancel()}catch(e){}
+  document.getElementById('end').classList.add('show');
+  bar.style.display='none';
+}
+
+// controls
+document.getElementById('play').addEventListener('click',()=>{
+  document.getElementById('start').classList.add('hide');
+  bar.style.display='flex'; playing=true; paused=false;
+  // Safari needs a kick after gesture
+  if('speechSynthesis' in window){ try{speechSynthesis.resume()}catch(e){} pickVoice(); }
+  play(0);
+});
+document.getElementById('replay').addEventListener('click',()=>{
+  document.getElementById('end').classList.remove('show');
+  bar.style.display='flex'; playing=true; paused=false; play(0);
+});
+document.getElementById('btnPause').addEventListener('click',(e)=>{
+  paused=!paused;
+  if(paused){ try{speechSynthesis.pause()}catch(_){} clearTimeout(timer);
+    segEls[idx].querySelector('i').style.animationPlayState='paused'; e.target.textContent='▶';
+  }else{ e.target.textContent='⏸';
+    try{speechSynthesis.resume()}catch(_){}
+    segEls[idx].querySelector('i').style.animationPlayState='running';
+    // if speech already ended during pause, nudge forward
+  }
+});
+document.getElementById('btnNext').addEventListener('click',()=>{ if(idx<SCENES.length-1){clearTimeout(timer);try{speechSynthesis.cancel()}catch(_){}paused=false;document.getElementById('btnPause').textContent='⏸';play(idx+1);} else finishFilm(); });
+document.getElementById('btnPrev').addEventListener('click',()=>{ clearTimeout(timer);try{speechSynthesis.cancel()}catch(_){}paused=false;document.getElementById('btnPause').textContent='⏸';play(Math.max(0,idx-1)); });
+document.getElementById('btnCC').addEventListener('click',(e)=>{
+  ccOn=!ccOn; e.target.classList.toggle('off',!ccOn);
+  document.querySelectorAll('.caption').forEach(c=>c.style.visibility=ccOn?'visible':'hidden');
+});
+// stop speech if the page is hidden/closed
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){try{speechSynthesis.cancel()}catch(_){}} });
+window.addEventListener('pagehide',()=>{try{speechSynthesis.cancel()}catch(_){}});
+</script>
+</body>
+</html>
