@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Städmästarklass — Bli expert på 5 minuter | Residence Studio</title>
+<meta name="description" content="Onboarding-mästarklass för städning av Airbnb-boenden. Från nybörjare till hotellstandard på 5 minuter."/>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0e0c;--paper:#f5f2ec;--warm:#e8e2d6;
+  --gold:#b89a6a;--gold-light:#d4b88a;--gold-pale:#f0e8d8;
+  --muted:#8a8278;--surface:#fffdf9;--border:#e0dbd2;
+  --navy:#0D1527;--navy2:#142040;
+  --green:#1a7a4a;--green-pale:#e7f2ec;--red:#c0392b;--red-pale:#fbeae8;--amber:#d97706;--amber-pale:#fbf1e0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+.eyebrow{font-family:'Jost',sans-serif;font-size:12px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* HEADER */
+header.top{position:sticky;top:0;z-index:100;background:rgba(245,242,236,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+header.top .bar{max-width:820px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+header.top img{height:26px;width:auto;display:block}
+header.top .tag{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(184,154,106,.28),transparent 70%);pointer-events:none}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:clamp(2.6rem,8vw,4.4rem);margin:14px 0 8px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p.lead{font-size:1.12rem;max-width:560px;color:rgba(255,255,255,.82);font-weight:300}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:8px 15px;font-size:13px;font-weight:500;letter-spacing:.02em}
+
+/* PROMISE STRIP */
+.promise{background:var(--gold-pale);border-bottom:1px solid var(--border)}
+.promise .wrap{padding:20px 22px;display:flex;flex-wrap:wrap;gap:20px 34px;justify-content:center;text-align:center}
+.promise b{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--navy);display:block;line-height:1}
+.promise span{font-size:12px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+
+section{padding:52px 0}
+section.alt{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sec-head{margin-bottom:30px}
+.sec-head h2{font-size:clamp(1.9rem,5vw,2.6rem);margin:8px 0 6px}
+.sec-head p{color:var(--muted);max-width:600px}
+
+/* MINDSET */
+.mindset{background:var(--navy);color:#fff;border-radius:18px;padding:34px 30px;position:relative;overflow:hidden}
+.mindset::before{content:"“";position:absolute;top:-30px;left:14px;font-family:'Cormorant Garamond',serif;font-size:180px;color:rgba(184,154,106,.16);line-height:1}
+.mindset p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;line-height:1.35;position:relative}
+.mindset p em{color:var(--gold-light);font-style:italic}
+
+/* RULES */
+.rules{display:grid;gap:14px}
+.rule{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;transition:transform .15s,box-shadow .15s}
+.rule:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(15,14,12,.06)}
+.rule .num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold);line-height:1;text-align:center}
+.rule h3{font-size:1.3rem;margin-bottom:3px}
+.rule p{color:var(--muted);font-size:.96rem}
+
+/* KIT */
+.kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.kit label{display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:.92rem;cursor:pointer;transition:background .15s;user-select:none}
+.kit label:hover{background:var(--gold-pale)}
+.kit input{appearance:none;width:20px;height:20px;border:2px solid var(--gold);border-radius:6px;flex-shrink:0;cursor:pointer;position:relative;transition:background .15s}
+.kit input:checked{background:var(--gold)}
+.kit input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700}
+.kit input:checked + span{text-decoration:line-through;color:var(--muted)}
+
+/* PROTOCOL */
+.step{background:var(--surface);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.step-head{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:20px 22px;cursor:pointer;list-style:none}
+.step-head::-webkit-details-marker{display:none}
+.step-icon{width:46px;height:46px;border-radius:12px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.step-head h3{font-size:1.4rem;line-height:1.05}
+.step-head .time{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:2px;display:block}
+.step-head .chev{color:var(--muted);font-size:20px;transition:transform .2s}
+details[open] .step-head .chev{transform:rotate(180deg)}
+.step-body{padding:2px 22px 24px 22px}
+.step-body .lane{border-top:1px dashed var(--border);padding-top:16px;margin-top:4px}
+.task{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid #f0ece4}
+.task:last-child{border-bottom:none}
+.task input{appearance:none;width:22px;height:22px;border:2px solid var(--border);border-radius:6px;flex-shrink:0;margin-top:1px;cursor:pointer;position:relative;transition:.15s}
+.task input:checked{background:var(--green);border-color:var(--green)}
+.task input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700}
+.task input:checked + .t-txt{color:var(--muted);text-decoration:line-through}
+.t-txt{font-size:.97rem}
+.t-txt b{font-weight:600;color:var(--ink)}
+.pro{display:inline-block;margin-top:2px;font-size:.82rem;background:var(--amber-pale);color:#8a5a08;padding:2px 9px;border-radius:6px;font-weight:500}
+
+/* CALLOUTS */
+.callout{border-radius:14px;padding:18px 20px;margin:16px 0;font-size:.96rem}
+.callout.warn{background:var(--red-pale);border:1px solid #eecfca}
+.callout.win{background:var(--green-pale);border:1px solid #cbe6d8}
+.callout h4{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.02em;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.callout.warn h4{color:var(--red)}
+.callout.win h4{color:var(--green)}
+.callout ul{margin:4px 0 0 2px;list-style:none}
+.callout li{padding:3px 0 3px 20px;position:relative}
+.callout.warn li::before{content:"✕";position:absolute;left:0;color:var(--red);font-weight:700}
+.callout.win li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+
+/* RESTOCK */
+.restock{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.restock label{display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:.92rem;cursor:pointer;user-select:none}
+.restock input{appearance:none;width:20px;height:20px;border:2px solid var(--gold);border-radius:6px;flex-shrink:0;position:relative;cursor:pointer}
+.restock input:checked{background:var(--gold)}
+.restock input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700}
+.restock input:checked + span{text-decoration:line-through;color:var(--muted)}
+.restock small{display:block;color:var(--muted);font-size:.78rem}
+
+/* FINAL CHECK */
+.final{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:32px 28px}
+.final h3{color:#fff;font-size:1.9rem;margin-bottom:6px}
+.final .fc-list{margin-top:18px;display:grid;gap:10px}
+.final .fc{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 15px;font-size:.95rem}
+.final .fc b{color:var(--gold-light)}
+
+/* VIDEO SCRIPT */
+.scene{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:12px}
+.scene .sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+.scene .sn{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.scene .st{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.scene .vo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--ink);margin-bottom:8px;line-height:1.35}
+.scene .vis{font-size:.86rem;color:var(--muted)}
+.scene .vis b{color:var(--ink);font-weight:600}
+
+/* MISC */
+.note{background:var(--amber-pale);border:1px solid #f0dcae;border-radius:12px;padding:16px 18px;font-size:.92rem;color:#6b4c10}
+.note b{color:#5a3f0a}
+footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:40px 22px;font-size:.85rem}
+footer img{height:24px;margin-bottom:14px;opacity:.9}
+footer a{color:var(--gold-light);text-decoration:none}
+.reset{display:inline-block;margin-top:14px;font-size:.8rem;color:var(--muted);background:none;border:1px solid var(--border);border-radius:100px;padding:7px 16px;cursor:pointer;font-family:inherit}
+.reset:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:600px){
+  .rule{grid-template-columns:40px 1fr;gap:12px;padding:16px}
+  .rule .num{font-size:1.9rem}
+  .hero{padding:48px 0 54px}
+  section{padding:42px 0}
+  .mindset::before{font-size:120px}
+}
+@media print{
+  header.top,.hero .meta,.reset,footer .reset{display:none}
+  body{background:#fff}
+  details{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <img src="/images/logo.png" alt="Residence Studio"/>
+    <span class="tag">Städmästarklass · Onboarding</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Residence Studio · Personalutbildning</span>
+    <h1>Från nybörjare<br>till <em>hotellstandard</em></h1>
+    <p class="lead">Den kompletta mästarklassen för städning av våra boenden. Har du aldrig städat professionellt förut? Läs igenom en gång — sen kan du det.</p>
+    <div class="meta">
+      <span class="chip">⏱ 5 min att lära sig</span>
+      <span class="chip">🏠 Airbnb-turnover</span>
+      <span class="chip">✓ Interaktiv checklista</span>
+      <span class="chip">📱 Följ på mobilen</span>
+    </div>
+    <a href="/stadning-video.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--gold);color:var(--navy);padding:15px 30px;border-radius:100px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 12px 40px rgba(184,154,106,.3)">▶ Se filmen — 60 sekunder</a>
+  </div>
+</div>
+
+<div class="promise">
+  <div class="wrap">
+    <div><b>1</b><span>Ordning varje gång</span></div>
+    <div><b>6</b><span>Steg per boende</span></div>
+    <div><b>0</b><span>Hårstrån kvar</span></div>
+    <div><b>5★</b><span>Målet på varje städ</span></div>
+  </div>
+</div>
+
+<!-- MINDSET -->
+<section>
+  <div class="wrap">
+    <div class="mindset">
+      <p>Gästen ska kliva in och känna att <em>ingen någonsin bott här</em>. Du städar inte bara bort smuts — du skapar den första känslan av lyx. Ett hårstrån i duschen eller en fläck på spegeln räcker för att sänka ett omdöme från 5 till 3 stjärnor. <em>Detaljerna är jobbet.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 GOLDEN RULES -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Grunden</span>
+      <h2>De 5 gyllene reglerna</h2>
+      <p>Lär dig dessa fem principer och du gör aldrig ett grovt misstag. Allt annat är detaljer.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><div class="num">1</div><div><h3>Uppifrån och ner</h3><p>Städa alltid från högsta punkten neråt. Damm faller nedåt — dammsug och moppa golvet <b>sist</b>, annars städar du samma yta två gånger.</p></div></div>
+      <div class="rule"><div class="num">2</div><div><h3>Torrt efter vått</h3><p>Spreja, låt verka, torka rent — och torka alltid <b>torrt</b> efteråt. Kranar, speglar och glas ska blänka utan ränder. Vått som får lufttorka lämnar kalkfläckar.</p></div></div>
+      <div class="rule"><div class="num">3</div><div><h3>Samma ordning varje gång</h3><p>Följ alltid samma runda: kök → badrum → sovrum → ytor → golv → doft. Rutin gör att du aldrig glömmer ett rum, även när du har bråttom.</p></div></div>
+      <div class="rule"><div class="num">4</div><div><h3>Två trasor, aldrig blanda</h3><p>Färgkoda: en färg för kök/ytor, en annan <b>bara</b> för toalett. Blanda aldrig. Byt/skölj trasan mellan rummen så du inte flyttar bakterier.</p></div></div>
+      <div class="rule"><div class="num">5</div><div><h3>Fota innan du går</h3><p>Ta bilder på varje färdigt rum + eventuella skador. Det är ditt kvitto på hotellstandard och vår trygghet om en gäst klagar felaktigt.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KIT -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Före start</span>
+      <h2>Packa vagnen</h2>
+      <p>Ha allt med in — springa efter grejer kostar dig tid. Bocka av innan du kliver in i boendet.</p>
+    </div>
+    <div class="kit">
+      <label><input type="checkbox" data-k="kit1"><span>Allrengöring</span></label>
+      <label><input type="checkbox" data-k="kit2"><span>Badrums-/kalkrengöring</span></label>
+      <label><input type="checkbox" data-k="kit3"><span>Glas-/spegelputs</span></label>
+      <label><input type="checkbox" data-k="kit4"><span>Desinfektion (touchpoints)</span></label>
+      <label><input type="checkbox" data-k="kit5"><span>Mikrofibertrasor (färgkod.)</span></label>
+      <label><input type="checkbox" data-k="kit6"><span>Skursvamp + skrapa</span></label>
+      <label><input type="checkbox" data-k="kit7"><span>Dammsugare</span></label>
+      <label><input type="checkbox" data-k="kit8"><span>Mopp + hink</span></label>
+      <label><input type="checkbox" data-k="kit9"><span>Gummihandskar</span></label>
+      <label><input type="checkbox" data-k="kit10"><span>Sopsäckar</span></label>
+      <label><input type="checkbox" data-k="kit11"><span>Rena lakan + handdukar</span></label>
+      <label><input type="checkbox" data-k="kit12"><span>Påfyllning (se lista nedan)</span></label>
+    </div>
+  </div>
+</section>
+
+<!-- 6-STEP PROTOCOL -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Kärnan</span>
+      <h2>6-stegs rumsprotokoll</h2>
+      <p>Tryck på varje steg för att öppna checklistan. Bocka av medan du jobbar — din progress sparas i telefonen.</p>
+    </div>
+
+    <!-- STEP 1 -->
+    <details class="step" open>
+      <summary class="step-head">
+        <div class="step-icon">🚪</div>
+        <div><h3>1 · Ankomst & luft</h3><span class="time">0:00 – 0:20 · ca 2 min</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="task"><input type="checkbox" data-k="s1a"><span class="t-txt"><b>Öppna alla fönster</b> direkt — vädra ut under hela städet.</span></div>
+        <div class="task"><input type="checkbox" data-k="s1b"><span class="t-txt">Gå ett <b>varv och samla allt skräp</b> i en sopsäck: soptunnor, kylen, glömda saker.</span></div>
+        <div class="task"><input type="checkbox" data-k="s1c"><span class="t-txt"><b>Skadekoll:</b> fläckar, trasigt, saknade saker. Hittar du något → <b>fota och rapportera direkt</b>.</span></div>
+        <div class="task"><input type="checkbox" data-k="s1d"><span class="t-txt">Kolla efter <b>kvarglömda ägodelar</b> — lägg undan och notera.</span></div>
+        <div class="task"><input type="checkbox" data-k="s1e"><span class="t-txt">Starta en <b>tvätt / diskmaskin</b> med sängkläder om det behövs, så hinner det bli klart.</span></div>
+      </div></div>
+    </details>
+
+    <!-- STEP 2 -->
+    <details class="step">
+      <summary class="step-head">
+        <div class="step-icon">🍳</div>
+        <div><h3>2 · Köket</h3><span class="time">0:20 – 1:30 · granskas hårdast</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="task"><input type="checkbox" data-k="s2a"><span class="t-txt"><b>Töm & torka ur kylen</b> — inga rester, inga fläckar, inga lukter. Lämna den fräsch.</span></div>
+        <div class="task"><input type="checkbox" data-k="s2b"><span class="t-txt"><b>Mikro in- och utvändigt</b>, ugn och spishäll — fettfritt. <span class="pro">Proffstips: blöt fläckar, låt verka medan du gör annat</span></span></div>
+        <div class="task"><input type="checkbox" data-k="s2c"><span class="t-txt"><b>Diskmaskin:</b> töm, torka luckans kant och gummilist. Kör tom rengöring vid lukt.</span></div>
+        <div class="task"><input type="checkbox" data-k="s2d"><span class="t-txt">Kaffebryggare/vattenkokare — <b>töm, skölj, avkalka</b> vid behov.</span></div>
+        <div class="task"><input type="checkbox" data-k="s2e"><span class="t-txt"><b>Bänkar & stänkskydd</b> avtorkade, kryddor/tillbehör snyggt uppställda.</span></div>
+        <div class="task"><input type="checkbox" data-k="s2f"><span class="t-txt">Diskho blank, <b>kranen polerad torr</b> så den glänser. Diska/ställ undan allt.</span></div>
+        <div class="task"><input type="checkbox" data-k="s2g"><span class="t-txt">Räkna <b>servis & bestick</b> — allt komplett och rent i skåpen.</span></div>
+      </div></div>
+    </details>
+
+    <!-- STEP 3 -->
+    <details class="step">
+      <summary class="step-head">
+        <div class="step-icon">🛁</div>
+        <div><h3>3 · Badrummet</h3><span class="time">1:30 – 2:40 · avgör omdömet</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="callout warn" style="margin-top:0"><h4>⚠ Nolltolerans</h4><ul><li>Hårstrån — kolla golv, avlopp, hörn, duschvägg</li><li>Kalk & tvålrester på glas och kran</li><li>Ränder på spegeln</li></ul></div>
+        <div class="task"><input type="checkbox" data-k="s3a"><span class="t-txt"><b>Spreja toalett, dusch och handfat</b> först — låt medlet verka medan du gör resten.</span></div>
+        <div class="task"><input type="checkbox" data-k="s3b"><span class="t-txt"><b>Toaletten:</b> insida med borste, under kanten, ytan, sitsen båda sidor, foten. <span class="pro">Egen trasa — aldrig till annat</span></span></div>
+        <div class="task"><input type="checkbox" data-k="s3c"><span class="t-txt"><b>Dusch/badkar:</b> skrubba bort kalk, torka glaset <b>torrt och rentt</b> tills det blänker.</span></div>
+        <div class="task"><input type="checkbox" data-k="s3d"><span class="t-txt"><b>Spegel & kromdetaljer</b> putsade utan en enda rand.</span></div>
+        <div class="task"><input type="checkbox" data-k="s3e"><span class="t-txt"><b>Avlopp & golvbrunn</b> rensade — inga hår, inget skräp.</span></div>
+        <div class="task"><input type="checkbox" data-k="s3f"><span class="t-txt">Rena handdukar upphängda <b>symmetriskt</b> (hotellvik). Fyll på papper, tvål, schampo.</span></div>
+      </div></div>
+    </details>
+
+    <!-- STEP 4 -->
+    <details class="step">
+      <summary class="step-head">
+        <div class="step-icon">🛏️</div>
+        <div><h3>4 · Sovrum & bäddning</h3><span class="time">2:40 – 3:40 · det gäster fotar</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="task"><input type="checkbox" data-k="s4a"><span class="t-txt"><b>Alltid helt rena lakan</b> — även om sängen ser obäddad ut. Aldrig återanvänd.</span></div>
+        <div class="task"><input type="checkbox" data-k="s4b"><span class="t-txt"><b>Släta lakan, inga veck.</b> Dra hårt, vik hörnen som på hotell (sjukhusvik).</span></div>
+        <div class="task"><input type="checkbox" data-k="s4c"><span class="t-txt"><b>Kuddar plymfade</b> och upprättstående, täcke jämnt utlagt och slätt.</span></div>
+        <div class="task"><input type="checkbox" data-k="s4d"><span class="t-txt">Kolla under sängen och i garderoben — <b>inga kvarglömda saker</b>, extra kudde/filt framme.</span></div>
+        <div class="task"><input type="checkbox" data-k="s4e"><span class="t-txt">Nattduksbord, lampor och handtag <b>avdammade</b>.</span></div>
+      </div></div>
+    </details>
+
+    <!-- STEP 5 -->
+    <details class="step">
+      <summary class="step-head">
+        <div class="step-icon">🛋️</div>
+        <div><h3>5 · Ytor, damm & golv</h3><span class="time">3:40 – 4:30 · uppifrån & ner</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="task"><input type="checkbox" data-k="s5a"><span class="t-txt"><b>Damma uppifrån och ner:</b> hyllor, lister, tavelramar, lampor, fönsterbrädor.</span></div>
+        <div class="task"><input type="checkbox" data-k="s5b"><span class="t-txt"><b>Touchpoints — desinficera:</b> handtag, strömbrytare, fjärrkontroll, termostat, kranar.</span></div>
+        <div class="task"><input type="checkbox" data-k="s5c"><span class="t-txt">Speglar och glasytor <b>randfria</b>. Fingeravtryck bort från blanka ytor.</span></div>
+        <div class="task"><input type="checkbox" data-k="s5d"><span class="t-txt"><b>Dammsug allt golv</b> — även under möbler, i hörn och trappor.</span></div>
+        <div class="task"><input type="checkbox" data-k="s5e"><span class="t-txt"><b>Moppa sist</b>, backa ut mot dörren så du inte går på blött golv.</span></div>
+      </div></div>
+    </details>
+
+    <!-- STEP 6 -->
+    <details class="step">
+      <summary class="step-head">
+        <div class="step-icon">✨</div>
+        <div><h3>6 · Doft, detaljer & staging</h3><span class="time">4:30 – 5:00 · sista intrycket</span></div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="step-body"><div class="lane">
+        <div class="task"><input type="checkbox" data-k="s6a"><span class="t-txt"><b>Stäng fönstren</b> efter vädring. Rummet ska dofta rent och neutralt — <b>aldrig starkt parfymerat</b>.</span></div>
+        <div class="task"><input type="checkbox" data-k="s6b"><span class="t-txt"><b>Töm alla papperskorgar</b> och sätt i ny påse. Nya sopsäckar på plats.</span></div>
+        <div class="task"><input type="checkbox" data-k="s6c"><span class="t-txt"><b>Staging:</b> kuddar rakt, stolar inskjutna, fjärrkontroll framme, en välkomstdetalj om det ingår.</span></div>
+        <div class="task"><input type="checkbox" data-k="s6d"><span class="t-txt">Ställ tillbaka <b>allt på sin plats</b> enligt boendets standard.</span></div>
+        <div class="task"><input type="checkbox" data-k="s6e"><span class="t-txt"><b>Fota varje färdigt rum</b> och ladda upp. Rapportera skador eller lågt lager.</span></div>
+      </div></div>
+    </details>
+  </div>
+</section>
+
+<!-- RESTOCK -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Påfyllning</span>
+      <h2>Lämna aldrig tomt</h2>
+      <p>En gäst som får slut på toapapper eller kaffe klockan 22 skriver en dålig recension. Fyll på generöst — bocka av.</p>
+    </div>
+    <div class="restock">
+      <label><input type="checkbox" data-k="r1"><span>Toapapper <small>2 extra rullar synliga</small></span></label>
+      <label><input type="checkbox" data-k="r2"><span>Handtvål <small>full pump vid varje ho</small></span></label>
+      <label><input type="checkbox" data-k="r3"><span>Schampo & balsam <small>påfyllt i duschen</small></span></label>
+      <label><input type="checkbox" data-k="r4"><span>Handdukar <small>rena, per gäst</small></span></label>
+      <label><input type="checkbox" data-k="r5"><span>Kaffe, te & socker <small>fyll på</small></span></label>
+      <label><input type="checkbox" data-k="r6"><span>Salt, peppar, olja <small>kolla nivå</small></span></label>
+      <label><input type="checkbox" data-k="r7"><span>Disktabletter & diskmedel</span></label>
+      <label><input type="checkbox" data-k="r8"><span>Disktrasa & disksvamp <small>alltid ny</small></span></label>
+      <label><input type="checkbox" data-k="r9"><span>Sopsäckar <small>extra i lådan</small></span></label>
+      <label><input type="checkbox" data-k="r10"><span>Hushållspapper</span></label>
+    </div>
+  </div>
+</section>
+
+<!-- TOP MISTAKES -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Undvik</span>
+      <h2>De 5 misstagen som sänker omdömet</h2>
+    </div>
+    <div class="callout warn">
+      <h4>✕ Gör aldrig detta</h4>
+      <ul>
+        <li><b>Hårstrån i badrummet</b> — den vanligaste orsaken till dålig recension. Kontrollera två gånger.</li>
+        <li><b>Ränder på speglar & glas</b> — torka alltid torrt efteråt, aldrig lufttorka.</li>
+        <li><b>Lukt</b> — instängd, unken eller för stark doft. Vädra alltid, dofta neutralt.</li>
+        <li><b>Glömd påfyllning</b> — tomt toapapper, kaffe eller tvål känns snålt och oproffsigt.</li>
+        <li><b>Blanda trasor</b> — toalettrasa på köksbänken sprider bakterier. Färgkoda strikt.</li>
+      </ul>
+    </div>
+    <div class="callout win">
+      <h4>✓ Det som ger 5 stjärnor</h4>
+      <ul>
+        <li>Sängen ser ut som på ett hotell — slät, plymfad, inbjudande.</li>
+        <li>Allt blankt glänser: kranar, speglar, glas.</li>
+        <li>Det doftar rent och neutralt när gästen kliver in.</li>
+        <li>Små omtänksamma detaljer — extra rulle framme, kuddar rakt.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CHECK -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <span class="eyebrow" style="color:var(--gold-light)">Innan du låser</span>
+      <h3>60-sekunders slutkoll</h3>
+      <p style="color:rgba(255,255,255,.8);max-width:560px">Ställ dig i dörren och titta med <b style="color:var(--gold-light)">gästens ögon</b>. Skulle du själv vilja checka in här just nu? Gå igenom:</p>
+      <div class="fc-list">
+        <div class="fc"><span>🛏️</span><span>Sängen slät och inbjudande, kuddar plymfade?</span></div>
+        <div class="fc"><span>🚿</span><span>Badrummet <b>hårfritt</b>, spegel och glas randfria?</span></div>
+        <div class="fc"><span>🍽️</span><span>Kök blankt, kyl fräsch, kranar polerade?</span></div>
+        <div class="fc"><span>👆</span><span>Touchpoints desinficerade, golv nymoppat?</span></div>
+        <div class="fc"><span>🌬️</span><span>Doftar rent & neutralt, alla fönster stängda?</span></div>
+        <div class="fc"><span>📦</span><span>Påfyllt: papper, tvål, kaffe, rena handdukar?</span></div>
+        <div class="fc"><span>📸</span><span>Bilder tagna, skador/lager rapporterat?</span></div>
+      </div>
+      <p style="margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--gold-light)">Allt bockat? Då har du precis levererat hotellstandard. Lås & gå. ✨</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SCRIPT APPENDIX -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Bilaga · För videoproduktion</span>
+      <h2>Video-manus, scen för scen</h2>
+      <p>Färdigt manus för en 5-minuters narrerad onboarding-video (svenskt speak + bild). Klart att rendera med AI-video eller filma själv — 12 scener à ca 25 sek.</p>
+    </div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 1 · Intro</span><span class="st">0:00–0:25</span></div><div class="vo">"Välkommen. Om fem minuter kan du städa våra boenden till hotellstandard — även om du aldrig gjort det förut."</div><p class="vis"><b>Bild:</b> Ljust, nystädat boende i solljus, långsam kamerapanorering. Logotyp tonar in.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 2 · Mindset</span><span class="st">0:25–0:50</span></div><div class="vo">"Ditt jobb är en känsla: gästen ska tro att ingen bott här. Ett hårstrån eller en rand kan sänka omdömet från fem till tre."</div><p class="vis"><b>Bild:</b> Närbild på blank kran, perfekt bäddad säng, gäst som ler i dörren.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 3 · Regel 1–2</span><span class="st">0:50–1:15</span></div><div class="vo">"Två grundregler: städa alltid uppifrån och ner. Och torka alltid torrt efter vått — annars blir det kalkränder."</div><p class="vis"><b>Bild:</b> Hand dammar hylla högt upp, sen golv; sen putsar en spegel blank. Textremsa: "1. Uppifrån & ner · 2. Torrt efter vått".</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 4 · Regel 3–5</span><span class="st">1:15–1:40</span></div><div class="vo">"Följ samma ordning varje gång. Färgkoda trasorna — aldrig toalett och kök på samma. Och fota allt innan du går."</div><p class="vis"><b>Bild:</b> Färgade trasor läggs upp, städvagn packas, mobil fotar färdigt rum.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 5 · Ankomst</span><span class="st">1:40–2:05</span></div><div class="vo">"Steg ett: öppna fönstren, samla allt skräp, och kolla efter skador. Hittar du något — fota och rapportera direkt."</div><p class="vis"><b>Bild:</b> Fönster öppnas, sopsäck fylls, närbild på mobil som rapporterar.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 6 · Kök</span><span class="st">2:05–2:30</span></div><div class="vo">"Köket granskas hårdast. Töm och torka kylen, avfetta spis och mikro, töm diskmaskinen — och polera kranen tills den blänker."</div><p class="vis"><b>Bild:</b> Snabba klipp: kyl torkas, spis skuras, kran poleras blank.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 7 · Badrum</span><span class="st">2:30–2:55</span></div><div class="vo">"Badrummet avgör omdömet. Spreja först, låt verka. Skrubba bort kalk, torka glaset torrt — och leta efter varenda hårstrån."</div><p class="vis"><b>Bild:</b> Duschglas torkas blankt, närbild golvbrunn rensas, spegel putsas randfri.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 8 · Bäddning</span><span class="st">2:55–3:20</span></div><div class="vo">"Alltid helt rena lakan. Dra dem släta, vik hörnen som på hotell och plymfa kuddarna. Detta är det gästen fotar."</div><p class="vis"><b>Bild:</b> Lakan dras slätt i slow motion, hörnvik, kudde plymfas och läggs.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 9 · Ytor & golv</span><span class="st">3:20–3:45</span></div><div class="vo">"Damma uppifrån och ner. Desinficera allt man rör vid — handtag, strömbrytare, fjärrkontroll. Dammsug, och moppa sist."</div><p class="vis"><b>Bild:</b> Trasa över strömbrytare och fjärr, dammsugare i hörn, mopp backar mot dörr.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 10 · Doft & påfyllning</span><span class="st">3:45–4:10</span></div><div class="vo">"Fyll på generöst: toapapper, tvål, kaffe, rena handdukar. Vädra ut, och lämna en doft som är ren — aldrig stark."</div><p class="vis"><b>Bild:</b> Handdukar hängs symmetriskt, toapapper viks till spets, fönster stängs.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 11 · Slutkoll</span><span class="st">4:10–4:40</span></div><div class="vo">"Ställ dig i dörren och titta med gästens ögon. Sängen, badrummet, doften, påfyllningen. Skulle du vilja checka in här?"</div><p class="vis"><b>Bild:</b> Person står i dörröppningen, kameran sveper över det perfekta rummet.</p></div>
+
+    <div class="scene"><div class="sh"><span class="sn">Scen 12 · Avslut</span><span class="st">4:40–5:00</span></div><div class="vo">"Allt bockat? Då har du levererat hotellstandard. Fota, rapportera, lås och gå. Nu är du en expert."</div><p class="vis"><b>Bild:</b> Mobil fotar rummet, dörr låses, logotyp + text "Residence Studio · Städmästarklass".</p></div>
+
+    <div class="note" style="margin-top:20px"><b>Renderingsklart:</b> Detta manus är format för Higgsfield explainer-workflow (12 klipp à ~10 s + svenskt speak per scen, formatet 9:16 för mobil eller 16:9). Higgsfield-anslutningen tappade kopplingen upprepade gånger i den här sessionen, så själva videon kunde inte renderas här — men manuset ovan är klart att köra så snart verktyget är stabilt.</div>
+  </div>
+</section>
+
+<footer>
+  <img src="/images/logo.png" alt="Residence Studio"/>
+  <p>Städmästarklass · Intern personalutbildning<br>Frågor? Kontakta din koordinator på <a href="mailto:wilhelm@bostadsuthyrning.se">wilhelm@bostadsuthyrning.se</a></p>
+  <button class="reset" onclick="if(confirm('Nollställa alla bockar?')){localStorage.clear();location.reload()}">↺ Nollställ checklistan</button>
+</footer>
+
+<script>
+// Persist all checkboxes with data-k in localStorage
+(function(){
+  var boxes = document.querySelectorAll('input[type=checkbox][data-k]');
+  boxes.forEach(function(b){
+    var key = 'sm_' + b.dataset.k;
+    if(localStorage.getItem(key) === '1') b.checked = true;
+    b.addEventListener('change', function(){
+      localStorage.setItem(key, b.checked ? '1' : '0');
+    });
+  });
+})();
+</script>
+</body>
+</html>
