@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Higgsfield",
+      "mcp__Higgsfield__generate_video",
+      "mcp__Higgsfield__generate_audio",
+      "mcp__Higgsfield__generate_image",
+      "mcp__Higgsfield__explainer_video",
+      "mcp__Higgsfield__list_voices",
+      "mcp__Higgsfield__job_display",
+      "mcp__Higgsfield__balance",
+      "mcp__Higgsfield__models_explore"
+    ]
+  }
+}
