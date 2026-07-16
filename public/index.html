@@ -770,6 +770,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);padding:72px 80px 40px}
       <a href="#process" class="btn-ghost">Hur det fungerar</a>
     </div>
     <div class="hero-mini-stats">
+      <div class="hero-mini-stat"><div class="num">200<sup> kr</sup></div><div class="lbl">Från, per person &amp; dygn — allt inkl.</div></div>
       <div class="hero-mini-stat"><div class="num">173</div><div class="lbl">Bostäder</div></div>
       <div class="hero-mini-stat"><div class="num">10 000<sup>+</sup></div><div class="lbl">Välkomnade gäster</div></div>
       <div class="hero-mini-stat"><div class="num">2 000<sup>+</sup></div><div class="lbl">Uthyrningar 2025</div></div>
@@ -856,8 +857,29 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);padding:72px 80px 40px}
         <span class="wic-eyebrow-line"></span>
       </div>
       <h2 class="wic-headline">En faktura. Allt ingår.</h2>
-      <p class="wic-subline"><em>Från 200 kr per person och dygn.</em></p>
-      <p class="wic-body">Ni bokar — vi sköter allt. Era medarbetare fokuserar på jobbet, inte logistiken.</p>
+      <p class="wic-subline"><em>Från 200 kr per person och dygn — allt inklusive.</em></p>
+      <p class="wic-body">El, wifi, städning, möbler och sängkläder ingår. Ingen deposition. En faktura till företaget. Ni bokar — vi sköter allt.</p>
+    </div>
+
+    <!-- Indikativ priskalkylator -->
+    <div id="price-calc" class="wic-animate" data-delay="150">
+      <div class="pc-inner">
+        <div class="pc-title">Räkna på ert boende</div>
+        <div class="pc-fields">
+          <label class="pc-field">Antal personer
+            <input type="number" id="pcPersons" min="1" max="50" value="6" inputmode="numeric"/>
+          </label>
+          <label class="pc-field">Antal nätter
+            <input type="number" id="pcNights" min="1" max="365" value="30" inputmode="numeric"/>
+          </label>
+        </div>
+        <div class="pc-result">
+          <div class="pc-range" id="pcRange">36 000 – 63 000 kr</div>
+          <div class="pc-per" id="pcPer">≈ 6 000 – 10 500 kr per person och månad</div>
+        </div>
+        <div class="pc-disclaimer">Indikativt spann, allt inklusive — exakt offert inom 24 timmar.</div>
+        <button class="pc-cta" onclick="document.getElementById('enterprise-booking-widget').scrollIntoView({behavior:'smooth'})">Få exakt pris →</button>
+      </div>
     </div>
 
     <!-- Tab Nav -->
@@ -2533,6 +2555,44 @@ shadow.appendChild(style);
   closeBtn.addEventListener('click',function(e){e.stopPropagation();close();});
   // Auto-open after 4s
   setTimeout(function(){if(!hasAutoOpened){hasAutoOpened=true;open();}},4000);
+})();
+</script>
+
+<!-- ═══ PRISKALKYLATOR (självständigt block) ═══ -->
+<style>
+#price-calc{max-width:520px;margin:36px auto 0}
+#price-calc .pc-inner{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.25);border-radius:16px;padding:28px 28px 24px;backdrop-filter:blur(4px)}
+#price-calc .pc-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;margin-bottom:18px;text-align:center}
+#price-calc .pc-fields{display:flex;gap:14px;margin-bottom:18px}
+#price-calc .pc-field{flex:1;display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+#price-calc .pc-field input{padding:12px 14px;border:1px solid rgba(255,255,255,.15);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;font-family:'Jost',sans-serif;font-size:16px;outline:none;width:100%}
+#price-calc .pc-field input:focus{border-color:#c9a96e}
+#price-calc .pc-result{text-align:center;margin-bottom:10px}
+#price-calc .pc-range{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:#e8d5a3;line-height:1.1}
+#price-calc .pc-per{font-size:13px;color:rgba(255,255,255,.55);margin-top:6px}
+#price-calc .pc-disclaimer{font-size:12px;color:rgba(255,255,255,.4);text-align:center;margin-bottom:16px}
+#price-calc .pc-cta{display:block;margin:0 auto;background:#c9a96e;color:#0f1923;border:none;border-radius:10px;padding:13px 28px;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:transform .15s}
+#price-calc .pc-cta:hover{transform:translateY(-1px)}
+@media(max-width:600px){#price-calc .pc-fields{flex-direction:column}#price-calc .pc-range{font-size:28px}}
+</style>
+<script>
+(function(){
+  var PRICE_MIN_PPN = 200;
+  var PRICE_MAX_PPN = 350; /* TODO(ägare): bekräfta övre spann */
+  var p = document.getElementById('pcPersons'), n = document.getElementById('pcNights');
+  var range = document.getElementById('pcRange'), per = document.getElementById('pcPer');
+  if (!p || !n || !range || !per) return;
+  function fmt(x){ return Math.round(x).toLocaleString('sv-SE'); }
+  function calc(){
+    var persons = Math.min(Math.max(parseInt(p.value,10)||1,1),50);
+    var nights = Math.min(Math.max(parseInt(n.value,10)||1,1),365);
+    var lo = persons*nights*PRICE_MIN_PPN, hi = persons*nights*PRICE_MAX_PPN;
+    range.textContent = fmt(lo)+' – '+fmt(hi)+' kr';
+    per.textContent = '≈ '+fmt(30*PRICE_MIN_PPN)+' – '+fmt(30*PRICE_MAX_PPN)+' kr per person och månad';
+  }
+  p.addEventListener('input', calc);
+  n.addEventListener('input', calc);
+  calc();
 })();
 </script>
 
