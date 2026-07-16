@@ -1,0 +1,9 @@
+Meta Ad Library keyword search "corporate apartments" country=SE (scrape 2026-06-27)
+Result: ~2,200 results — but these match the GENERIC keyword, NOT the advertiser.
+Advertiser page names appearing as Sponsored in results: StoryBox, Blueground,
+  EasyFlat, Forenom, Melbourne Private Apartments, Portico Invest, others.
+"Corporate Apartments Sweden" own FB page (facebook.com/corporateapartments) did NOT
+  appear as an advertiser in this keyword result set.
+=> Corporate Apartments Sweden running Meta ads: EJ VERIFIERAT (not found by keyword).
+   Meta Pixel IS installed on site (fbq 403789254006725) = retargeting capability exists.
+Competitive note: EasyFlat + Forenom ARE active Meta advertisers in SE corporate-housing space.

@@ -12,11 +12,16 @@ services:
         value: kontakt@bostadsuthyrning.se
       - key: LEAD_EMAIL
         value: kontakt@bostadsuthyrning.se
+      # Hemliga värden sätts i Render-dashboarden (Environment → Add Secret),
+      # alternativt via secret-filen /etc/secrets/.env som server.js läser.
+      # Se docs/DRIFT.md för rotationsinstruktioner.
       - key: JWT_SECRET
-        value: residence_studio_super_secret_jwt_key_2024
+        sync: false
       - key: GUESTY_CLIENT_ID
-        value: 0oatnyobvq6fqjH7y5d7
+        sync: false
       - key: GUESTY_CLIENT_SECRET
-        value: -pt2Motf-BxAoqCz2fxp54P5MkorEMRkCr7EVpfAkRK8Oz2sk8-Gzn3GeoraPzLr
+        sync: false
       - key: RESEND_API_KEY
-        value: re_Za2qvcDa_A1jy7o6jhaTMVuiSkowjVCr8
+        sync: false
+      # Valfria: MAIL_FROM (verifierad Resend-avsändare, krävs för kundbekräftelser),
+      # MAKE_WEBHOOK_URL (tom = webhook avstängd), EMAIL_DRY_RUN (endast lokal test).

@@ -5,7 +5,7 @@ const { db } = require('../db/init');
 const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
-const JWT_KEY = process.env.JWT_SECRET || 'residence_studio_fallback_jwt_key_2024';
+const JWT_KEY = process.env.JWT_SECRET || 'foretagsboende_dev_only_fallback_key';
 
 function signToken(user) {
   return jwt.sign(

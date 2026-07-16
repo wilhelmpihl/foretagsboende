@@ -1,0 +1,2 @@
+[Saved from firecrawl scrape 2026-06-27 of https://workersstay.com/about — see assistant transcript for full content]
+Key: "international corporate housing operator", sources from "network of trusted property owners", leases & manages itself, "direct operator" not marketplace. Partners shown: Booking.com, Airbnb, Google Vacation Rentals, Vrbo, Trivago, Qasa, Expedia, Hotels.com. Legal entity footer: Real Estate Ollopa11 LTD, Company no. 13697786, inc. 22 Oct 2021, 128 City Road, London EC1V 2NX.

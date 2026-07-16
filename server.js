@@ -36,7 +36,7 @@ guesty.init();
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 // API Routes
 app.use('/api/auth', require('./routes/auth'));
@@ -49,11 +49,11 @@ app.use('/api/enquiries', require('./routes/enquiries'));
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok', env: process.env.NODE_ENV }));
 
-// SPA fallback — serve portal/login from public/
+// Okända URL:er → riktig 404 (inte soft-404 med 200) för korrekt indexering
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.status(404).sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`\n  Residence Studio running at http://localhost:${PORT}\n`);
+  console.log(`\n  foretagsboende.se running at http://localhost:${PORT}\n`);
 });

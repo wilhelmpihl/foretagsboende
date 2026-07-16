@@ -63,13 +63,10 @@ const db = {
 };
 
 function initDb() {
-  // Seed users
-  if (readTable('users').length === 0) {
+  // Seed admin user — endast från env, aldrig hårdkodade lösenord i git
+  if (readTable('users').length === 0 && process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD) {
     writeTable('users', [
-      { id: 1, email: 'admin@residence.se', password_hash: bcrypt.hashSync('admin123', 10), name: 'Admin', role: 'admin', company_name: 'Residence Studio', phone: '+46 70 000 00 00', created_at: new Date().toISOString() },
-      { id: 2, email: 'hr@volvocars.com', password_hash: bcrypt.hashSync('volvo123', 10), name: 'Anna Björk', role: 'company', company_name: 'Volvo Cars', phone: '+46 72 123 45 67', created_at: new Date().toISOString() },
-      { id: 3, email: 'demo@company.se', password_hash: bcrypt.hashSync('demo123', 10), name: 'Erik Svensson', role: 'company', company_name: 'Ericsson AB', phone: '+46 73 456 78 90', created_at: new Date().toISOString() },
-      { id: 4, email: 'wilhelm@bostadsuthyrning.se', password_hash: bcrypt.hashSync('Gais9494!!', 10), name: 'Wilhelm Pihl', role: 'admin', company_name: 'AWP Superhost Aktiebolag', phone: '+46 73 537 67 07', created_at: new Date().toISOString() },
+      { id: 1, email: process.env.ADMIN_EMAIL, password_hash: bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10), name: process.env.ADMIN_NAME || 'Admin', role: 'admin', company_name: 'AWP Superhost Aktiebolag', phone: '+46 73 537 67 07', created_at: new Date().toISOString() },
     ]);
   }
 
@@ -84,15 +81,6 @@ function initDb() {
       { id:6, title:'Penthouse med takterrass', area:'Eriksberg', address:'Eriksberg Allé 8', price_per_night:2800, bedrooms:3, bathrooms:2, max_persons:6, amenities:['Wifi','Takterrass','Parkering','Kök','Hushållerska','Gym'], description:'Exklusivt penthouse med 180° utsikt. Hushållerska ingår.', image_url:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format', rating:5.0, reviews_count:19, is_available:true, badge:'Exklusiv' },
       { id:7, title:'Centralt läge, Centrum', area:'Centrum', address:'Drottninggatan 10', price_per_night:1100, bedrooms:2, bathrooms:1, max_persons:4, amenities:['Wifi','Kök','TV','Hiss'], description:'Centralt belägen, gångavstånd till allt.', image_url:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80&auto=format', rating:4.71, reviews_count:108, is_available:true, badge:null },
       { id:8, title:'Tech-hub, Johanneberg', area:'Johanneberg', address:'Eklandagatan 25', price_per_night:1350, bedrooms:3, bathrooms:2, max_persons:5, amenities:['Wifi 1Gbit','Arbetsplatser','Whiteboardvägg','Kök','Parkering'], description:'Designad för teknikteam. 1Gbit fiber, dubbla skärmar ingår.', image_url:'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80&auto=format', rating:4.91, reviews_count:34, is_available:true, badge:'Tech' },
-    ]);
-  }
-
-  // Seed bookings
-  if (readTable('bookings').length === 0) {
-    writeTable('bookings', [
-      { id:1, user_id:2, listing_id:1, check_in:'2026-03-20', check_out:'2026-04-20', persons:4, status:'confirmed', total_price:57350, company_name:'Volvo Cars', contact_name:'Anna Björk', contact_email:'hr@volvocars.com', contact_phone:'+46 72 123 45 67', notes:'Parkering krävs', created_at:new Date().toISOString() },
-      { id:2, user_id:2, listing_id:3, check_in:'2026-04-01', check_out:'2026-04-14', persons:1, status:'confirmed', total_price:12350, company_name:'Volvo Cars', contact_name:'Anna Björk', contact_email:'hr@volvocars.com', contact_phone:null, notes:null, created_at:new Date().toISOString() },
-      { id:3, user_id:3, listing_id:5, check_in:'2026-03-25', check_out:'2026-05-01', persons:2, status:'pending', total_price:52200, company_name:'Ericsson AB', contact_name:'Erik Svensson', contact_email:'demo@company.se', contact_phone:'+46 73 456 78 90', notes:'Behöver snabbt internet', created_at:new Date().toISOString() },
     ]);
   }
 

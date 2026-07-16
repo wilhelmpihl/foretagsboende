@@ -1,0 +1,72 @@
+# Corporate Apartments (Sweden) — konkurrentprofil
+
+> **TL;DR**
+> - **Positionering:** "Swedish experts at staff accommodation — all over Sweden." Möblerat personalboende (hus + lägenheter + apart-hotell), self-catering, allt-inkl. Uttalad nisch: **bygg- och entreprenadbranschen** ("our customers are mainly in the construction and contracting industries"). Familjeföretag grundat 2009. (källa: startsida, /about-us)
+> - **Prismodell:** Offert-ledd ("we prepare an offer based on your specific wishes"). Allt-inkl (el/värme/vatten/internet/sopor). **Inga priser publicerade** för boenden; enda publika prisuppgift = tilläggstjänster städ/trädgård 350 SEK/h. Flexibelt: förläng/förkorta gratis med **30 dagars uppsägning**. (källa: startsida, /our-services)
+> - **Skala/geografi:** 200–250+ boenden i 30+ orter i Sverige + "on demand"-nätverk av fastighetsägare. 16 stadssidor (Stockholm→Luleå). 400+ kunder/år. Apart-hotell: 300+ lägenheter på 3 platser (Täby/Rotebro Stockholm) via förvärv av Part-Time Home Hotel Group 2024. (källa: /about-us, /our-apartment-hotels, /for-house-owners)
+> - **Kanalmix:** **Google Ads BEKRÄFTAT** (2 verifierade creatives i Google Ads Transparency, advertiser "Corporate Apartments Swedrent AB"). Meta Pixel + Albacross (B2B-deanon) + Plausible + GA4 + GTM installerat. Programmatisk SEO via per-stad + per-fastighet-sidor + lång blogg (2017→).
+> - **Stack-essens:** **Astro** (static-site) + **Bootstrap 5.3** + Font Awesome. Lättviktig, klassisk server-renderad sajt (ej Next.js/SPA).
+> - **Största styrka/svaghet:** Styrka = **äkta operatörsdjup** (15+ år, familjeföretag, egen service-/ekonomi-/bokningsavdelning med namngiven personal, bygg-nisch-trovärdighet, fysiska enheter + apart-hotell). Svaghet = **daterad/spretig digital närvaro** (gammal blogg, 404:ande fastighetssidor, ingen pristransparens, ingen chatt, generisk copy) → svag konvertering trots stark verksamhet.
+
+**Källor:** scrape 2026-06-27 av startsida, /quote, /goteborg, /about-us, /our-services, /our-apartment-hotels, /for-house-owners, /contactus; Google Ads Transparency; Meta Ad Library (se `raw/`). Tech: `raw/homepage-tech-signals.txt`.
+**Domän:** corporate-apartments.se · **Juridisk enhet:** "Corporate Apartments Swedrent AB" (namn från Google Ads Transparency, hög) / "The Corporate Apartments Group" (självbenämning) · **Kontakt:** sara@corporate-apartments.se, +46 738 616 200 · **HK:** Borås (grundort) + Stockholm-kontor.
+
+---
+
+## Modul 1 — Marknad & positionering
+- **Value prop (hög):** Bekymmersfritt, prisvärt möblerat personalboende för företag med utstationerad personal — "just arrive with your toothbrush". Allt-inkl, self-catering, flexibla villkor, lokal service. Slogan (JSON-LD): *"Comfortable and Affordable Staff Accommodations"*. (källa: startsida, JSON-LD)
+- **ICP — KÄRNÖVERLAPP med AWP (hög):** Explicit och genomgående: **bygg- och entreprenadbranschen**. Citat: "Our customers are mainly in the construction and contracting industries, so our rental objects are well adapted for both workers and managers" (footer); "experts at accommodation solutions for construction and contracting companies" (startsida); vision: *"the primary and best accommodation supplier in Sweden for construction companies"* (/about-us). Riktar sig mot både **arbetslag ("work teams")** och **chefer ("managers")**. (källa: startsida, /about-us, /goteborg, /for-house-owners)
+- **Segment (hög):** B2B personalboende/"longstay" — kort och lång tid. Köpare: HR Manager, Project Manager, Site Manager, Company Owner (testimonials-roller på startsidan). Self-catering-fokus (laga egen mat/tvätta) = arbetar-/projektboende snarare än white-collar serviced apartments. (källa: startsida testimonials, mission)
+- **Geografi (hög):** Hela Sverige. 16 stadssidor med klickbar Sverige-karta: Luleå, Umeå, Örnsköldsvik, Sandviken, Gävle, Uppsala, Stockholm, Örebro, Karlstad, Linköping, Borås, **Göteborg**, Helsingborg, Lund, Malmö. Footer nämner även Timrå, Sundsvall, Kiruna, Piteå, Boden, Norrköping, Jönköping. "Large network of property owners" → täckning överallt på begäran. (källa: startsida-karta, footer)
+- **Göteborg-vinkel (hög):** Egen /goteborg-sida — generisk lokaltext (Masthuggskajen-utveckling, hamnstad) + inkluderat-lista (värme/el, sänglinne/handdukar, möbler/kök, tvätt, TV/Wi-Fi, **parkering**). Anpassat för "construction teams and managers". *Ingen Volvo/SKF-specifik vinkel som Rentaborg har — svagare lokal industri-targeting.* (källa: /goteborg)
+- **Pris/paketering (medel):** Allt-inkl hyra (el, värme, vatten, internet, sopor "vid normal förbrukning"). Inga publika boendepriser → offert/förhandling. Apart-hotellen marknadsför "corporate agreements with priority booking and fixed pricing". Tilläggstjänster: städ 350 SEK/h, trädgård 350 SEK/h, transport till site, möbler, avtalsförhandling. (källa: /our-services, /our-apartment-hotels)
+- **Affärsmodell / "moat" (hög):** **Tenant-operator / master-lease**, inte ren mäklare: hyr in 200+ hus/lägenheter från privata och företag, tar **vacancy-risk** ("we are responsible for all vacancies"), gör underhåll/besiktning, betalar hyra i tid. Äger/driver dessutom 3 nybyggda apart-hotell (förvärv 2024). Egna in-house städare och caretakers. → Reellt operationellt djup + fysiska tillgångar = svårare att kopiera än asset-light broker. Moat: 15 års bransch-relationer i bygg + landlord-nätverk. (källa: /for-house-owners, /about-us)
+
+## Modul 2 — Trafik & annonsering
+- **Betalt — Google Ads (hög, BEKRÄFTAT):** Google Ads Transparency Center visar **2 verifierade creatives** för advertiser **"Corporate Apartments Swedrent AB"** med landning på corporate-apartments.se (advertiser-ID AR12582950465727102977). → aktiv Google Ads-annonsör. *OBS: ingen AW-conversion-ID i sidans `<head>` — konvertering troligen via GTM-container (GTM-MWHQLQ9), ej inline gtag.* Sökord-tema sannolikt "personalboende [stad]", "staff accommodation Sweden", "boende byggarbetare". *Exakta sökord/bud EJ VERIFIERAT.* (källa: `raw/google-ads-transparency.txt`)
+- **Betalt — Meta (medel, EJ VERIFIERAT aktiv):** **Meta Pixel installerad** (fbq `403789254006725`, init + PageView) → retargeting-kapacitet finns. MEN i Meta Ad Library (kw "corporate apartments", SE) återfanns **inte** deras egen FB-sida som annonsör — träffarna matchade konkurrenter (EasyFlat, Forenom, Blueground, StoryBox). → Aktiv Meta-annonsering **EJ VERIFIERAT**; pixel ≠ aktiva kampanjer. (källa: `raw/meta-ad-library-keyword-search.txt`)
+- **B2B intent-data (hög):** **Albacross** installerat (`window._nQc="89620593"`, serve.albacross.com/track.js) → de-anonymiserar besökande företag (B2B lead-gen/account-based). Tydlig B2B-sälj-mognad. (källa: startsida rawHtml)
+- **Analytics (hög):** Dubbel analytics — **GA4** (`G-K8YPM9FKJF`) + GTM (`GTM-MWHQLQ9`) + **Plausible** (`corporate-apartments.se`, privacy-vänlig). Termly consent manager. (källa: startsida rawHtml)
+- **Organiskt (medel):** Programmatisk SEO: 16 stadssidor + ~30+ per-fastighet-sidor (per gatuadress) + 3 produkttyper + lång blogg (2017→2024, news/tips/general-knowledge) + full i18n (en/sv/pl). Stark long-tail-yta för "personalboende [stad]". *OBS: många per-fastighet-URL:er 404:ar vid direkt scrape (JS-gated eller borttagna) → potentiellt teknisk SEO-skuld.* (källa: firecrawl_map, `raw/sitemap-map.txt`)
+- **Socialt (medel):** Facebook (facebook.com/corporateapartments/), LinkedIn (company/corporate-apartments-sweden/), Instagram (corporateapartments/) länkade. Frekvens/engagemang *EJ VERIFIERAT*.
+- **Kanalmix-bedömning:** Hävstång = Google Ads (bekräftad) + bred geografisk/fastighets-SEO + Albacross-driven B2B-outbound. Meta troligen sekundärt/retargeting.
+
+## Modul 3 — SEO & content
+- **Teknisk SEO (medel):** OG/Twitter-meta komplett, canonical per sida, JSON-LD **LodgingBusiness** (currencies USD/SEK/EUR/PLN/NOK, languages EN/SV), favicon/apple-touch. **Ingen `keywords`-meta**. i18n via separata /sv/ /pl/-träd (ej hreflang verifierat i head). **Svaghet:** per-fastighet-sidor returnerar 404 vid scrape → trasiga/borttagna landningssidor = SEO-läckage. (källa: startsida rawHtml, firecrawl_map)
+- **Keyword-portfölj (medel):** Kommersiellt: "staff accommodation [stad]", "personalboende", "company housing Sweden", "boende bygg/entreprenad", "corporate apartments [stad]". Polsk variant ("kwatery pracownicze") → riktar **polska byggarbetare/underentreprenörer** — relevant ICP-signal. (källa: titlar i firecrawl_map, /pl-sidor)
+- **Content-strategi (medel):** Stad-sidor (tunna, generiska) + fastighet-sidor + bygg-fokuserad blogg + guide-content (tips/general-knowledge, t.ex. "olyckor på företagsboendet", "boendepartner eller privat hyresavtal"). Topical authority kring "personalboende bygg" men innehållet är ojämnt/åldrat (många inlägg 2017–2019). (källa: firecrawl_map blog-URL:er)
+- **Backlink/domänstyrka (låg):** *EJ VERIFIERAT — orsak: ingen backlink-källa hämtad.* Riktning: gammal domän (verksam sedan 2009) → sannolikt högre etablerad auktoritet än unga konkurrenter (t.ex. Rentaborg © 2026).
+- **Core Web Vitals (låg):** *EJ VERIFIERAT — PSI ej körd.* Astro static + Bootstrap + lazy-loaded bilder → rimlig grundprestanda, men icke-optimerade `.jpg`-hero kan tynga LCP.
+
+## Modul 4 — Funnel & landningssida
+Se `funnel.md` för steg-för-steg. Sammanfattning:
+- **Sidarkitektur (hög):** Hero med **inbäddat lead-formulär direkt** (ovanför vikningen) + "ring bokningsteamet"-knapp → 3 fråge-ikoner (workers/projekt/prisvärt) → trust-text (industry experience) → bildgalleri → 6 USP:ar (service, allt-inkl, fullt möblerat, flexibelt 30 dgr, extratjänster, self-catering) → 4 testimonials (roll-märkta) → Sverige-karta (klickbara städer) → footer. (källa: startsida)
+- **CTA-arkitektur (hög):** Primär CTA = **formulär + telefon** högt upp; sekundärt upprepade "Contact us"-knappar. Ingen "Get a quote"-säljvinkel lika aggressiv som Rentaborg; mer "kontakta oss / ring bokningsteamet". (källa: startsida)
+- **Lead capture (hög):** Hero-formulär (`name="homepage-lead"`, POST→/contactus-thank-you) — fält: **Antal gäster, Var i Sverige, Dela sovrum? (Only shared/Only separate/Both — obligatoriskt), Fullt namn*, Företag*, E-post*, Telefon*, Startdatum, Slutdatum, Kommentar***. ~10 fält men färre obligatoriska än Rentaborg; saknar bransch/headcount-kvalificering. /quote-sidan har identiskt formulär + 5-stegs processförklaring. (källa: startsida, /quote)
+- **Konverteringselement (medel):** 4 testimonials med förnamn + roll (HR Manager/Project Manager/Site Manager/Company Owner) men **utan företagsnamn/foto på person** → låg verifierbarhet. "400+ companies/year", "200+/250+/300+ boenden", "15 år", "sedan 2009", namngiven personal med foton (Anna/Issa/Frida etc.) = **starkare äkthetssignaler än AI-genererade konkurrenter**. Ingen extern recensionswidget (Google/Trustpilot). (källa: startsida, /about-us)
+- **Mobil/5-sek-intryck (medel):** Erbjudandet tydligt på <5 sek (rubrik "Swedish experts at staff accommodation" + formulär). Separat mobil-nav (offcanvas). *Faktisk mobil-UX ej skärmdumpad.* (källa: startsida rawHtml)
+
+## Modul 5 — Tech stack
+Se `tech.md`. Essens: **Astro** (static-site generator, `data-astro-cid-*`, `/_astro/*.css`) + **Bootstrap 5.3.3** (CDN) + **Font Awesome**-ikoner. Klassisk server-renderad/statisk sajt (ej SPA). Analytics-tung: GA4 + GTM + Plausible + Meta Pixel + Albacross + Termly. Kund-portal (`/web/login`) + helpdesk antyder eget backoffice-system. Lead-formulär POST (ej API/instant-book).
+
+## Modul 6 — Erbjudande & leverans
+- **Tjänsteflöde (hög, 5 steg från /quote):** 1) Intresseanmälan (form/mejl/tel) → 2) Offert via **personlig account manager** → 3) Bekräftelse via mejl/sms + förhandsinfo → 4) Ankomst (klart: kök, WiFi, bäddat) → 5) Löpande kontakt under vistelsen + check-out-info 5 dagar före avresa. (källa: /quote)
+- **Vad ingår (hög):** Möbler + fullt utrustat kök, sänglinne/handdukar, värme/el/vatten/internet/sopor (normal förbrukning), tvättmöjlighet, TV/WiFi, parkering (Göteborg). Self-catering (laga mat/tvätta själv). Apart-hotell: + gym, veckostädning, laundry rooms, konferens/co-working. (källa: /goteborg, startsida USP, /our-apartment-hotels)
+- **Tilläggstjänster (hög):** Städ (350 SEK/h, ingen bindningstid), trädgård (350 SEK/h), transport till arbetsplats, specialmöbler, avtalsförhandling. (källa: /our-services)
+- **Villkor (hög):** Flexibelt — förläng/förkorta **gratis med 30 dagars uppsägning** ("we understand the complexity behind a construction or contracting project"). Inga bindningstider på tjänster. Deposition hanteras (ekonomiavdelning). *Exakt min-stay/kontraktslängd ej publicerad — "shorter or longer period", "longstay"; min-stay EJ VERIFIERAT i siffror.* (källa: startsida USP, /about-us)
+- **Self-serve vs sälj-lett (hög):** **Helt sälj-/offert-lett.** Ingen online-bokning/pris/instant-book. Personlig account manager (Anna/Issa/Frida) genom hela flödet. (källa: /quote, /about-us)
+
+## Modul 7 — Försäljning & kundservice (endast publikt observerbart)
+- **Sales motion (hög):** Offert-baserad, relations-driven. Telefon framträdande ("call our booking team +46 738 616 200"). Namngiven **bokningsavdelning** (account managers) + **serviceavdelning** + **ekonomiavdelning** = struktur som signalerar etablerad operatör. Albacross för outbound B2B. (källa: /about-us)
+- **Supportkanaler (hög):** E-post (sara@corporate-apartments.se — central för alla avdelningar), telefon, 4 separata webformulär (boka / bli hyresvärd / jobba hos oss / felanmälan), helpdesk/report-a-problem, kund-portal-login. **Öppettider:** mån–fre 08:00–16:00 CET; jour kvällar/helger för akuta ärenden. **Ingen live-chat/chatbot** i koden (Intercom/Crisp/Tawk/Drift ej hittade). (källa: /contactus, /for-house-owners, startsida)
+- **Mystery shopping:** EJ UTFÖRT (per uppdragsgivarens beslut — endast publik info).
+- **Faktisk svarstid/ton:** *EJ VERIFIERAT — ingen kontakt tagen.*
+
+---
+### Öppna luckor / att verifiera senare
+- Faktiska Google Ads-sökord/creatives (Transparency visade 2 display-creatives; söktext ej hämtad i detalj).
+- Om Meta-pixeln driver aktiva kampanjer (Ad Library by-page-ID ej körd på deras FB-sida).
+- Exakt min-stay, kontraktslängd och prisnivåer (ej publicerade → kräver offert; mystery shopping ej tillåtet).
+- Per-fastighet-sidornas 404-status (teknisk SEO-skuld vs JS-gating) — verifiera i browser.
+- Backlink-profil / organisk trafik (extern källa).
+- Exakt juridisk enhet & ekonomi (Bolagsverket/allabolag — "Corporate Apartments Swedrent AB").

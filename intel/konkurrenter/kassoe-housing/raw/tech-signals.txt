@@ -1,0 +1,145 @@
+=== Kassoe Housing tech grep (homepage rawHtml) 2026-06-27 ===
+--- WordPress / wp-content / wp-includes (count) ---
+     79 wp-content
+      4 wp-emoji
+      4 wp-includes
+      6 wp-json
+--- Elementor ---
+      2 Elementor
+      1 ElementorProFrontendConfig
+      4 elementor
+      1 elementor-1032\
+      1 elementor-242
+      1 elementor-638
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0MiwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTQyMC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0MywidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTU0OC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NCwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTU0MC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NSwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTUzMy5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      1 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NiwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTUyNS5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      1 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NywidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTUxOS5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      1 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0OCwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTUxNC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      1 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0OSwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTUwNi5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1MCwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTQ1NS5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1MSwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTQ0OC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1MiwidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTQ0MC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      2 elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1MywidXJsIjoiaHR0cHM6XC9cL2thc3NvZWhvdXNpbmcuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI0XC8xMVwvU2NyZWVuc2hvdC0yMDI0LTExLTAxLTEwNTQyOC5wbmciLCJzbGlkZXNob3ciOiJiZjViMzNkIn0%3D\
+      1 elementor-align-center
+      2 elementor-align-right
+--- Builders/platforms ---
+--- Analytics / Ads / pixels ---
+      4 bilmur
+      1 crisp
+      9 g-bottom
+      8 g-buttons
+      1 g-content
+      2 g-fields
+      2 g-inline
+      2 g-overlay
+      7 g-padding
+      1 g-progress
+      1 g-shapes
+      1 g-single
+      1 g-symbols
+      2 g-wrapper
+      3 gtag
+--- Font providers ---
+--- Script src domains ---
+--- WP plugins seen ---
+      4 wp-content/plugins/jetpack
+      3 wp-content/plugins/elementor-pro
+      2 wp-content/plugins/gutenberg
+      2 wp-content/plugins/contact-form-7
+      1 wp-content/plugins/the-plus-addons-for-elementor-page-builder
+      1 wp-content/plugins/layout-grid
+      1 wp-content/plugins/header-footer-elementor
+      1 wp-content/plugins/essential-addons-for-elementor-lite
+      1 wp-content/plugins/elementor
+--- WP themes seen ---
+      3 wp-content/themes/astra
+--- generator meta ---
+--- forms plugin hints ---
+      9 contact-form-7
+     17 wpcf7
+--- jetpack / woocommerce ---
+      1 JETPACK
+      2 jQuery
+    310 jetpack
+      7 jquery
+    131 woocommerce
+
+=== Refined precise signals ===
+--- gtag/GA4 measurement IDs ---
+      1 g-progress
+      3 gtag(
+--- GTM container ---
+--- Google Ads AW- ---
+--- Meta pixel (fbq / facebook pixel) ---
+--- Crisp chat (precise) ---
+--- crisp context (60 chars window) ---
+ 0, 0); --wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0); }\
+--- bilmur (jetpack boost) ---
+      1 bilmur.min.js?m=202626\
+      1 bilmur:data
+      1 bilmur:data\
+      1 bilmur\
+--- WP version / wp-includes js ---
+      1 wp-includes/js/jquery/jquery-migrate.min.js
+      1 wp-includes/js/jquery/jquery.min.js
+      1 wp-includes/js/wp-emoji-loader.min.js
+      1 wp-includes/js/wp-emoji-release.min.js
+--- all external script domains (broader) ---
+    153 kassoehousing.com
+      2 www.facebook.com
+      2 s0.wp.com
+      2 s.kassoehousing.com
+      2 portal.kassoehousing.com
+      2 policy.app.cookieinformation.com
+      2 maps.googleapis.com
+      2 maps.google.com
+      2 assets.apollo.io
+      1 yoast.com
+      1 www.linkedin.com
+      1 widgets.wp.com
+      1 stats.wp.com
+      1 secure.gravatar.com
+      1 public-api.wordpress.com
+      1 jetpack.wordpress.com
+      1 2.gravatar.com
+      1 1.gravatar.com
+      1 0.gravatar.com
+
+=== Apollo / portal / gtag context ===
+--- gtag id near gtag/js ---
+      9 g-bottom
+      8 g-buttons
+      1 g-content
+      2 g-fields
+      2 g-inline
+      2 g-overlay
+      7 g-padding
+      1 g-progress
+      1 g-shapes
+      1 g-single
+      1 g-symbols
+      2 g-wrapper
+--- apollo context ---
+(\"script\");\n  o.src=\"https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=\"+n,o.async=
+);</script><script src=\"https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=weluog\" asyn
+--- portal.kassoehousing context ---
+sm\" href=\"https://portal.kassoehousing.com/users/login\">\n\t\t\t\t\t\t<span class
+;:&quot;https:\\/\\/portal.kassoehousing.com\\/uploads\\/kassoe.mp4&quot;,&quot;back
+=\"\" src=\"https://portal.kassoehousing.com/uploads/kassoe.mp4\" style=\"width: 190
+--- cookieinformation (consent) ---
+      1 cookieinformation.com/\
+      1 cookieinformation.com/uc.js\
+--- yoast ---
+      3 Yoast
+      1 yoast-schema-graph\
+      1 yoast.com/product/yoast-seo-premium-wordpress/
+--- facebook context ---
+" content=\"https://www.facebook.com/profile.php?id=100063503562715\
+As\":[\"https:\\/\\/www.facebook.com\\/profile.php?id=100063503562715\
+ublisher": "https://www.facebook.com/profile.php?id=100063503562715
+--- linkedin context ---
+",\"https:\\/\\/www.linkedin.com\\/company\\/80709101\\/admin\\/dashboard\\/\
+ href=\"https://www.linkedin.com/company/80709101/admin/dashboard/\

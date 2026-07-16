@@ -1,0 +1,12 @@
+firecrawl_map of corporate-apartments.se (2026-06-27) — key URLs
+Nav structure:
+- Accommodations: /our-houses-and-terraced-houses, /our-apartments, /our-apartment-hotels
+- Locations: /all-locations + 16 city pages: stockholm, goteborg, malmo, boras, gavle, helsingborg,
+  karlstad, linkoping, lulea, lund, sandviken, umea, uppsala, orebro, ornskoldsvik (Borås also)
+- /our-services, /for-house-owners, /about-us, /contactus, /blog (News), /quote (Offer)
+- Languages: default (en), /pl (Polish), /sv (Swedish) — full i18n mirror
+- Individual property pages (per street address), e.g. /sv/komedigatan-17, /dalkarrsleden-142
+  (NOTE: these 404 on direct firecrawl scrape — likely JS-gated or moved; listed in sitemap/map only)
+- Blog spans 2017–2024+ (company news, tips, general knowledge categories)
+- /web/login (customer portal login), /helpdesk, /report-a-problem, /part-time-home-service-request
+- /survey/... (customer satisfaction survey)
