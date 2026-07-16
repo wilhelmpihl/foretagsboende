@@ -55,5 +55,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`\n  Residence Studio running at http://localhost:${PORT}\n`);
+  console.log(`\n  foretagsboende.se running at http://localhost:${PORT}\n`);
 });

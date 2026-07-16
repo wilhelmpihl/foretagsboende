@@ -63,13 +63,10 @@ const db = {
 };
 
 function initDb() {
-  // Seed users
-  if (readTable('users').length === 0) {
+  // Seed admin user — endast från env, aldrig hårdkodade lösenord i git
+  if (readTable('users').length === 0 && process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD) {
     writeTable('users', [
-      { id: 1, email: 'admin@residence.se', password_hash: bcrypt.hashSync('admin123', 10), name: 'Admin', role: 'admin', company_name: 'Residence Studio', phone: '+46 70 000 00 00', created_at: new Date().toISOString() },
-      { id: 2, email: 'hr@volvocars.com', password_hash: bcrypt.hashSync('volvo123', 10), name: 'Anna Björk', role: 'company', company_name: 'Volvo Cars', phone: '+46 72 123 45 67', created_at: new Date().toISOString() },
-      { id: 3, email: 'demo@company.se', password_hash: bcrypt.hashSync('demo123', 10), name: 'Erik Svensson', role: 'company', company_name: 'Ericsson AB', phone: '+46 73 456 78 90', created_at: new Date().toISOString() },
-      { id: 4, email: 'wilhelm@bostadsuthyrning.se', password_hash: bcrypt.hashSync('Gais9494!!', 10), name: 'Wilhelm Pihl', role: 'admin', company_name: 'AWP Superhost Aktiebolag', phone: '+46 73 537 67 07', created_at: new Date().toISOString() },
+      { id: 1, email: process.env.ADMIN_EMAIL, password_hash: bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10), name: process.env.ADMIN_NAME || 'Admin', role: 'admin', company_name: 'AWP Superhost Aktiebolag', phone: '+46 73 537 67 07', created_at: new Date().toISOString() },
     ]);
   }
 

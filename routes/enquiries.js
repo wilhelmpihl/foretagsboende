@@ -1,5 +1,6 @@
 const express = require('express');
 const guesty = require('../services/guesty');
+const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
@@ -55,12 +56,12 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/', (req, res) => {
+router.get('/', requireAuth, (req, res) => {
   const enquiries = guesty.readEnquiries();
   res.json({ enquiries });
 });
 
-router.patch('/:id/status', (req, res) => {
+router.patch('/:id/status', requireAuth, (req, res) => {
   const valid = ['pending', 'confirmed', 'completed'];
   if (!valid.includes(req.body.status)) return res.status(400).json({ error: 'Ogiltigt status.' });
   const updated = guesty.updateEnquiryStatus(req.params.id, req.body.status);

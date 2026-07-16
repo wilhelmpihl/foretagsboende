@@ -1,18 +1,27 @@
 const { Resend } = require('resend');
 
 // ─── RESEND CLIENT ────────────────────────────────
-const resend = new Resend(process.env.RESEND_API_KEY || '');
-
+// Lat-initierad: Resend-konstruktorn kastar utan API-nyckel,
+// och appen ska kunna starta även utan e-postkonfiguration.
+let resend = null;
 if (process.env.RESEND_API_KEY) {
-  console.log('✓ Resend email ready — leads → kontakt@bostadsuthyrning.se');
+  resend = new Resend(process.env.RESEND_API_KEY);
+  console.log('✓ Resend email ready');
 } else {
   console.log('⚠ RESEND_API_KEY not set — emails via webhook only');
 }
 
 // ─── MAKE.COM WEBHOOK FALLBACK ────────────────────
-const WEBHOOK_URL = 'https://hook.eu2.make.com/cgpgmn98xgl03pdl6uojlgq06xg7ktgh';
+// MAKE_WEBHOOK_URL: ej satt = default-URL, satt till tom sträng = webhook avstängd
+const WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL !== undefined
+  ? process.env.MAKE_WEBHOOK_URL
+  : 'https://hook.eu2.make.com/cgpgmn98xgl03pdl6uojlgq06xg7ktgh';
+
+const LEAD_EMAIL = process.env.LEAD_EMAIL || 'wilhelm@bostadsuthyrning.se';
+const MAIL_FROM = process.env.MAIL_FROM || 'Företagsboende <onboarding@resend.dev>';
 
 async function sendWebhook(type, data) {
+  if (!WEBHOOK_URL) return;
   try {
     const fetch = require('node-fetch');
     await fetch(WEBHOOK_URL, {
@@ -35,8 +44,8 @@ async function sendLeadNotification(type, data) {
   };
 
   await resend.emails.send({
-    from: 'Företagsboende <onboarding@resend.dev>',
-    to: ['wilhelm@bostadsuthyrning.se'],
+    from: MAIL_FROM,
+    to: [LEAD_EMAIL],
     replyTo: data.email || undefined,
     subject: subjects[type] || 'Ny lead — Företagsboende',
     html: buildLeadHTML(type, data)
@@ -55,19 +64,37 @@ async function sendConfirmation(type, data) {
     contact: 'Tack för ert meddelande — vi återkommer snart'
   };
 
-  await resend.emails.send({
-    from: 'Företagsboende <onboarding@resend.dev>',
-    to: ['wilhelm@bostadsuthyrning.se'],
-    subject: '[Kund-kopia] ' + (subjects[type] || 'Tack — vi återkommer inom 24 timmar') + ' (till: ' + data.email + ')',
-    html: buildConfirmationHTML(type, data)
-  });
-
-  console.log('✓ Confirmation sent to:', data.email);
+  // Kunden kan bara nås från en verifierad Resend-domän (MAIL_FROM).
+  // Sandbox-avsändaren onboarding@resend.dev når endast kontoägaren —
+  // då skickas bekräftelsen som märkt admin-kopia istället.
+  if (process.env.MAIL_FROM) {
+    await resend.emails.send({
+      from: MAIL_FROM,
+      to: [data.email],
+      subject: subjects[type] || 'Tack — vi återkommer inom 24 timmar',
+      html: buildConfirmationHTML(type, data)
+    });
+    console.log('✓ Confirmation sent to:', data.email);
+  } else {
+    await resend.emails.send({
+      from: MAIL_FROM,
+      to: [LEAD_EMAIL],
+      subject: '[Kund-kopia] ' + (subjects[type] || 'Tack — vi återkommer inom 24 timmar') + ' (till: ' + data.email + ')',
+      html: buildConfirmationHTML(type, data)
+    });
+    console.log('⚠ MAIL_FROM ej satt — bekräftelse skickad som admin-kopia (avsedd för ' + data.email + ')');
+  }
 }
 
 // ─── MAIN EXPORT ──────────────────────────────────
 async function sendEmails(type, data) {
   const results = { lead: false, confirmation: false, webhook: false };
+
+  // Lokal test utan externa sidoeffekter
+  if (process.env.EMAIL_DRY_RUN === '1') {
+    console.log('DRY RUN — email/webhook skipped:', type, JSON.stringify(data));
+    return { ...results, dryRun: true };
+  }
 
   // Always send webhook
   try { await sendWebhook(type, data); results.webhook = true; } catch (e) {}
