@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /portal.html
+Disallow: /login.html
+Disallow: /register.html
+Disallow: /api/
+
+Sitemap: https://xn--fretagsboende-imb.se/sitemap.xml
