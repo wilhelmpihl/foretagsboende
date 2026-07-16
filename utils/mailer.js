@@ -133,6 +133,7 @@ function buildLeadHTML(type, data) {
   if (type === 'enquiry') {
     add('Bostad', data.listingTitle, true);
     add('Företag', data.companyName, true);
+    add('Bransch', data.industry);
     add('E-post', data.email, true);
     add('Kontaktperson', data.contactName);
     add('Telefon', data.phone);

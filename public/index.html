@@ -994,7 +994,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);padding:72px 80px 40px}
             <input class="fb-input" id="fb-company" placeholder="Företagets namn"/>
             <input class="fb-input" id="fb-email" type="email" placeholder="Er e-postadress"/>
           </div>
+          <select class="fb-input" id="fb-industry" style="margin-top:8px;width:100%">
+            <option value="">Välj bransch (valfritt)</option>
+            <option>Fordonsindustri</option>
+            <option>Bygg &amp; anläggning</option>
+            <option>Industri &amp; tillverkning</option>
+            <option>IT &amp; konsult</option>
+            <option>Energi</option>
+            <option>Event &amp; film</option>
+            <option>Annat</option>
+          </select>
           <button class="fb-cta" style="margin-top:8px" id="fbSignupBtn" onclick="submitSignup()">Aktivera konto & hämta 10% rabatt</button>
+          <div class="sla-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Svar inom 24h — garanterat · <a href="https://wa.me/46735376707" target="_blank" rel="noopener">WhatsApp direkt</a></div>
           <div id="fbSignupMsg"></div>
           <div class="fb-trust-row" style="margin-top:14px">
             <span class="fb-trust-muted">Kostnadsfritt ·</span>
@@ -1410,7 +1421,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     fetch('/api/enquiry', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ companyName: company.value.trim(), email: email.value.trim(), contactName: '', phone: '', checkIn: '', checkOut: '', guests: 1, listingTitle: 'Kontoregistrering', message: 'Ny företagsregistrering via hemsidan' })
+      body: JSON.stringify({ companyName: company.value.trim(), email: email.value.trim(), contactName: '', phone: '', checkIn: '', checkOut: '', guests: 1, industry: (document.getElementById('fb-industry') || {}).value || '', listingTitle: 'Kontoregistrering', message: 'Ny företagsregistrering via hemsidan' })
     }).then(function(r) { return r.json(); }).then(function() { showSignupSuccess(); }).catch(function() {
       setTimeout(showSignupSuccess, 1500);
     });
@@ -1658,7 +1669,9 @@ try {
       checkIn: d.checkIn || 'Flexibelt',
       checkOut: d.checkOut || 'Flexibelt',
       guests: d.persons || 1,
+      industry: d.industry || '',
       message: [
+        d.industry ? 'Bransch: ' + d.industry : '',
         d.propertyType ? 'Typ: ' + d.propertyType : '',
         d.bedrooms ? d.bedrooms + ' sovrum' : '',
         d.beds ? d.beds + ' sängar' : '',
@@ -1828,7 +1841,7 @@ weeklyCleaning: false, privateRooms: false, singleBeds: false, storage: false,
 quiet: false, nearShops: false
 },
 workplace: "", maxCommuteMin: 30, budgetSlider: 35,
-companyName: "", contactName: "", email: "", phone: "", notes: ""
+companyName: "", contactName: "", email: "", phone: "", industry: "", notes: ""
 };
 var state = (function () {
 var saved = null;
@@ -2146,6 +2159,12 @@ return '<section class="awSec">' +
 '<input class="awIn" data-bind="phone" value="' + attr(state.phone) + '" placeholder="+46\u2026">' +
 (e2.phone ? '<div class="awErr">' + esc(e2.phone) + '</div>' : '') + '</div>' +
 '</div>' +
+'<div class="awF"><label class="awLab">Bransch</label>' +
+'<select class="awIn" data-bind="industry">' +
+['', 'Fordonsindustri', 'Bygg & anl\u00e4ggning', 'Industri & tillverkning', 'IT & konsult', 'Energi', 'Event & film', 'Annat'].map(function (o) {
+return '<option value="' + attr(o) + '"' + (state.industry === o ? ' selected' : '') + '>' + (o ? esc(o) : 'V\u00e4lj bransch (valfritt)') + '</option>';
+}).join('') +
+'</select></div>' +
 '<div class="awF"><label class="awLab">' + esc(T.notes) + '</label>' +
 '<textarea class="awTa" data-bind="notes" placeholder="' + attr(T.notesPh) + '">' + esc(state.notes) + '</textarea></div>' +
 '<div class="awFine">' + esc(T.fine) + '</div>' +
@@ -2201,7 +2220,9 @@ newAm[amk] = !newAm[amk]; patch({ amenities: newAm }, true); return;
 }
 if (el.hasAttribute("data-more")) { patch({ showMoreAmenities: !state.showMoreAmenities }, true); return; }
 });
-shadow.addEventListener("input", function (ev) {
+shadow.addEventListener("input", handleBind);
+shadow.addEventListener("change", handleBind); // select-element avfyrar inte alltid input
+function handleBind(ev) {
 var el = ev.target; if (!el) return;
 if (el.id === "awBudgetSlider") { patch({ budgetSlider: clamp(+el.value || 35, 1, 100) }, false); return; }
 var bind = el.getAttribute("data-bind"); if (!bind) return;
@@ -2210,7 +2231,7 @@ if (bind === "maxCommuteMin") v = clamp(parseInt(String(v).replace(/[^\d-]/g, ""
 if (bind === "phone") { v = phoneClean(v); el.value = v; }
 if (bind === "checkIn" || bind === "checkOut") { patch(makeObj(bind, v), true); return; }
 patch(makeObj(bind, v), false);
-});
+}
 function goTo(n, dir) { state.step = clamp(n, 0, steps.length - 1); showErrors = false; save(); render({ keepScroll: false, resetScroll: true, dir: dir }); }
 function updateCTA() { var b = $(".awNext"); if (b) b.disabled = !canProceed(); }
 function updateBudgetIfVisible() {
@@ -2562,6 +2583,10 @@ shadow.appendChild(style);
 
 <!-- ═══ PRISKALKYLATOR (självständigt block) ═══ -->
 <style>
+.sla-badge{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:#888}
+.sla-badge svg{color:#1a9e68;flex-shrink:0}
+.sla-badge a{color:#8a6520;text-decoration:none;font-weight:500}
+.sla-badge a:hover{text-decoration:underline}
 #price-calc{max-width:520px;margin:36px auto 0}
 #price-calc .pc-inner{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.25);border-radius:16px;padding:28px 28px 24px;backdrop-filter:blur(4px)}
 #price-calc .pc-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;margin-bottom:18px;text-align:center}
