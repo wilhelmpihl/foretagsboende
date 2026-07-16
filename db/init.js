@@ -84,15 +84,6 @@ function initDb() {
     ]);
   }
 
-  // Seed bookings
-  if (readTable('bookings').length === 0) {
-    writeTable('bookings', [
-      { id:1, user_id:2, listing_id:1, check_in:'2026-03-20', check_out:'2026-04-20', persons:4, status:'confirmed', total_price:57350, company_name:'Volvo Cars', contact_name:'Anna Björk', contact_email:'hr@volvocars.com', contact_phone:'+46 72 123 45 67', notes:'Parkering krävs', created_at:new Date().toISOString() },
-      { id:2, user_id:2, listing_id:3, check_in:'2026-04-01', check_out:'2026-04-14', persons:1, status:'confirmed', total_price:12350, company_name:'Volvo Cars', contact_name:'Anna Björk', contact_email:'hr@volvocars.com', contact_phone:null, notes:null, created_at:new Date().toISOString() },
-      { id:3, user_id:3, listing_id:5, check_in:'2026-03-25', check_out:'2026-05-01', persons:2, status:'pending', total_price:52200, company_name:'Ericsson AB', contact_name:'Erik Svensson', contact_email:'demo@company.se', contact_phone:'+46 73 456 78 90', notes:'Behöver snabbt internet', created_at:new Date().toISOString() },
-    ]);
-  }
-
   console.log('Database ready.');
   return db;
 }
